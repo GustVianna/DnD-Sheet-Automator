@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://dppt6ewthv565"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_b1bbn"]
+
+[resource]
+script = ExtResource("1_b1bbn")
+unique_id = "dwarven_resilience"
+name = "Dwarven Resilience"
+description = "You have advantage on saving throws you make to avoid or end the poisoned condition on yourself. You also have resistance to poison damage."
+classes = Array[String]([])
+races = Array[String](["Hill Dwarf", "Mountain Dwarf", "Duergar"])
+pre_req = Array[String]([])
+tags = Array[String](["dwarven", "dwarf", "racial", "passive", "resilience", "poison"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

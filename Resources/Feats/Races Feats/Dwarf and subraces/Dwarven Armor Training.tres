@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://ck5ulkwwxa51c"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_htyc0"]
+
+[resource]
+script = ExtResource("1_htyc0")
+unique_id = "dwarven_armor_training"
+name = "Dwarven Armor Training"
+description = "You have proficiency with light and medium armor."
+classes = Array[String]([])
+races = Array[String](["Mountain Dwarf"])
+pre_req = Array[String]([])
+tags = Array[String](["proficiency", "dwarf", "racial", "passive", "light", "medium", "armor"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

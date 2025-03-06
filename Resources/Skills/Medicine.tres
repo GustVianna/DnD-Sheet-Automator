@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Medicine" load_steps=2 format=3 uid="uid://d3n53kn6dv018"]
+
+[ext_resource type="Script" path="res://Resources/Skills/Medicine.gd" id="1_tc8l2"]
+
+[resource]
+script = ExtResource("1_tc8l2")
+skill_name = ""
+derived_ability = "Wisdom"
+proficiency = false
+proficiency_bonus = 0
+expertise = false
+expertise_bonus = 0
+advantage = false
+disadvantage = false
+added_other = 0
+other_source = ""
+total = 0

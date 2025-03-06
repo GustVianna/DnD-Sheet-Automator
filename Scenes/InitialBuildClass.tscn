@@ -1,0 +1,995 @@
+[gd_scene load_steps=18 format=3 uid="uid://0qb1m0igm1o8"]
+
+[ext_resource type="Script" path="res://Scripts/ClassDefiner.gd" id="1_335yp"]
+[ext_resource type="Theme" uid="uid://g5dcmi2kejgv" path="res://Assets/Themes/TestTheme.tres" id="1_j6ye8"]
+[ext_resource type="Texture2D" uid="uid://c50m45t1ptkig" path="res://Assets/Barbarian.png" id="2_nrq1l"]
+[ext_resource type="PackedScene" uid="uid://ntar0ljurf53" path="res://Scenes/BackgroundBio.tscn" id="3_n5ofx"]
+[ext_resource type="Texture2D" uid="uid://21u3uli3uycq" path="res://Assets/Bard.png" id="3_vkvom"]
+[ext_resource type="Texture2D" uid="uid://7aro5ho2pl1k" path="res://Assets/Cleric.png" id="4_yqfuk"]
+[ext_resource type="Texture2D" uid="uid://bn03egcn0nj01" path="res://Assets/Druid.png" id="5_fkumn"]
+[ext_resource type="PackedScene" uid="uid://dovpmp4f4ubog" path="res://Scenes/animated_button.tscn" id="5_tlgus"]
+[ext_resource type="Texture2D" uid="uid://x8yiulwb8xd" path="res://Assets/Fighter.png" id="6_o3okn"]
+[ext_resource type="Texture2D" uid="uid://bvw0uootixdai" path="res://Assets/Monk.png" id="7_a2itc"]
+[ext_resource type="Texture2D" uid="uid://bp0xv1fbkwnux" path="res://Assets/Paladin.png" id="8_i5hm3"]
+[ext_resource type="Texture2D" uid="uid://dj8okgm1keavv" path="res://Assets/Ranger.png" id="9_w4qn4"]
+[ext_resource type="Texture2D" uid="uid://4qx8gk86rto5" path="res://Assets/Rogue.png" id="10_2a1y4"]
+[ext_resource type="Texture2D" uid="uid://ca8l03hpi5wcq" path="res://Assets/Sorcerer.png" id="11_7miv3"]
+[ext_resource type="Texture2D" uid="uid://bu6jkv1dqdi2t" path="res://Assets/Warlock.png" id="12_500h6"]
+[ext_resource type="Texture2D" uid="uid://spa72xj6alko" path="res://Assets/Wizard.png" id="13_visiw"]
+[ext_resource type="Texture2D" uid="uid://dgk5t7ceir5iv" path="res://Assets/Artficer.png" id="14_p3i3j"]
+
+[node name="ClassMaster" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_j6ye8")
+
+[node name="Class" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_335yp")
+
+[node name="Background" parent="Class" instance=ExtResource("3_n5ofx")]
+z_index = -1
+layout_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Class"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_right = 450
+
+[node name="Back" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/VBoxContainer2/MarginContainer" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+label_name = "Back"
+
+[node name="LineEdit" type="RichTextLabel" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=3.0 connected=1][center]Choose your Class[/center][/wave]"
+fit_content = true
+
+[node name="GridContainer" type="GridContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 25
+theme_override_constants/v_separation = 100
+columns = 2
+
+[node name="Barbarian" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Barbarian" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Barbarian" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Barbarian/Barbarian"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Barbarian/Barbarian/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_nrq1l")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Barbarian"]
+z_index = -1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Barbarian/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Barbarian/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Barbarian" type="Label" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Barbarian/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Barbarian"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Barbarian/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advantage on all Strength checks"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Bard" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Bard" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Bard" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Bard/Bard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Bard/Bard/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("3_vkvom")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Bard"]
+z_index = -1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Bard/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Bard/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Bard" type="Label" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Bard/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Bard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Bard/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advantage on all Strength checks"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Cleric" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Cleric" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Cleric" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Cleric/Cleric"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Cleric/Cleric/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("4_yqfuk")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Cleric"]
+z_index = -1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Cleric/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Cleric/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Cleric" type="Label" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Cleric/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Cleric"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Cleric/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advantage on all Strength checks"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Druid" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Druid" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Druid" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Druid/Druid"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Druid/Druid/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_fkumn")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Druid"]
+z_index = -1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Druid/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Druid/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Druid" type="Label" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Druid/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Druid"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Druid/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advantage on all Strength checks"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Fighter" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Fighter" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Fighter" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Fighter/Fighter"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Fighter/Fighter/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_o3okn")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Fighter"]
+z_index = -1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Fighter/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Fighter/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Fighter" type="Label" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Fighter/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Fighter"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Fighter/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advantage on all Strength checks"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Monk" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Monk" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Monk" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Monk/Monk"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Monk/Monk/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("7_a2itc")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Monk"]
+z_index = -1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Monk/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Monk/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Monk" type="Label" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Monk/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Monk"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Monk/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advantage on all Strength checks"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Paladin" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Paladin" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Paladin" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Paladin/Paladin"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Paladin/Paladin/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("8_i5hm3")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Paladin"]
+z_index = -1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Paladin/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Paladin/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Paladin" type="Label" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Paladin/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Paladin"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Paladin/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advantage on all Strength checks"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Ranger" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Paladin" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Ranger" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Ranger/Paladin"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Ranger/Paladin/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("9_w4qn4")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Ranger"]
+z_index = -1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Ranger/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Ranger/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Ranger" type="Label" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Ranger/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Ranger"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Ranger/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advantage on all Strength checks"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Rogue" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Rogue" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Rogue" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Rogue/Rogue"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Rogue/Rogue/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("10_2a1y4")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Rogue"]
+z_index = -1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Rogue/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Rogue/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Rogue" type="Label" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Rogue/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Rogue"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Rogue/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advantage on all Strength checks"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Sorcerer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Sorcerer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Sorcerer" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Sorcerer/Sorcerer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Sorcerer/Sorcerer/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("11_7miv3")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Sorcerer"]
+z_index = -1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Sorcerer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Sorcerer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Sorcerer" type="Label" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Sorcerer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Sorcerer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Sorcerer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advantage on all Strength checks"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Warlock" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Warlock" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Warlock" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Warlock/Warlock"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Warlock/Warlock/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("12_500h6")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Warlock"]
+z_index = -1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Warlock/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Warlock/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Warlock" type="Label" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Warlock/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Warlock"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Warlock/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advantage on all Strength checks"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Wizard" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Wizard" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Wizard" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Wizard/Wizard"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Wizard/Wizard/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("13_visiw")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Wizard"]
+z_index = -1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Wizard/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Wizard/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Wizard" type="Label" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Wizard/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Wizard"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Wizard/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advantage on all Strength checks"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Artificer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Artificer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Artificer" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Artificer/Artificer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Artificer/Artificer/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("14_p3i3j")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Artificer"]
+z_index = -1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Artificer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Artificer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Artificer" type="Label" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Artificer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Artificer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Artificer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advantage on all Strength checks"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Custom" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Custom" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Custom" instance=ExtResource("5_tlgus")]
+custom_minimum_size = Vector2(0, 250)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Custom/Custom"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="TextureRect" type="TextureRect" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Custom/Custom/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("14_p3i3j")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Custom"]
+z_index = -1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Custom/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Custom/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Custom" type="Label" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Custom/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Custom"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Custom/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Advantage on all Strength checks"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+drag_and_drop_selection_enabled = false
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/VBoxContainer2/MarginContainer/Back" to="Class" method="_on_button_pressed"]
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Barbarian/Barbarian" to="Class" method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Bard/Bard" to="Class" method="_on_texture_button_2_pressed"]
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Cleric/Cleric" to="Class" method="_on_texture_button_3_pressed"]
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Druid/Druid" to="Class" method="_on_texture_button_4_pressed"]
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Fighter/Fighter" to="Class" method="_on_texture_button_5_pressed"]
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Monk/Monk" to="Class" method="_on_texture_button_6_pressed"]
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Paladin/Paladin" to="Class" method="_on_texture_button_7_pressed"]
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Ranger/Paladin" to="Class" method="_on_texture_button_8_pressed"]
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Rogue/Rogue" to="Class" method="_on_texture_button_9_pressed"]
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Sorcerer/Sorcerer" to="Class" method="_on_texture_button_10_pressed"]
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Warlock/Warlock" to="Class" method="_on_texture_button_11_pressed"]
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Wizard/Wizard" to="Class" method="_on_texture_button_12_pressed"]
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Artificer/Artificer" to="Class" method="_on_texture_button_13_pressed"]
+[connection signal="pressed" from="Class/ScrollContainer/MarginContainer/VBoxContainer/GridContainer/Custom/Custom" to="Class" method="_on_custom_pressed"]

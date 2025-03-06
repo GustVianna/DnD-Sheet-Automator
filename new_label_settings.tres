@@ -1,0 +1,13 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dhk7r36rcwyu8"]
+
+[ext_resource type="FontFile" uid="uid://jkquuo7frvtf" path="res://Assets/Fonts/Roboto/Roboto-Bold.ttf" id="1_h3pov"]
+
+[resource]
+font = ExtResource("1_h3pov")
+font_size = 30
+font_color = Color(0.933333, 0.921569, 0.866667, 1)
+outline_size = 8
+outline_color = Color(0, 0, 0, 0.454902)
+shadow_size = 6
+shadow_color = Color(0, 0, 0, 0.352941)
+shadow_offset = Vector2(-5, 5)

@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ucyv7fmwpt0o"]
+
+[ext_resource type="Shader" path="res://Assets/Materials/Vignette.gdshader" id="1_p834i"]
+
+[resource]
+shader = ExtResource("1_p834i")
+shader_parameter/color = Color(0, 0, 0, 1)
+shader_parameter/multiplier = -0.02
+shader_parameter/softness = 1.485

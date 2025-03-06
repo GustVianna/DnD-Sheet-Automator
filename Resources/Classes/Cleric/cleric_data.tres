@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ClericData" load_steps=2 format=3 uid="uid://denf1e2omoiex"]
+
+[ext_resource type="Script" path="res://Resources/Classes/Cleric/cleric_data.gd" id="1_afm4b"]
+
+[resource]
+script = ExtResource("1_afm4b")
+unique_id = "cleric"
+name = "Cleric"
+description = ""
+features = Array[Resource("res://Resources/ClassTraits/ClassTraitData.gd")]([])

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://dq3p04ifdmeux"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_afpaq"]
+
+[resource]
+script = ExtResource("1_afpaq")
+unique_id = "dwarven_combat_training"
+name = "Dwarven Combat Training"
+description = "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer."
+classes = Array[String]([])
+races = Array[String](["Hill Dwarf", "Mountain Dwarf"])
+pre_req = Array[String]([])
+tags = Array[String](["proficiency", "dwarf", "racial", "passive", "battleaxe", "handaxe", "light hammer", "warhammer"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

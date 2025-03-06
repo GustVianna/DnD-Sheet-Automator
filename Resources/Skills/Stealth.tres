@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Stealth" load_steps=2 format=3 uid="uid://byfx7v6b67ws"]
+
+[ext_resource type="Script" path="res://Resources/Skills/Stealth.gd" id="1_x1ent"]
+
+[resource]
+script = ExtResource("1_x1ent")
+skill_name = ""
+derived_ability = "Dexterity"
+proficiency = false
+proficiency_bonus = 0
+expertise = false
+expertise_bonus = 0
+advantage = false
+disadvantage = false
+added_other = 0
+other_source = ""
+total = 0

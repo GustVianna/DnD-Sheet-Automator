@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ElfData" load_steps=2 format=3 uid="uid://bye16oemuoujt"]
+
+[ext_resource type="Script" path="res://Resources/Races/Elf/ElfData.gd" id="1_jy3td"]
+
+[resource]
+script = ExtResource("1_jy3td")
+unique_id = "mark_of_shadow_elf"
+name = "Mark of Shadow Elf"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Eberron: Rising from the Last War"

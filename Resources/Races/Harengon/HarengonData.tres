@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HarengonData" load_steps=2 format=3 uid="uid://w52jyklxdmqg"]
+
+[ext_resource type="Script" path="res://Resources/Races/Harengon/HarengonData.gd" id="1_ollli"]
+
+[resource]
+script = ExtResource("1_ollli")
+unique_id = "harengon"
+name = "Harengon"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

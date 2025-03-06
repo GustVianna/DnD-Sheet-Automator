@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TabaxiData" load_steps=2 format=3 uid="uid://4aygmb0f1q0x"]
+
+[ext_resource type="Script" path="res://Resources/Races/Tabaxi/TabaxiData.gd" id="1_aevl8"]
+
+[resource]
+script = ExtResource("1_aevl8")
+unique_id = "tabaxi"
+name = "Tabaxi"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

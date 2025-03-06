@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HalflingData" load_steps=2 format=3 uid="uid://kpwmdc3qjavi"]
+
+[ext_resource type="Script" path="res://Resources/Races/Halfling/HalflingData.gd" id="1_jrato"]
+
+[resource]
+script = ExtResource("1_jrato")
+unique_id = "stout_halfling"
+name = "Stout Halfling"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Player's Handbook"

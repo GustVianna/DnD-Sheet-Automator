@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MetallicAncestryTrait" load_steps=2 format=3 uid="uid://4qromycxi7fk"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Dragonborn/MetallicAncestryTrait.gd" id="1_6rdf0"]
+
+[resource]
+script = ExtResource("1_6rdf0")
+unique_id = "metallic_ancestry"
+name = "Metallic Ancestry"
+description = "You have a metallic dragon ancestor, granting you a special magical affinity. Choose one kind of dragon from the Metallic Ancestry table. This determines the damage type for your other traits, as shown in the table."

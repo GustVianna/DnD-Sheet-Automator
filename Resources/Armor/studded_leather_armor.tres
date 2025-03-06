@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="StuddedLeatherArmor" load_steps=2 format=3 uid="uid://caewacrh2sejn"]
+
+[ext_resource type="Script" path="res://Resources/Armor/studded_leather_armor.gd" id="1_btom2"]
+
+[resource]
+script = ExtResource("1_btom2")
+unique_id = "studded_leather"
+name = "Studded leather"
+description = "Made from tough but flexible leather, studded leather is reinforced with close-set rivets or spikes."
+cost = 45
+weight = 13
+stealth_disadvantage = false
+strength = "-"
+category = "Light Armor"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GithData" load_steps=2 format=3 uid="uid://kecmbdr31w6n"]
+
+[ext_resource type="Script" path="res://Resources/Races/Gith/GithData.gd" id="1_adc2j"]
+
+[resource]
+script = ExtResource("1_adc2j")
+unique_id = "githzerai_gith"
+name = "Githzerai Gith"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen's Tome of Foes"

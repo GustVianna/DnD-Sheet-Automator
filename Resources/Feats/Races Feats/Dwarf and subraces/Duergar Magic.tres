@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://nva5qfj8pyyc"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_7h6ak"]
+
+[resource]
+script = ExtResource("1_7h6ak")
+unique_id = "duergar_magic"
+name = "Duergar Magic"
+description = "Starting at 3rd level, you can cast the enlarge/reduce spell on yourself with this trait, without requiring a material component. Starting at 5th level, you can also cast the invisibility spell on yourself with this trait, without requiring a material component. Once you cast either of these spells with this trait, you can't cast that spell with it again until you finish a long rest. You can also cast these spells using spell slots you have of the appropriate level.Intelligence, Wisdom, or Charisma is your spellcasting ability for these spells when you cast them with this trait (choose when you select this race)."
+classes = Array[String]([])
+races = Array[String](["Duergar"])
+pre_req = Array[String]([])
+tags = Array[String](["duergar", "dwarf", "racial", "passive", "magic"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

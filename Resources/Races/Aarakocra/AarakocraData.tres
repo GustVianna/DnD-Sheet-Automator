@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AarakocraData" load_steps=6 format=3 uid="uid://bw1urntmetu2k"]
+
+[ext_resource type="Script" path="res://Resources/Races/Aarakocra/AarakocraData.gd" id="1_bcba7"]
+[ext_resource type="Resource" uid="uid://b5y6yoap81f0m" path="res://Resources/RacialTraits/Aarakocra/FlightTrait.tres" id="2_efiyf"]
+[ext_resource type="Resource" uid="uid://cxitc46wmmku5" path="res://Resources/RacialTraits/Aarakocra/TalonsTrait.tres" id="3_71tf7"]
+[ext_resource type="Resource" uid="uid://haxrfk82kt8y" path="res://Resources/RacialTraits/Aarakocra/WindCallerTrait.tres" id="4_dqfsn"]
+[ext_resource type="Resource" uid="uid://cpnvcmd56m3mg" path="res://Resources/RacialTraits/Aasimar/LanguagesCommonOtherTrait.tres" id="5_4epw6"]
+
+[resource]
+script = ExtResource("1_bcba7")
+unique_id = "aarakocra"
+name = "Aarakocra"
+description = ""
+traits = Array[Resource("res://Resources/RacialTraits/RacialTraitData.gd")]([ExtResource("2_efiyf"), ExtResource("3_71tf7"), ExtResource("4_dqfsn"), ExtResource("5_4epw6")])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CelestialRevelationTrait" load_steps=2 format=3 uid="uid://dmn8kkx3hjtaa"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Aasimar/CelestialRevelationTrait.gd" id="1_akbd6"]
+
+[resource]
+script = ExtResource("1_akbd6")
+options = "Necrotic Shroud"
+unique_id = "celestial_revelation"
+trait_name = "Celestial revelation"
+description = "When you reach 3rd level, choose one of the revelation options below. Thereafter, you can use a bonus action to unleash the celestial energy within yourself, gaining the benefits of that revelation. Your transformation lasts for 1 minute or until you end it as a bonus action. Once you transform using your revelation below, you can't use it again until you finish a long rest."
+trait_speed = "Action"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ShifterData" load_steps=2 format=3 uid="uid://f18o5dm8wxqv"]
+
+[ext_resource type="Script" path="res://Resources/Races/Shifter/ShifterData.gd" id="1_5ytcu"]
+
+[resource]
+script = ExtResource("1_5ytcu")
+unique_id = "shifter"
+name = "Shifter"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

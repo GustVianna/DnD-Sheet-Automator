@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TieflingData" load_steps=2 format=3 uid="uid://brlonlelnw3lv"]
+
+[ext_resource type="Script" path="res://Resources/Races/Tiefling/TieflingData.gd" id="1_bhx67"]
+
+[resource]
+script = ExtResource("1_bhx67")
+unique_id = "levistus_tiefling"
+name = "Levistus Tiefling"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen's Tome of Foes"

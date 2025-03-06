@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SpecializedDesignTrait" load_steps=2 format=3 uid="uid://dpvgyskalg1vf"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Autognome/SpecializedDesignTrait.gd" id="1_145sw"]
+
+[resource]
+script = ExtResource("1_145sw")
+unique_id = "creature_type_construct"
+name = "Creature Type"
+description = "You are a Construct."

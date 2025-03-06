@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AutognomeData" load_steps=2 format=3 uid="uid://dw2aoobysebmn"]
+
+[ext_resource type="Script" path="res://Resources/Races/Autognome/AutognomeData.gd" id="1_srvf1"]
+
+[resource]
+script = ExtResource("1_srvf1")
+unique_id = "autognome"
+name = "Autognome"
+description = ""
+traits = Array[Resource("res://Resources/RacialTraits/RacialTraitData.gd")]([])
+source = "Astral Adventurer's Guide"

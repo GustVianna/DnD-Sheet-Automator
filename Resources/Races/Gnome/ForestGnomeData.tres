@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GnomeData" load_steps=2 format=3 uid="uid://dior1degytkpu"]
+
+[ext_resource type="Script" path="res://Resources/Races/Gnome/GnomeData.gd" id="1_x3ro8"]
+
+[resource]
+script = ExtResource("1_x3ro8")
+unique_id = "forest_gnome"
+name = "Forest Gnome"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Player's Handbook"

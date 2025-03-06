@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://shna0yliglf3"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_ndhti"]
+
+[resource]
+script = ExtResource("1_ndhti")
+unique_id = "darkvision"
+name = "Darkvision"
+description = "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray."
+classes = Array[String]([])
+races = Array[String](["Hill Dwarf", "Mountain Dwarf"])
+pre_req = Array[String]([])
+tags = Array[String](["darkvision", "dwarf", "racial", "passive"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

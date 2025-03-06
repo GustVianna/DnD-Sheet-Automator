@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://ohkfb44fy1ah"]
+
+[ext_resource type="PackedScene" uid="uid://d12v6tyoucisq" path="res://Scenes/bio_button.tscn" id="1_l7reo"]
+[ext_resource type="Shader" path="res://Scenes/pixelized_scene_test.gdshader" id="2_prpah"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gpq5y"]
+shader = ExtResource("2_prpah")
+shader_parameter/change_color_depth = true
+shader_parameter/target_color_depth = 5
+shader_parameter/dithering = true
+shader_parameter/scale_resolution = true
+shader_parameter/target_resolution_scale = 3
+shader_parameter/enable_recolor = false
+
+[node name="Bio" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bio" parent="." instance=ExtResource("1_l7reo")]
+layout_mode = 1
+offset_bottom = 0.0
+
+[node name="LineEdit" parent="Bio/MarginContainer/HBoxContainer/VBoxContainer" index="1"]
+z_index = 6
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 5
+material = SubResource("ShaderMaterial_gpq5y")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[editable path="Bio"]

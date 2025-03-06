@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="CustomRaceData" load_steps=2 format=3 uid="uid://sn41o62d0s77"]
+
+[ext_resource type="Script" path="res://Resources/Races/CustomRace/CustomRaceData.gd" id="1_pn302"]
+
+[resource]
+script = ExtResource("1_pn302")
+unique_id = "custom"
+name = "testicles"
+description = "Trait description"
+traits = Array[Resource("res://Resources/RacialTraits/RacialTraitData.gd")]([])
+source = ""

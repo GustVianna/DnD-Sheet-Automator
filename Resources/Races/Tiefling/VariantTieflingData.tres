@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TieflingData" load_steps=2 format=3 uid="uid://coicsh0hvvjlg"]
+
+[ext_resource type="Script" path="res://Resources/Races/Tiefling/TieflingData.gd" id="1_7wwqk"]
+
+[resource]
+script = ExtResource("1_7wwqk")
+unique_id = "variant_tiefling"
+name = "Variant Tiefling"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Sword Coast Adventurer's Guide"

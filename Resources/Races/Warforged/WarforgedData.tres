@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="WarforgedData" load_steps=2 format=3 uid="uid://d1s0tao8fpkcx"]
+
+[ext_resource type="Script" path="res://Resources/Races/Warforged/WarforgedData.gd" id="1_sdlsw"]
+
+[resource]
+script = ExtResource("1_sdlsw")
+unique_id = "warforged"
+name = "Warforged"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Eberron: Rising from the Last War"

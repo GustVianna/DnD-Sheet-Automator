@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://co1wfv5jvwd82"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_b84a7"]
+
+[resource]
+script = ExtResource("1_b84a7")
+unique_id = "dwarven_toughness"
+name = "Dwarven Toughness"
+description = "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
+classes = Array[String]([])
+races = Array[String](["Hill Dwarf"])
+pre_req = Array[String]([])
+tags = Array[String](["hit point", "dwarf", "racial", "passive", "1"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

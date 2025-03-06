@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Wisdom" load_steps=2 format=3 uid="uid://d2xvlwgiegxcj"]
+
+[ext_resource type="Script" path="res://Resources/AbilityScore/wisdom.gd" id="1_w1o5k"]
+
+[resource]
+script = ExtResource("1_w1o5k")
+ability_name = ""
+advantage = false
+disadvantage = false
+added_race = {}
+added_feats = {}
+added_other = {}
+total = 0

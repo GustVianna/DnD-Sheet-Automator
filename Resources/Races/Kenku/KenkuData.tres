@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="KenkuData" load_steps=2 format=3 uid="uid://bxifoa8o32fto"]
+
+[ext_resource type="Script" path="res://Resources/Races/Kenku/KenkuData.gd" id="1_i5tgc"]
+
+[resource]
+script = ExtResource("1_i5tgc")
+unique_id = "kenku"
+name = "Kenku"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

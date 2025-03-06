@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ArtificerData" load_steps=2 format=3 uid="uid://dfj4v20t61k2n"]
+
+[ext_resource type="Script" path="res://Resources/Classes/Artificer/artificer_data.gd" id="1_l7gm1"]
+
+[resource]
+script = ExtResource("1_l7gm1")
+unique_id = "artificer"
+name = "Artificer"
+description = ""
+features = Array[Resource("res://Resources/ClassTraits/ClassTraitData.gd")]([])

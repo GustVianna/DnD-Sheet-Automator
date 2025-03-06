@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TieflingData" load_steps=2 format=3 uid="uid://bnma8ml8hul1w"]
+
+[ext_resource type="Script" path="res://Resources/Races/Tiefling/TieflingData.gd" id="1_5trf2"]
+
+[resource]
+script = ExtResource("1_5trf2")
+unique_id = "zariel_tiefling"
+name = "Zariel Tiefling"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen's Tome of Foes"

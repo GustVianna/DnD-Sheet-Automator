@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://fq7brk7ext4b"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_nphhp"]
+
+[resource]
+script = ExtResource("1_nphhp")
+unique_id = "languages"
+name = "Languages"
+description = "You can speak, read, and write Common and one other language that you and your DM agree is appropriate for your character."
+classes = Array[String]([])
+races = Array[String](["Duergar"])
+pre_req = Array[String]([])
+tags = Array[String](["language", "racial", "passive", "common"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

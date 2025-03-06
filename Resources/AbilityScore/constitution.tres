@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Constitution" load_steps=2 format=3 uid="uid://kgnffkjuocw7"]
+
+[ext_resource type="Script" path="res://Resources/AbilityScore/constitution.gd" id="1_dy2m8"]
+
+[resource]
+script = ExtResource("1_dy2m8")
+ability_name = ""
+advantage = false
+disadvantage = false
+added_race = {}
+added_feats = {}
+added_other = {}
+total = 0

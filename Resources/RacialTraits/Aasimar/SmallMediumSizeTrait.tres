@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SmallMediumSizeTrait" load_steps=2 format=3 uid="uid://jvehisve3t58"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Aasimar/SmallMediumSizeTrait.gd" id="1_muu0a"]
+
+[resource]
+script = ExtResource("1_muu0a")
+size = "Small"
+unique_id = "small_medium_size"
+trait_name = "Size"
+description = "You are Medium or Small. You choose the size when you select this race."
+trait_speed = "Passive"

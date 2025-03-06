@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ShieldArmor" load_steps=2 format=3 uid="uid://bjlrds206xa65"]
+
+[ext_resource type="Script" path="res://Resources/Armor/shield_armor.gd" id="1_jllu4"]
+
+[resource]
+script = ExtResource("1_jllu4")
+unique_id = "shield"
+name = "Shield"
+description = ""
+cost = 10
+weight = 6
+stealth_disadvantage = false
+strength = "-"
+category = "Shield"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ArmoredCasingTrait" load_steps=2 format=3 uid="uid://7tfb0orhg5k"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Autognome/ArmoredCasingTrait.gd" id="1_x8cu1"]
+
+[resource]
+script = ExtResource("1_x8cu1")
+unique_id = "armored_casing"
+name = "Armored Casing"
+description = "You are encased in thin metal or some other durable material. While you aren't wearing armor, your base Armor Class is 13 + your Dexterity modifier."

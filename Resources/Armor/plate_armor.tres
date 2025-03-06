@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PlateArmor" load_steps=2 format=3 uid="uid://6jixh85etpw2"]
+
+[ext_resource type="Script" path="res://Resources/Armor/plate_armor.gd" id="1_wcgra"]
+
+[resource]
+script = ExtResource("1_wcgra")
+unique_id = "plate"
+name = "Plate"
+description = "Plate consists of shaped, interlocking metal plates to cover the entire body. A suit of plate includes gauntlets, heavy leather boots, a visored helmet, and thick layers of padding underneath the armor. Buckles and straps distribute the weight over the body."
+cost = 1500
+weight = 65
+stealth_disadvantage = true
+strength = "Str 15"
+category = "Heavy Armor"

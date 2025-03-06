@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TieflingData" load_steps=2 format=3 uid="uid://rhlekek586di"]
+
+[ext_resource type="Script" path="res://Resources/Races/Tiefling/TieflingData.gd" id="1_60k5s"]
+
+[resource]
+script = ExtResource("1_60k5s")
+unique_id = "asmodeus_tiefling"
+name = "Asmodeus Tiefling"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Player's Handbook"

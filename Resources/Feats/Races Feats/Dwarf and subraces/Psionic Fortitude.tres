@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://cxwm1rs17llek"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_7rjex"]
+
+[resource]
+script = ExtResource("1_7rjex")
+unique_id = "psionic_fortitude"
+name = "Psionic Fortitude"
+description = "You have advantage on saving throws you make to avoid or end the charmed or stunned condition on yourself."
+classes = Array[String]([])
+races = Array[String](["Duergar"])
+pre_req = Array[String]([])
+tags = Array[String](["duergar", "dwarf", "racial", "passive", "advantage", "saving throw"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ThrikreenData" load_steps=2 format=3 uid="uid://cqnh3b56x10be"]
+
+[ext_resource type="Script" path="res://Resources/Races/Thri-kreen/ThrikreenData.gd" id="1_tvqvf"]
+
+[resource]
+script = ExtResource("1_tvqvf")
+unique_id = "thri_kreen"
+name = "Thri-kreen"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Astral Adventurer's Guide"

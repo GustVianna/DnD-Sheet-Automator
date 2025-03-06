@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CelestialResistanceTrait" load_steps=2 format=3 uid="uid://dken53r3qrcui"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Aasimar/CelestialResistanceTrait.gd" id="1_o5f3y"]
+
+[resource]
+script = ExtResource("1_o5f3y")
+unique_id = "celestial_resistance"
+trait_name = "Celestial resistance"
+description = "You have resistance to necrotic damage and radiant damage."
+trait_speed = "Passive"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SentrysRestTrait" load_steps=2 format=3 uid="uid://x6c38y1xbnwx"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Autognome/SentrysRestTrait.gd" id="1_h5n1d"]
+
+[resource]
+script = ExtResource("1_h5n1d")
+unique_id = "creature_type_construct"
+name = "Creature Type"
+description = "You are a Construct."

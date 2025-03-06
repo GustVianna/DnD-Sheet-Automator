@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://crno83cj4i25j"]
+
+[ext_resource type="Script" path="res://Scripts/campfire_video.gd" id="1_b13gn"]
+[ext_resource type="VideoStream" path="res://Scenes/landscape30fps0001-0540.ogv" id="1_wkh8q"]
+[ext_resource type="Shader" path="res://Scenes/pixelized_scene_test.gdshader" id="2_1gpc5"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_k0r5f"]
+shader = ExtResource("2_1gpc5")
+shader_parameter/change_color_depth = true
+shader_parameter/target_color_depth = 7
+shader_parameter/dithering = true
+shader_parameter/scale_resolution = true
+shader_parameter/target_resolution_scale = 4
+shader_parameter/enable_recolor = false
+
+[node name="CampfireVideo" type="Node"]
+script = ExtResource("1_b13gn")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+z_index = 6
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_wkh8q")
+autoplay = true
+expand = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 7
+material = SubResource("ShaderMaterial_k0r5f")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

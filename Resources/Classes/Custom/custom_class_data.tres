@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CustomClassData" load_steps=2 format=3 uid="uid://mavb2w5h6vf4"]
+
+[ext_resource type="Script" path="res://Resources/Classes/Custom/custom_class_data.gd" id="1_huhkj"]
+
+[resource]
+script = ExtResource("1_huhkj")
+unique_id = "custom"
+name = "testando"
+description = ""
+features = Array[Resource("res://Resources/ClassTraits/ClassTraitData.gd")]([])

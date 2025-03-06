@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HalflingData" load_steps=2 format=3 uid="uid://cwiccmml3nq4g"]
+
+[ext_resource type="Script" path="res://Resources/Races/Halfling/HalflingData.gd" id="1_ikpst"]
+
+[resource]
+script = ExtResource("1_ikpst")
+unique_id = "mark_hospitality_halfling"
+name = "Mark of Hospitality Halfling"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Eberron: Rising from the Last War"

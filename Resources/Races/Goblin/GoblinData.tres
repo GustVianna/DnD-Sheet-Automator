@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GoblinData" load_steps=2 format=3 uid="uid://38b6jhyoueyu"]
+
+[ext_resource type="Script" path="res://Resources/Races/Goblin/GoblinData.gd" id="1_eaydn"]
+
+[resource]
+script = ExtResource("1_eaydn")
+unique_id = "goblin"
+name = "Goblin"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

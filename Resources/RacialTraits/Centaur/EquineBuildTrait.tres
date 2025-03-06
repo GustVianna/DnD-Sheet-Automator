@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EquineBuildTrait" load_steps=2 format=3 uid="uid://bmkwwmptu3p5i"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Centaur/EquineBuildTrait.gd" id="1_25cek"]
+
+[resource]
+script = ExtResource("1_25cek")
+unique_id = "equine_build"
+name = "Equine Build"
+description = "You count as one size larger when determining your carrying capacity and the weight you can push or drag.In addition, any climb that requires hands and feet is especially difficult for you because of your equine legs. When you make such a climb, each foot of movement costs you 4 extra feet instead of the normal 1 extra foot."

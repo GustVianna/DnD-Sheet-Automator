@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GemAncestryTrait" load_steps=2 format=3 uid="uid://d114r1eo1covl"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Dragonborn/GemAncestryTrait.gd" id="1_o83hx"]
+
+[resource]
+script = ExtResource("1_o83hx")
+unique_id = "gem_ancestry"
+name = "Gem Ancestry"
+description = "You have a gem dragon ancestor, granting you a special magical affinity. Choose one kind of dragon from the Gem Ancestry table. This determines the damage type for your other traits, as shown in the table."

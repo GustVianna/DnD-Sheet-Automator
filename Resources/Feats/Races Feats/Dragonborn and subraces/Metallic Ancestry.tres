@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://cyca0tbymf00v"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_o7n37"]
+
+[resource]
+script = ExtResource("1_o7n37")
+unique_id = "metallic_ancestry"
+name = "Metallic Ancestry"
+description = "You have a metallic dragon ancestor, granting you a special magical affinity. Choose one kind of dragon from the Metallic Ancestry table. This determines the damage type for your other traits, as shown in the table."
+classes = Array[String]([])
+races = Array[String](["Metallic Dragonborn"])
+pre_req = Array[String]([])
+tags = Array[String](["metallic", "dragonborn", "racial", "passive"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

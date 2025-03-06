@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CreatureTypeConstructTrait" load_steps=2 format=3 uid="uid://bn1m6dbcsgwot"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Autognome/CreatureTypeConstructTrait.gd" id="1_puchp"]
+
+[resource]
+script = ExtResource("1_puchp")
+unique_id = "creature_type_construct"
+name = "Creature Type"
+description = "You are a Construct."

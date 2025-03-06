@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://beomfr5de6v7b"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_pep4k"]
+
+[resource]
+script = ExtResource("1_pep4k")
+unique_id = "languages_dwarf"
+name = "Languages"
+description = "You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak."
+classes = Array[String]([])
+races = Array[String](["Hill Dwarf", "Mountain Dwarf"])
+pre_req = Array[String]([])
+tags = Array[String](["language", "dwarf", "racial", "passive", "dwarvish"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="FeyAncestryTrait" load_steps=2 format=3 uid="uid://0wfrvakwc006"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Bugbear/FeyAncestryTrait.gd" id="1_3mvvw"]
+
+[resource]
+script = ExtResource("1_3mvvw")
+unique_id = "fey_ancestry"
+name = "Fey Ancestry"
+description = "You have advantage on saving throws you make to avoid or end the charmed condition on yourself."

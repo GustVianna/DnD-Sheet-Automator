@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Insight" load_steps=2 format=3 uid="uid://b8f8wv0t8a2ti"]
+
+[ext_resource type="Script" path="res://Resources/Skills/Insight.gd" id="1_i23ko"]
+
+[resource]
+script = ExtResource("1_i23ko")
+skill_name = ""
+derived_ability = "Wisdom"
+proficiency = false
+proficiency_bonus = 0
+expertise = false
+expertise_bonus = 0
+advantage = false
+disadvantage = false
+added_other = 0
+other_source = ""
+total = 0

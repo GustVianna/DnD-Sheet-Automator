@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://c7gyau8wu8pag"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_w4jhw"]
+
+[resource]
+script = ExtResource("1_w4jhw")
+unique_id = "flight"
+name = "Flight"
+description = "Because of your wings, you have a flying speed equal to your walking speed. You can't use this flying speed if you're wearing medium or heavy armor."
+classes = Array[String]([])
+races = Array[String](["Aarakocra"])
+pre_req = Array[String]([])
+tags = Array[String](["flight", "aarakocra", "racial", "passive"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

@@ -1,0 +1,105 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv83kxpb63y4y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqclm"]
+bg_color = Color(0.960784, 0.937255, 0.905882, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(0.129412, 0.207843, 0.333333, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_6s46r"]
+LineEdit/colors/font_color = Color(0.129412, 0.207843, 0.333333, 1)
+LineEdit/styles/normal = SubResource("StyleBoxFlat_nqclm")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.129412, 0.207843, 0.333333, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+color = Color(0.309804, 0.439216, 0.611765, 1)
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 200
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 200
+
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer2"]
+layout_mode = 2
+color = Color(0.847059, 0.768627, 0.713726, 1)
+
+[node name="MarginContainer3" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 110
+theme_override_constants/margin_top = 210
+theme_override_constants/margin_right = 110
+theme_override_constants/margin_bottom = 210
+
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer3"]
+layout_mode = 2
+color = Color(0.960784, 0.937255, 0.905882, 1)
+
+[node name="LineEdit" type="LineEdit" parent="MarginContainer3/ColorRect2"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 229.0
+offset_right = 736.0
+offset_bottom = 308.0
+theme = SubResource("Theme_6s46r")
+theme_override_colors/caret_color = Color(0.847059, 0.768627, 0.713726, 1)
+theme_override_font_sizes/font_size = 50
+text = "BLABLABLA"
+
+[node name="Label" type="Label" parent="MarginContainer3/ColorRect2"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 20.0
+offset_right = 730.0
+offset_bottom = 189.0
+theme_override_colors/font_color = Color(0.129412, 0.207843, 0.333333, 1)
+theme_override_font_sizes/font_size = 50
+text = "NA TERRINHA NATE NATE 
+DANO DE FOGO"

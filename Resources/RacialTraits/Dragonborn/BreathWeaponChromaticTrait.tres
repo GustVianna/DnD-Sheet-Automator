@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BreathWeaponChromaticTrait" load_steps=2 format=3 uid="uid://bcyrrat4jp8na"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Dragonborn/BreathWeaponChromaticTrait.gd" id="1_4jnin"]
+
+[resource]
+script = ExtResource("1_4jnin")
+unique_id = "breath_weapon_chromatic"
+name = "Breath Weapon"
+description = "When you take the Attack action on your turn, you can replace one of your attacks with an exhalation of magical energy in a 30-foot line that is 5 feet wide. Each creature in that area must make a Dexterity saving throw (DC = 8 + your Constitution modifier + your proficiency bonus). On a failed save, the creature takes 1d10 damage of the type associated with your Chromatic Ancestry. On a successful save, it takes half as much damage. This damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).You can use your Breath Weapon a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ChangelingInstinctsTrait" load_steps=2 format=3 uid="uid://dywd81udrwhsq"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Changeling/ChangelingInstinctsTrait.gd" id="1_xjcin"]
+
+[resource]
+script = ExtResource("1_xjcin")
+unique_id = "changeling_instincts"
+name = "Changeling Instincts"
+description = "Thanks to your connection to the fey realm, you gain proficiency with two of the following skills of your choice: Deception, Insight, Intimidation, Performance, or Persuasion."

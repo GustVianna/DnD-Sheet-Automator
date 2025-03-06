@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ScaleMailArmor" load_steps=2 format=3 uid="uid://p7v22pidkcub"]
+
+[ext_resource type="Script" path="res://Resources/Armor/scale_mail_armor.gd" id="1_st4le"]
+
+[resource]
+script = ExtResource("1_st4le")
+unique_id = "half_plate"
+name = "Half Plate"
+description = "Half plate consists of shaped metal plates that cover most of the wearer’s body. It does not include leg protection beyond simple greaves that are attached with leather straps."
+cost = 750
+weight = 40
+stealth_disadvantage = true
+strength = "-"
+category = "Medium Armor"

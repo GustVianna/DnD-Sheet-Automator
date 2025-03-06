@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="AncestralLegacyTrait" load_steps=2 format=3 uid="uid://y134cptyf40i"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Dhampir/AncestralLegacyTrait.gd" id="1_2xo06"]
+
+[resource]
+script = ExtResource("1_2xo06")
+unique_id = "ancestral_legacy"
+name = "Ancestral Legacy"
+description = "If you replace a race with this lineage, you can keep the following elements of that race: any skill proficiencies you gained from it and any climbing, flying, or swimming speed you gained from it.If you don't keep any of those elements or you choose this lineage at character creation, you gain proficiency in two skills of your choice."

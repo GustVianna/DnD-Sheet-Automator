@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GnomeData" load_steps=2 format=3 uid="uid://d3osymkrfx7pk"]
+
+[ext_resource type="Script" path="res://Resources/Races/Gnome/GnomeData.gd" id="1_lyqi4"]
+
+[resource]
+script = ExtResource("1_lyqi4")
+unique_id = "mark_gnome"
+name = "Mark of Scribing Gnome"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Eberron: Rising from the Last War"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SorcererData" load_steps=2 format=3 uid="uid://bo1dgr77jh8vq"]
+
+[ext_resource type="Script" path="res://Resources/Classes/Sorcerer/sorcerer_data.gd" id="1_bip64"]
+
+[resource]
+script = ExtResource("1_bip64")
+unique_id = "sorcerer"
+name = "Sorcerer"
+description = ""
+features = Array[Resource("res://Resources/ClassTraits/ClassTraitData.gd")]([])

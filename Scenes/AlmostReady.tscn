@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=3 uid="uid://cglvvyt64315y"]
+
+[ext_resource type="Script" path="res://Scripts/AlmostReady.gd" id="1_4vybg"]
+[ext_resource type="Theme" uid="uid://g5dcmi2kejgv" path="res://Assets/Themes/TestTheme.tres" id="1_jaxys"]
+[ext_resource type="PackedScene" uid="uid://ntar0ljurf53" path="res://Scenes/BackgroundBio.tscn" id="3_qwakv"]
+[ext_resource type="PackedScene" uid="uid://dovpmp4f4ubog" path="res://Scenes/animated_button.tscn" id="4_ofk1h"]
+
+[node name="main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_jaxys")
+script = ExtResource("1_4vybg")
+
+[node name="Background2" parent="." instance=ExtResource("3_qwakv")]
+layout_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 300
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_right = 450
+
+[node name="AnimatedButton" parent="MarginContainer/VBoxContainer/VBoxContainer2/MarginContainer" instance=ExtResource("4_ofk1h")]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+label_name = "Back"
+
+[node name="Name" type="RichTextLabel" parent="MarginContainer/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=3.0 connected=1][center]What is your name?[/center][/wave]"
+fit_content = true
+
+[node name="AdventureName" type="RichTextLabel" parent="MarginContainer/VBoxContainer/VBoxContainer2"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=3.0 connected=1][center]What is your adventure's name?[/center][/wave]"
+fit_content = true
+
+[node name="NameEdit" type="LineEdit" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="AdventureNameEdit" type="LineEdit" parent="MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Next" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_ofk1h")]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+color_theme = "Primary"
+label_name = "Next"
+
+[node name="BeginAdventure" parent="MarginContainer/VBoxContainer" instance=ExtResource("4_ofk1h")]
+visible = false
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+color_theme = "Primary"
+label_name = "Begin Adventure"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer2/MarginContainer/AnimatedButton" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/BeginAdventure" to="." method="_on_begin_adventure_pressed"]

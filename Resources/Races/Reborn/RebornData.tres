@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="RebornData" load_steps=2 format=3 uid="uid://c0n5ybu7dqqc4"]
+
+[ext_resource type="Script" path="res://Resources/Races/Reborn/RebornData.gd" id="1_mypcq"]
+
+[resource]
+script = ExtResource("1_mypcq")
+unique_id = "reborn"
+name = "Reborn"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Van Richten's Guide to Ravenloft"

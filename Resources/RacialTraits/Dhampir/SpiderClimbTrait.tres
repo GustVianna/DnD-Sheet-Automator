@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SpiderClimbTrait" load_steps=2 format=3 uid="uid://46c6sr86704x"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Dhampir/SpiderClimbTrait.gd" id="1_66o2o"]
+
+[resource]
+script = ExtResource("1_66o2o")
+unique_id = "spider_climb"
+name = "Spider Climb"
+description = "You have a climbing speed equal to your walking speed. In addition, at 3rd level, you can move up, down, and across vertical surfaces and upside down along ceilings, while leaving your hands free."

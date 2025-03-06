@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PsionicMindTrait" load_steps=2 format=3 uid="uid://boolttm2n72au"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Dragonborn/PsionicMindTrait.gd" id="1_a876h"]
+
+[resource]
+script = ExtResource("1_a876h")
+unique_id = "psionic_mind"
+name = "Psionic Mind"
+description = "You can send telepathic messages to any creature you can see within 30 feet of you. You don't need to share a language with the creature for it to understand these messages, but it must be able to understand at least one language to comprehend them."

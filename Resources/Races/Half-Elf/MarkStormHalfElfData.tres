@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HalfElfData" load_steps=2 format=3 uid="uid://br0fw18bky4b6"]
+
+[ext_resource type="Script" path="res://Resources/Races/Half-Elf/HalfElfData.gd" id="1_e5yot"]
+
+[resource]
+script = ExtResource("1_e5yot")
+unique_id = "mark_storm_half_elf"
+name = "Mark of Storm Half-Elf"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Eberron: Rising from the Last War"

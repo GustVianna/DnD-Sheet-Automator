@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MechanicalNatureTrait" load_steps=2 format=3 uid="uid://d2ndre2hgi6ag"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Autognome/MechanicalNatureTrait.gd" id="1_bgew6"]
+
+[resource]
+script = ExtResource("1_bgew6")
+unique_id = "creature_type_construct"
+name = "Creature Type"
+description = "You are a Construct."

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PowerfulBuildTrait" load_steps=2 format=3 uid="uid://fsyr4vjtnvdg"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Bugbear/PowerfulBuildTrait.gd" id="1_xhlmd"]
+
+[resource]
+script = ExtResource("1_xhlmd")
+unique_id = "powerful_build"
+name = "Powerful Build"
+description = "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift."

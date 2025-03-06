@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Perception" load_steps=2 format=3 uid="uid://b2j18blcv0d72"]
+
+[ext_resource type="Script" path="res://Resources/Skills/Perception.gd" id="1_wqwlo"]
+
+[resource]
+script = ExtResource("1_wqwlo")
+skill_name = ""
+derived_ability = "Wisdom"
+proficiency = false
+proficiency_bonus = 0
+expertise = false
+expertise_bonus = 0
+advantage = false
+disadvantage = false
+added_other = 0
+other_source = ""
+total = 0

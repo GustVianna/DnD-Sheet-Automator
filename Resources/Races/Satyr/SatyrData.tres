@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SatyrData" load_steps=2 format=3 uid="uid://cu5beke1a12bx"]
+
+[ext_resource type="Script" path="res://Resources/Races/Satyr/SatyrData.gd" id="1_2lvam"]
+
+[resource]
+script = ExtResource("1_2lvam")
+unique_id = "satyr"
+name = "Satyr"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

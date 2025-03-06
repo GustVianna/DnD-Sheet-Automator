@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="KalashtarData" load_steps=2 format=3 uid="uid://cnla8e5dkn525"]
+
+[ext_resource type="Script" path="res://Resources/Races/Kalashtar/KalashtarData.gd" id="1_a2jsg"]
+
+[resource]
+script = ExtResource("1_a2jsg")
+unique_id = "kalashtar"
+name = "Kalashtar"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Eberron: Rising from the Last War"

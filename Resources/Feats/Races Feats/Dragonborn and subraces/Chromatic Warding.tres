@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://c7molrpgdubyw"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_j642k"]
+
+[resource]
+script = ExtResource("1_j642k")
+unique_id = "chromatic_warding"
+name = "Chromatic Warding"
+description = "Starting at 5th level, as an action, you can channel your draconic energy to protect yourself. For 1 minute, you become immune to the damage type associated with your Chromatic Ancestry. Once you use this trait, you can't do so again until you finish a long rest."
+classes = Array[String]([])
+races = Array[String](["Chromatic Dragonborn"])
+pre_req = Array[String]([])
+tags = Array[String](["chromatic", "dragonborn", "racial", "passive", "immune"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

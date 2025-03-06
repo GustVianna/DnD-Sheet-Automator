@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="UnarmoredDefenseData" load_steps=2 format=3 uid="uid://dmamucyb8fbd6"]
+
+[ext_resource type="Script" path="res://Resources/ClassTraits/Barbarian/unarmored_defense_data.gd" id="1_rd1ho"]
+
+[resource]
+script = ExtResource("1_rd1ho")
+trait_class = "Barbarian"
+unique_id = "unarmored_defense"
+trait_name = "Unarmored defense"
+description = "While you are not wearing any armor, your armor class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit."
+trait_speed = "Passive"
+level = 1.0

@@ -1,0 +1,1344 @@
+[gd_scene load_steps=6 format=3 uid="uid://dj122m1v5iics"]
+
+[ext_resource type="PackedScene" uid="uid://ntar0ljurf53" path="res://Scenes/BackgroundBio.tscn" id="1_6ehn6"]
+[ext_resource type="Script" path="res://Scripts/Race Definer.gd" id="1_46o80"]
+[ext_resource type="Theme" uid="uid://g5dcmi2kejgv" path="res://Assets/Themes/TestTheme.tres" id="1_ajxgs"]
+[ext_resource type="PackedScene" uid="uid://dovpmp4f4ubog" path="res://Scenes/animated_button.tscn" id="4_ht843"]
+[ext_resource type="Texture2D" uid="uid://it3pyg7e2o70" path="res://icon_profile.png" id="5_2ox1u"]
+
+[node name="Master" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" parent="." instance=ExtResource("1_6ehn6")]
+layout_mode = 1
+
+[node name="Race" type="Control" parent="."]
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Race"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 100
+
+[node name="Race Definer" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+theme = ExtResource("1_ajxgs")
+theme_override_constants/separation = 85
+script = ExtResource("1_46o80")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_right = 450
+
+[node name="Back" parent="Race/ScrollContainer/MarginContainer/Race Definer/VBoxContainer/MarginContainer" instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+label_name = "Back"
+
+[node name="LineEdit" type="RichTextLabel" parent="Race/ScrollContainer/MarginContainer/Race Definer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=3.0 connected=1][center]Choose your Lineage[/center][/wave]"
+fit_content = true
+
+[node name="A races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="A" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races"]
+layout_mode = 2
+text = "A
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races/MarginContainer"]
+layout_mode = 2
+
+[node name="Aarakocra" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races/Aarakocra"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races/Aarakocra/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races/Aarakocra/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("5_2ox1u")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races/Aarakocra/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Aarakocra"
+
+[node name="Aasimar" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races/Aasimar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races/Aasimar/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TextureRect" type="TextureRect" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races/Aasimar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("5_2ox1u")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races/Aasimar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Aasimar"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races/Aasimar/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="Autognome" parent="Race/ScrollContainer/MarginContainer/Race Definer/A races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Autognome"
+
+[node name="B races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="B" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/B races"]
+layout_mode = 2
+text = "B
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/B races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/B races/MarginContainer"]
+layout_mode = 2
+
+[node name="Bugbear" parent="Race/ScrollContainer/MarginContainer/Race Definer/B races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Bugbear"
+
+[node name="C races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="C" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/C races"]
+layout_mode = 2
+text = "C"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/C races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/C races/MarginContainer"]
+layout_mode = 2
+
+[node name="Centaur" parent="Race/ScrollContainer/MarginContainer/Race Definer/C races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Centaur"
+
+[node name="Changeling" parent="Race/ScrollContainer/MarginContainer/Race Definer/C races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Changeling"
+
+[node name="CustomRace" parent="Race/ScrollContainer/MarginContainer/Race Definer/C races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Custom"
+
+[node name="D Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="D" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races"]
+layout_mode = 2
+text = "D"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Dhampir" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Dhampir"
+
+[node name="Dragonborn" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races"]
+layout_mode = 2
+
+[node name="Dragonborn" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dragonborn" groups=["ButtonSubclasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Dragonborn"
+
+[node name="PanelContainer" type="PanelContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dragonborn"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dragonborn/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dragonborn/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="ChromaticDragonborn" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dragonborn/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Chromatic Dragonborn"
+
+[node name="GemDragonborn" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dragonborn/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Gem Dragonborn"
+
+[node name="MetallicDragonborn" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dragonborn/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Metallic Dragonborn"
+
+[node name="Dwarf" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races"]
+layout_mode = 2
+
+[node name="Dwarf" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dwarf" groups=["ButtonSubclasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Dwarf"
+
+[node name="PanelContainer" type="PanelContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dwarf"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dwarf/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dwarf/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="DuergarDwarf" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dwarf/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Duergar"
+
+[node name="HillDwarf" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dwarf/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Hill Dwarf"
+
+[node name="MountainDwarf" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dwarf/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Mountain Dwarf"
+
+[node name="WardingDwarf" parent="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dwarf/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Dwarf Mark of Warding"
+
+[node name="E Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="E" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races"]
+layout_mode = 2
+text = "E"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Elf" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races"]
+layout_mode = 2
+
+[node name="Elf" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf" groups=["ButtonSubclasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Elf"
+
+[node name="PanelContainer" type="PanelContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="DrowElf" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Drow Elf"
+
+[node name="EladrinElf" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Eladrin Elf"
+
+[node name="HighElf" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "High Elf"
+
+[node name="MarkofShadowElf" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Elf Mark of Shadow"
+
+[node name="SeaElf" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Sea Elf"
+
+[node name="ShadarElf" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Shadar-Kai Elf"
+
+[node name="WoodElf" parent="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Wood Elf"
+
+[node name="F Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="F" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/F Races"]
+layout_mode = 2
+text = "D"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/F Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/F Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Fairy" parent="Race/ScrollContainer/MarginContainer/Race Definer/F Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Fairy"
+
+[node name="Firbolg" parent="Race/ScrollContainer/MarginContainer/Race Definer/F Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Firbolg"
+
+[node name="G Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="G" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races"]
+layout_mode = 2
+text = "G"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Genasi" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races"]
+layout_mode = 2
+
+[node name="Genasi" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Genasi" groups=["ButtonSubclasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Genasi"
+
+[node name="PanelContainer" type="PanelContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Genasi"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Genasi/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Genasi/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="AirGenasi" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Genasi/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Air Genasi"
+
+[node name="EarthGenasi" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Genasi/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Earth Genasi"
+
+[node name="FireGenasi" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Genasi/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Fire Genasi"
+
+[node name="WaterGenasi" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Genasi/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Water Genasi"
+
+[node name="Giff" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Giff"
+
+[node name="Gith" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races"]
+layout_mode = 2
+
+[node name="Gith" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gith" groups=["ButtonSubclasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Gith"
+
+[node name="PanelContainer" type="PanelContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gith"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gith/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gith/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="GithyankiGith" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gith/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Githyanki"
+
+[node name="GithzeraiGith" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gith/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Githzerai"
+
+[node name="Gnome" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races"]
+layout_mode = 2
+
+[node name="Gnome" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gnome" groups=["ButtonSubclasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Gnome"
+
+[node name="PanelContainer" type="PanelContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gnome"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gnome/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gnome/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="DeepGnome" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gnome/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Deep Gnome"
+
+[node name="ForestGnome" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gnome/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Forest Gnome"
+
+[node name="MarkGnome" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gnome/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Gnome Mark of Scribing"
+
+[node name="RockGnome" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gnome/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Rock Gnome"
+
+[node name="Goblin" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Goblin"
+
+[node name="Goliath" parent="Race/ScrollContainer/MarginContainer/Race Definer/G Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Goliath"
+
+[node name="H Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="H" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races"]
+layout_mode = 2
+text = "H"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Hadozee" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Hadozee"
+
+[node name="HalfElf" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races"]
+layout_mode = 2
+
+[node name="HalfElf" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfElf" groups=["ButtonSubclasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Half-Elf"
+
+[node name="PanelContainer" type="PanelContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfElf"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfElf/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfElf/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HalfElf" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfElf/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Half-Elf"
+
+[node name="MarkDetectionHalfElf" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfElf/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Half-Elf Mark of Detection"
+
+[node name="MarkStormHalfElf" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfElf/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Half-Elf Mark of Storm"
+
+[node name="HalfOrc" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races"]
+layout_mode = 2
+
+[node name="HalfOrc" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfOrc" groups=["ButtonSubclasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Half-Orc"
+
+[node name="PanelContainer" type="PanelContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfOrc"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfOrc/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfOrc/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HalfOrc" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfOrc/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Half-Orc"
+
+[node name="MarkHalfOrc" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfOrc/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Half-Orc Mark of Finding"
+
+[node name="Halfling" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races"]
+layout_mode = 2
+
+[node name="Halfling" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling" groups=["ButtonSubclasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Halfling"
+
+[node name="PanelContainer" type="PanelContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="LightfootHalfling" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Lightfoot Halfling"
+
+[node name="StoutHalfling" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Stout Halfling"
+
+[node name="HospitalityHalfling" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Halfling (Mark of Hospitality)"
+
+[node name="HealingHalfling" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Halfling (Mark of Healing)"
+
+[node name="GhostwiseHalfling" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Halfling (Ghostwise)"
+
+[node name="Harengon" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Harengon"
+
+[node name="Hexblood" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Hexblood"
+
+[node name="Hobgoblin" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Hobgoblin"
+
+[node name="Human" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races"]
+layout_mode = 2
+
+[node name="Human" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human" groups=["ButtonSubclasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Human"
+
+[node name="PanelContainer" type="PanelContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Human" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Human"
+
+[node name="VariantHuman" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Human (Variant)"
+
+[node name="MakingHuman" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Human (Mark of Making)"
+
+[node name="PassageHuman" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Human (Mark of Passage)"
+
+[node name="SentinelHuman" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Human (Mark of Sentinel)"
+
+[node name="HandlingHuman" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Human (Mark of Handling)"
+
+[node name="FindingHuman" parent="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Human (Mark of Finding)"
+
+[node name="K Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="K" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/K Races"]
+layout_mode = 2
+text = "K"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/K Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/K Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Kalashtar" parent="Race/ScrollContainer/MarginContainer/Race Definer/K Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Kalashtar"
+
+[node name="Kender" parent="Race/ScrollContainer/MarginContainer/Race Definer/K Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Kender"
+
+[node name="Kenku" parent="Race/ScrollContainer/MarginContainer/Race Definer/K Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Kenku"
+
+[node name="Kobold" parent="Race/ScrollContainer/MarginContainer/Race Definer/K Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Kobold"
+
+[node name="L Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="L" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/L Races"]
+layout_mode = 2
+text = "L"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/L Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/L Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Leonin" parent="Race/ScrollContainer/MarginContainer/Race Definer/L Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Leonin"
+
+[node name="Lizardfolk" parent="Race/ScrollContainer/MarginContainer/Race Definer/L Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Lizardfolk"
+
+[node name="Loxodon" parent="Race/ScrollContainer/MarginContainer/Race Definer/L Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Loxodon"
+
+[node name="M Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="M" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/M Races"]
+layout_mode = 2
+text = "M"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/M Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/M Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Minotaur" parent="Race/ScrollContainer/MarginContainer/Race Definer/M Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Minotaur"
+
+[node name="O Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="O" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/O Races"]
+layout_mode = 2
+text = "O"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/O Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/O Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Orc" parent="Race/ScrollContainer/MarginContainer/Race Definer/O Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Orc"
+
+[node name="Owlin" parent="Race/ScrollContainer/MarginContainer/Race Definer/O Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Owlin"
+
+[node name="P Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="P" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/P Races"]
+layout_mode = 2
+text = "P"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/P Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/P Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Plasmoid" parent="Race/ScrollContainer/MarginContainer/Race Definer/P Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Plasmoid"
+
+[node name="R Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="R" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/R Races"]
+layout_mode = 2
+text = "R"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/R Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/R Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Reborn" parent="Race/ScrollContainer/MarginContainer/Race Definer/R Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Reborn"
+
+[node name="S Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="S" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/S Races"]
+layout_mode = 2
+text = "S"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/S Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/S Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Satyr" parent="Race/ScrollContainer/MarginContainer/Race Definer/S Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Satyr"
+
+[node name="Shifter" parent="Race/ScrollContainer/MarginContainer/Race Definer/S Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Shifter"
+
+[node name="SimicHybrid" parent="Race/ScrollContainer/MarginContainer/Race Definer/S Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "SimicHybrid"
+
+[node name="T Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="T" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races"]
+layout_mode = 2
+text = "T"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Tabaxi" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Tabaxi"
+
+[node name="Thri-kreen" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Thri-kreen"
+
+[node name="Tortle" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Tortle"
+
+[node name="Triton" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Triton"
+
+[node name="Tiefling" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races"]
+layout_mode = 2
+
+[node name="Tiefling" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling" groups=["ButtonSubclasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Human"
+
+[node name="PanelContainer" type="PanelContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="AsmodeusTiefling" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Tiefling (Asmodeus)"
+
+[node name="BaalzebulTiefling" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Tiefling Baalzebul"
+
+[node name="DispaterTiefling" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Tiefling (Dispater)"
+
+[node name="FiernaTiefling" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Tiefling (Fierna)"
+
+[node name="GlasyaTiefling" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Tiefling (Glasya)"
+
+[node name="LevistusTiefling" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Tiefling (Levistus)"
+
+[node name="MammonTiefling" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Tiefling (Mammon)"
+
+[node name="MephistophelesTiefling" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Tiefling (Mephistopheles)"
+
+[node name="ZarielTiefling" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Tiefling (Zariel)"
+
+[node name="VariantTiefling" parent="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Tiefling (Variant)"
+
+[node name="V Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="V" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/V Races"]
+layout_mode = 2
+text = "V"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/V Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/V Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Vedalken" parent="Race/ScrollContainer/MarginContainer/Race Definer/V Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Vedalken"
+
+[node name="Verdan" parent="Race/ScrollContainer/MarginContainer/Race Definer/V Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Verdan"
+
+[node name="W Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="W" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/W Races"]
+layout_mode = 2
+text = "W"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/W Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/W Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Warforged" parent="Race/ScrollContainer/MarginContainer/Race Definer/W Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Warforged"
+
+[node name="Y Races" type="VBoxContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Y" type="Label" parent="Race/ScrollContainer/MarginContainer/Race Definer/Y Races"]
+layout_mode = 2
+text = "Y"
+
+[node name="MarginContainer" type="MarginContainer" parent="Race/ScrollContainer/MarginContainer/Race Definer/Y Races"]
+layout_mode = 2
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 40
+
+[node name="HSeparator" type="HSeparator" parent="Race/ScrollContainer/MarginContainer/Race Definer/Y Races/MarginContainer"]
+layout_mode = 2
+
+[node name="Yuan-Ti" parent="Race/ScrollContainer/MarginContainer/Race Definer/Y Races" groups=["ButtonClasses"] instance=ExtResource("4_ht843")]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 2
+size_flags_vertical = 3
+label_name = "Yuan-Ti"
+
+[connection signal="pressed" from="Race/ScrollContainer/MarginContainer/Race Definer/VBoxContainer/MarginContainer/Back" to="Race/ScrollContainer/MarginContainer/Race Definer" method="_on_back_pressed"]
+
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/A races/Aarakocra"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/A races/Aasimar"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/A races/Autognome"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/B races/Bugbear"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/C races/Centaur"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/C races/Changeling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/C races/CustomRace"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dhampir"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dragonborn/Dragonborn"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dragonborn/PanelContainer/MarginContainer/VBoxContainer/ChromaticDragonborn"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dragonborn/PanelContainer/MarginContainer/VBoxContainer/GemDragonborn"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dragonborn/PanelContainer/MarginContainer/VBoxContainer/MetallicDragonborn"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dwarf/Dwarf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dwarf/PanelContainer/MarginContainer/VBoxContainer/DuergarDwarf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dwarf/PanelContainer/MarginContainer/VBoxContainer/HillDwarf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dwarf/PanelContainer/MarginContainer/VBoxContainer/MountainDwarf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/D Races/Dwarf/PanelContainer/MarginContainer/VBoxContainer/WardingDwarf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/Elf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer/VBoxContainer/DrowElf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer/VBoxContainer/EladrinElf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer/VBoxContainer/HighElf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer/VBoxContainer/MarkofShadowElf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer/VBoxContainer/SeaElf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer/VBoxContainer/ShadarElf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/E Races/Elf/PanelContainer/MarginContainer/VBoxContainer/WoodElf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/F Races/Fairy"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/F Races/Firbolg"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Genasi/Genasi"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Genasi/PanelContainer/MarginContainer/VBoxContainer/AirGenasi"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Genasi/PanelContainer/MarginContainer/VBoxContainer/EarthGenasi"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Genasi/PanelContainer/MarginContainer/VBoxContainer/FireGenasi"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Genasi/PanelContainer/MarginContainer/VBoxContainer/WaterGenasi"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Giff"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gith/Gith"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gith/PanelContainer/MarginContainer/VBoxContainer/GithyankiGith"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gith/PanelContainer/MarginContainer/VBoxContainer/GithzeraiGith"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gnome/Gnome"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gnome/PanelContainer/MarginContainer/VBoxContainer/DeepGnome"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gnome/PanelContainer/MarginContainer/VBoxContainer/ForestGnome"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gnome/PanelContainer/MarginContainer/VBoxContainer/MarkGnome"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Gnome/PanelContainer/MarginContainer/VBoxContainer/RockGnome"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Goblin"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/G Races/Goliath"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Hadozee"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfElf/HalfElf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfElf/PanelContainer/MarginContainer/VBoxContainer/HalfElf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfElf/PanelContainer/MarginContainer/VBoxContainer/MarkDetectionHalfElf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfElf/PanelContainer/MarginContainer/VBoxContainer/MarkStormHalfElf"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfOrc/HalfOrc"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfOrc/PanelContainer/MarginContainer/VBoxContainer/HalfOrc"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/HalfOrc/PanelContainer/MarginContainer/VBoxContainer/MarkHalfOrc"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling/Halfling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling/PanelContainer/MarginContainer/VBoxContainer/LightfootHalfling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling/PanelContainer/MarginContainer/VBoxContainer/StoutHalfling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling/PanelContainer/MarginContainer/VBoxContainer/HospitalityHalfling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling/PanelContainer/MarginContainer/VBoxContainer/HealingHalfling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Halfling/PanelContainer/MarginContainer/VBoxContainer/GhostwiseHalfling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Harengon"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Hexblood"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Hobgoblin"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/Human"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer/VBoxContainer/Human"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer/VBoxContainer/VariantHuman"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer/VBoxContainer/MakingHuman"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer/VBoxContainer/PassageHuman"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer/VBoxContainer/SentinelHuman"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer/VBoxContainer/HandlingHuman"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/H Races/Human/PanelContainer/MarginContainer/VBoxContainer/FindingHuman"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/K Races/Kalashtar"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/K Races/Kender"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/K Races/Kenku"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/K Races/Kobold"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/L Races/Leonin"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/L Races/Lizardfolk"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/L Races/Loxodon"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/M Races/Minotaur"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/O Races/Orc"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/O Races/Owlin"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/P Races/Plasmoid"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/R Races/Reborn"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/S Races/Satyr"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/S Races/Shifter"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/S Races/SimicHybrid"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tabaxi"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Thri-kreen"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tortle"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Triton"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/Tiefling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer/AsmodeusTiefling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer/BaalzebulTiefling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer/DispaterTiefling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer/FiernaTiefling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer/GlasyaTiefling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer/LevistusTiefling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer/MammonTiefling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer/MephistophelesTiefling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer/ZarielTiefling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/T Races/Tiefling/PanelContainer/MarginContainer/VBoxContainer/VariantTiefling"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/V Races/Vedalken"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/V Races/Verdan"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/W Races/Warforged"]
+[editable path="Race/ScrollContainer/MarginContainer/Race Definer/Y Races/Yuan-Ti"]

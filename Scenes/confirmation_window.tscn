@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3xbu3m1x2dlf"]
+
+[ext_resource type="Theme" uid="uid://g5dcmi2kejgv" path="res://Assets/Themes/TestTheme.tres" id="1_25tpa"]
+[ext_resource type="Script" path="res://Scenes/confirmation_window.gd" id="1_bar5i"]
+[ext_resource type="PackedScene" uid="uid://dovpmp4f4ubog" path="res://Scenes/animated_button.tscn" id="2_c7r1u"]
+
+[node name="ConfirmationWindow" type="PanelContainer"]
+custom_minimum_size = Vector2(700, 350)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_25tpa")
+script = ExtResource("1_bar5i")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Are you sure?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="OK" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_c7r1u")]
+layout_mode = 2
+size_flags_horizontal = 3
+color_theme = "Primary"
+label_name = "OK"
+
+[node name="Cancel" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("2_c7r1u")]
+layout_mode = 2
+size_flags_horizontal = 3
+color_theme = "Red"
+label_name = "Cancel"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/OK" to="." method="_on_ok_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Cancel" to="." method="_on_cancel_pressed"]

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BuiltforSuccessTrait" load_steps=2 format=3 uid="uid://cjbieyr5lax2g"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Autognome/BuiltforSuccessTrait.gd" id="1_xtfh2"]
+
+[resource]
+script = ExtResource("1_xtfh2")
+unique_id = "built_for_success"
+name = "Built for Success"
+description = "You can add a d4 to one attack roll, ability check, or saving throw you make, and you can do so after seeing the d20 roll but before the effects of the roll are resolved. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."

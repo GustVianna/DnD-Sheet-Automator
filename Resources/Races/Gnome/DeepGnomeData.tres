@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GnomeData" load_steps=2 format=3 uid="uid://bc4odoch6vcln"]
+
+[ext_resource type="Script" path="res://Resources/Races/Gnome/GnomeData.gd" id="1_t42im"]
+
+[resource]
+script = ExtResource("1_t42im")
+unique_id = "deep_gnome"
+name = "Deep Gnome"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

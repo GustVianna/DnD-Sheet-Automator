@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GiffData" load_steps=2 format=3 uid="uid://6ubxs1jpasr4"]
+
+[ext_resource type="Script" path="res://Resources/Races/Giff/GiffData.gd" id="1_8ssky"]
+
+[resource]
+script = ExtResource("1_8ssky")
+unique_id = "giff"
+name = "Giff"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Astral Adventurer's Guide"

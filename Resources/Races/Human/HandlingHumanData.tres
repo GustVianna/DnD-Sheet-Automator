@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HumanData" load_steps=2 format=3 uid="uid://d0vp3lvhkhg5"]
+
+[ext_resource type="Script" path="res://Resources/Races/Human/HumanData.gd" id="1_j2ba2"]
+
+[resource]
+script = ExtResource("1_j2ba2")
+unique_id = "mark_handling_human"
+name = "Mark of Handling Human"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Eberron: Rising from the Last War"

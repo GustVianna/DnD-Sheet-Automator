@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="HideArmor" load_steps=2 format=3 uid="uid://b52vpop0lrw7b"]
+
+[ext_resource type="Script" path="res://Resources/Armor/hide_armor.gd" id="1_put6d"]
+
+[resource]
+script = ExtResource("1_put6d")
+unique_id = "hide"
+name = "Hide"
+description = "This crude armor consists of thick furs and pelts. It is commonly worn by barbarian tribes, evil humanoids, and other folk who lack access to the tools and materials needed to create better armor."
+cost = 10
+weight = 12
+stealth_disadvantage = false
+strength = "-"
+category = "Medium Armor"

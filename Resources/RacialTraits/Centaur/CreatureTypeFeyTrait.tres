@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CreatureTypeFeyTrait" load_steps=2 format=3 uid="uid://cyvfwmuy34xr3"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Centaur/CreatureTypeFeyTrait.gd" id="1_eh5b4"]
+
+[resource]
+script = ExtResource("1_eh5b4")
+unique_id = "creature_type_fey"
+name = "Creature Type"
+description = "You are a Fey."

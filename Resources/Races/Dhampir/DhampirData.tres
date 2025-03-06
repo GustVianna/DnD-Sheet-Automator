@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DhampirData" load_steps=2 format=3 uid="uid://y100dx2b22r4"]
+
+[ext_resource type="Script" path="res://Resources/Races/Dhampir/DhampirData.gd" id="1_j1tg3"]
+
+[resource]
+script = ExtResource("1_j1tg3")
+unique_id = "dhampir"
+name = "Dhampir"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Van Richten's Guide to Ravenloft"

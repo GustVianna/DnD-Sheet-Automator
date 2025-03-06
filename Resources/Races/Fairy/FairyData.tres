@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FairyData" load_steps=2 format=3 uid="uid://dclqu8gx0m17g"]
+
+[ext_resource type="Script" path="res://Resources/Races/Fairy/FairyData.gd" id="1_h4d46"]
+
+[resource]
+script = ExtResource("1_h4d46")
+unique_id = "fairy"
+name = "Fairy"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

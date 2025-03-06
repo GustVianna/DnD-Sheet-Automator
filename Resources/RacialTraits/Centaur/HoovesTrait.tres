@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EquineBuildTrait" load_steps=2 format=3 uid="uid://28pu1cypngra"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Centaur/EquineBuildTrait.gd" id="1_pgmjy"]
+
+[resource]
+script = ExtResource("1_pgmjy")
+unique_id = "hooves"
+name = "Hooves"
+description = "You have hooves that you can use to make unarmed strikes. When you hit with them, the strike deals 1d6 + your Strength modifier bludgeoning damage, instead of the bludgeoning damage normal for an unarmed strike."

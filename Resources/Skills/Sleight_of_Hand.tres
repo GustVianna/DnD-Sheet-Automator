@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Sleight_of_Hand" load_steps=2 format=3 uid="uid://btl0c4hb61gsx"]
+
+[ext_resource type="Script" path="res://Resources/Skills/Sleight_of_Hand.gd" id="1_nu0gw"]
+
+[resource]
+script = ExtResource("1_nu0gw")
+skill_name = ""
+derived_ability = "Dexterity"
+proficiency = false
+proficiency_bonus = 0
+expertise = false
+expertise_bonus = 0
+advantage = false
+disadvantage = false
+added_other = 0
+other_source = ""
+total = 0

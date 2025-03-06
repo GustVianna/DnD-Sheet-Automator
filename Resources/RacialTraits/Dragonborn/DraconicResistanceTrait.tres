@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="DraconicResistanceTrait" load_steps=2 format=3 uid="uid://va1jkdq4f188"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Dragonborn/DraconicResistanceTrait.gd" id="1_agrre"]
+
+[resource]
+script = ExtResource("1_agrre")
+unique_id = "draconic_resistance"
+name = "Draconic Resistance"
+description = "You have resistance to the damage type associated with your Ancestry."

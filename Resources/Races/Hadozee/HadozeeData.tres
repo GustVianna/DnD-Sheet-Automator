@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HadozeeData" load_steps=2 format=3 uid="uid://c5lcjgqgtvan5"]
+
+[ext_resource type="Script" path="res://Resources/Races/Hadozee/HadozeeData.gd" id="1_rn3lx"]
+
+[resource]
+script = ExtResource("1_rn3lx")
+unique_id = "hadozee"
+name = "Hadozee"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Astral Adventurer's Guide"

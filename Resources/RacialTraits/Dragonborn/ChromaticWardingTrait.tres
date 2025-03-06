@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ChromaticWardingTrait" load_steps=2 format=3 uid="uid://ctaki847kgmh1"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Dragonborn/ChromaticWardingTrait.gd" id="1_pyckv"]
+
+[resource]
+script = ExtResource("1_pyckv")
+unique_id = "chromatic_warding"
+name = "Chromatic Warding"
+description = "Starting at 5th level, as an action, you can channel your draconic energy to protect yourself. For 1 minute, you become immune to the damage type associated with your Chromatic Ancestry. Once you use this trait, you can't do so again until you finish a long rest."

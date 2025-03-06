@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PaladinData" load_steps=2 format=3 uid="uid://83bh6801fbv1"]
+
+[ext_resource type="Script" path="res://Resources/Classes/Paladin/paladin_data.gd" id="1_tbabi"]
+
+[resource]
+script = ExtResource("1_tbabi")
+unique_id = "paladin"
+name = "Paladin"
+description = ""
+features = Array[Resource("res://Resources/ClassTraits/ClassTraitData.gd")]([])

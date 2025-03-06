@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Athletics" load_steps=2 format=3 uid="uid://cen4pmcv23tha"]
+
+[ext_resource type="Script" path="res://Resources/Skills/Athletics.gd" id="1_em3hg"]
+
+[resource]
+script = ExtResource("1_em3hg")
+skill_name = ""
+derived_ability = "Strength"
+proficiency = false
+proficiency_bonus = 0
+expertise = false
+expertise_bonus = 0
+advantage = false
+disadvantage = false
+added_other = 0
+other_source = ""
+total = 0

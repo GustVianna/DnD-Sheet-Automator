@@ -1,0 +1,135 @@
+[gd_scene load_steps=5 format=3 uid="uid://q63wfk4uxeqp"]
+
+[ext_resource type="Script" path="res://Scripts/ScrollControl.gd" id="1_0ku0y"]
+[ext_resource type="Texture2D" uid="uid://clso65kma06g7" path="res://icon.svg" id="2_mmgdm"]
+[ext_resource type="Resource" uid="uid://pqbfdqb6ypfm" path="res://Resources/Spells/AcidSplash.tres" id="2_ogw1b"]
+[ext_resource type="Script" path="res://Scripts/Spell.gd" id="3_r6i2d"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollControl" type="Control" parent="."]
+custom_minimum_size = Vector2(576, 1024)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ku0y")
+
+[node name="TextureRect" type="TextureRect" parent="ScrollControl"]
+custom_minimum_size = Vector2(2304, 1024)
+layout_mode = 2
+offset_right = 2304.0
+offset_bottom = 1024.0
+texture = ExtResource("2_mmgdm")
+
+[node name="Timer" type="Timer" parent="ScrollControl"]
+wait_time = 0.5
+one_shot = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 943.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Button" type="Button" parent="ScrollControl/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TEST"
+
+[node name="Button2" type="Button" parent="ScrollControl/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TEST2"
+
+[node name="Button3" type="Button" parent="ScrollControl/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TEST3"
+
+[node name="Button4" type="Button" parent="ScrollControl/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TEST4"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_r6i2d")
+card_data = ExtResource("2_ogw1b")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 36.0
+offset_right = 551.0
+offset_bottom = 76.0
+text = "null
+"
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 129.0
+offset_right = 539.0
+offset_bottom = 169.0
+text = "null
+"
+
+[node name="Label3" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 217.0
+offset_right = 535.0
+offset_bottom = 257.0
+text = "null
+"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_top = 308.0
+offset_right = 338.0
+offset_bottom = 805.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "-"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "null"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "+"
+
+[connection signal="timeout" from="ScrollControl/Timer" to="ScrollControl" method="_on_timer_timeout"]
+[connection signal="pressed" from="ScrollControl/HBoxContainer/Button" to="ScrollControl" method="_on_button_pressed"]
+[connection signal="pressed" from="ScrollControl/HBoxContainer/Button2" to="ScrollControl" method="_on_button_2_pressed"]
+[connection signal="pressed" from="ScrollControl/HBoxContainer/Button3" to="ScrollControl" method="_on_button_3_pressed"]
+[connection signal="pressed" from="ScrollControl/HBoxContainer/Button4" to="ScrollControl" method="_on_button_4_pressed"]

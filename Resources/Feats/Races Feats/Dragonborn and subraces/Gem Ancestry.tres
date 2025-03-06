@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://cf4tpxnpr8c3p"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_j0ce7"]
+
+[resource]
+script = ExtResource("1_j0ce7")
+unique_id = "gem_ancestry"
+name = "Gem Ancestry"
+description = "You have a gem dragon ancestor, granting you a special magical affinity. Choose one kind of dragon from the Gem Ancestry table. This determines the damage type for your other traits, as shown in the table."
+classes = Array[String]([])
+races = Array[String](["Gem Dragonborn"])
+pre_req = Array[String]([])
+tags = Array[String](["gem", "dragonborn", "racial", "passive"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

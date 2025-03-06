@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Charisma" load_steps=2 format=3 uid="uid://bmnttvfd14614"]
+
+[ext_resource type="Script" path="res://Resources/AbilityScore/charisma.gd" id="1_r0pxl"]
+
+[resource]
+script = ExtResource("1_r0pxl")
+ability_name = ""
+advantage = false
+disadvantage = false
+added_race = {}
+added_feats = {}
+added_other = {}
+total = 0

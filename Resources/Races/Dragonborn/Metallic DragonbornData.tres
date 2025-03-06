@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DragonbornData" load_steps=2 format=3 uid="uid://byybcylkeu85p"]
+
+[ext_resource type="Script" path="res://Resources/Races/Dragonborn/DragonbornData.gd" id="1_fg0ym"]
+
+[resource]
+script = ExtResource("1_fg0ym")
+unique_id = "metallic_dragonborn"
+name = "Metallic Dragonborn"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Fizban's Treasury of Dragons"

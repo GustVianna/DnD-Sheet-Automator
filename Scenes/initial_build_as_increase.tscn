@@ -1,0 +1,654 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxopnycrufvg7"]
+
+[ext_resource type="Theme" uid="uid://g5dcmi2kejgv" path="res://Assets/Themes/TestTheme.tres" id="1_21t3p"]
+[ext_resource type="PackedScene" uid="uid://ntar0ljurf53" path="res://Scenes/BackgroundBio.tscn" id="2_nn23f"]
+[ext_resource type="Script" path="res://Scripts/initial_build_as_increase.gd" id="2_vqw71"]
+[ext_resource type="PackedScene" uid="uid://dovpmp4f4ubog" path="res://Scenes/animated_button.tscn" id="4_ux6vw"]
+
+[node name="InitialBuildASIncrease" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_21t3p")
+script = ExtResource("2_vqw71")
+
+[node name="Background" parent="." instance=ExtResource("2_nn23f")]
+layout_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scroll_vertical = 100
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="ASIncrease" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/ASIncrease"]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_right = 450
+
+[node name="AnimatedButton" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer2/MarginContainer" instance=ExtResource("4_ux6vw")]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+label_name = "Back"
+
+[node name="LineEdit" type="RichTextLabel" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=3.0 connected=1][center]Ability Score Increase[/center][/wave]"
+fit_content = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="RaceBonus" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/RaceBonus"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/RaceBonus/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/RaceBonus/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="CheckBox" type="CheckBox" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/RaceBonus/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="PointBuyAmount" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/RaceBonus/PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Use lineage Ability Score Increases"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stats" type="GridContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 50
+columns = 3
+
+[node name="Strength" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Strength" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength" groups=["StatButton"] instance=ExtResource("4_ux6vw")]
+z_index = 1
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+label_name = "10"
+
+[node name="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength/Strength" index="1"]
+theme_override_font_sizes/font_size = 60
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Strength" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Strength"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Bonuses" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = "+2 Bonus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer/Label" groups=["+2Check"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "+1 Bonus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer2/Label" groups=["+1Check"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dexterity" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Dexterity" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity" groups=["StatButton"] instance=ExtResource("4_ux6vw")]
+z_index = 1
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+label_name = "10"
+
+[node name="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity/Dexterity" index="1"]
+theme_override_font_sizes/font_size = 60
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Dexterity" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Dexterity"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Bonuses" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = "+2 Bonus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer/Label" groups=["+2Check"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "+1 Bonus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer2/Label" groups=["+1Check"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Constitution" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Constitution" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution" groups=["StatButton"] instance=ExtResource("4_ux6vw")]
+z_index = 1
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+label_name = "10"
+
+[node name="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution/Constitution" index="1"]
+theme_override_font_sizes/font_size = 60
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Constitution" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Constitution"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Bonuses" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = "+2 Bonus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer/Label" groups=["+2Check"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "+1 Bonus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer2/Label" groups=["+1Check"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Intelligence" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Intelligence" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence" groups=["StatButton"] instance=ExtResource("4_ux6vw")]
+z_index = 1
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+label_name = "10"
+
+[node name="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence/Intelligence" index="1"]
+theme_override_font_sizes/font_size = 60
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Intelligence" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Intelligence"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Bonuses" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = "+2 Bonus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer/Label" groups=["+2Check"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "+1 Bonus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer2/Label" groups=["+1Check"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Wisdom" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Wisdom" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom" groups=["StatButton"] instance=ExtResource("4_ux6vw")]
+z_index = 1
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+label_name = "10"
+
+[node name="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom/Wisdom" index="1"]
+theme_override_font_sizes/font_size = 60
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Wisdom" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Wisdom"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Bonuses" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = "+2 Bonus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer/Label" groups=["+2Check"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "+1 Bonus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer2/Label" groups=["+1Check"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Charisma" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Charisma" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma" groups=["StatButton"] instance=ExtResource("4_ux6vw")]
+z_index = 1
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+label_name = "10"
+
+[node name="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma/Charisma" index="1"]
+theme_override_font_sizes/font_size = 60
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Charisma" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Charisma"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+
+[node name="Bonuses" type="VBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = "+2 Bonus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer/Label" groups=["+2Check"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 30
+text = "+1 Bonus"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CheckBox" type="CheckBox" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/Bonuses/HBoxContainer2/Label" groups=["+1Check"]]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedButton" parent="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer" instance=ExtResource("4_ux6vw")]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+color_theme = "Primary"
+label_name = "Next"
+
+[connection signal="pressed" from="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer2/MarginContainer/AnimatedButton" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/AnimatedButton" to="." method="_on_next_button_pressed"]
+
+[editable path="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Strength/Strength"]
+[editable path="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Dexterity/Dexterity"]
+[editable path="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Constitution/Constitution"]
+[editable path="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Intelligence/Intelligence"]
+[editable path="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Wisdom/Wisdom"]
+[editable path="ScrollContainer/ASIncrease/VBoxContainer/VBoxContainer/Stats/Charisma/Charisma"]

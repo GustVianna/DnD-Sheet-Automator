@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TalonsTrait" load_steps=2 format=3 uid="uid://cxitc46wmmku5"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Aarakocra/TalonsTrait.gd" id="1_rlcci"]
+
+[resource]
+script = ExtResource("1_rlcci")
+unique_id = "talons"
+trait_name = "Talons"
+description = "You have talons that you can use to make unarmed strikes. When you hit with them, the strike deals 1d6 + your Strength modifier slashing damage, instead of the bludgeoning damage normal for an unarmed strike."
+trait_speed = "Passive"

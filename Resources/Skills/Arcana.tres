@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Arcana" load_steps=2 format=3 uid="uid://dagsxopf4685d"]
+
+[ext_resource type="Script" path="res://Resources/Skills/Arcana.gd" id="1_py7tc"]
+
+[resource]
+script = ExtResource("1_py7tc")
+skill_name = ""
+derived_ability = "Intelligence"
+proficiency = false
+proficiency_bonus = 0
+expertise = false
+expertise_bonus = 0
+advantage = false
+disadvantage = false
+added_other = 0
+other_source = ""
+total = 0

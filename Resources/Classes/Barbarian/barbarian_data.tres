@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="BarbarianData" load_steps=5 format=3 uid="uid://cgbfrafbn1agt"]
+
+[ext_resource type="Resource" uid="uid://cgclilmmi44cx" path="res://Resources/ClassTraits/Barbarian/rage_data.tres" id="1_mp46u"]
+[ext_resource type="Script" path="res://Resources/Classes/Barbarian/barbarian_data.gd" id="1_vl6kx"]
+[ext_resource type="Resource" uid="uid://dmamucyb8fbd6" path="res://Resources/ClassTraits/Barbarian/unarmored_defense_data.tres" id="2_q3yst"]
+[ext_resource type="Resource" uid="uid://b2tiotq4vbmft" path="res://Resources/ClassTraits/Barbarian/danger_sense_data.tres" id="3_fcoqm"]
+
+[resource]
+script = ExtResource("1_vl6kx")
+unique_id = "barbarian"
+name = "Barbarian"
+description = ""
+features = Array[Resource("res://Resources/ClassTraits/ClassTraitData.gd")]([ExtResource("1_mp46u"), ExtResource("2_q3yst"), ExtResource("3_fcoqm")])

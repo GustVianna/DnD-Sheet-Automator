@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GenasiData" load_steps=2 format=3 uid="uid://beqqrtl5hauwl"]
+
+[ext_resource type="Script" path="res://Resources/Races/Genasi/GenasiData.gd" id="1_yx6cj"]
+
+[resource]
+script = ExtResource("1_yx6cj")
+unique_id = "water_genasi"
+name = "Water Genasi"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

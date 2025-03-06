@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SimicHybridData" load_steps=2 format=3 uid="uid://dc0ubwjmk448a"]
+
+[ext_resource type="Script" path="res://Resources/Races/Simic Hybrid/SimicHybridData.gd" id="1_n7mqd"]
+
+[resource]
+script = ExtResource("1_n7mqd")
+unique_id = "simic_hybrid"
+name = "Simic Hybrid"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Guildmasters' Guide to Ravnica"

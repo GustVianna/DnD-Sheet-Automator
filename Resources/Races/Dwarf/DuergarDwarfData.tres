@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DwarfData" load_steps=2 format=3 uid="uid://bmi0qyg6rn5k8"]
+
+[ext_resource type="Script" path="res://Resources/Races/Dwarf/DwarfData.gd" id="1_mj2nt"]
+
+[resource]
+script = ExtResource("1_mj2nt")
+unique_id = "duergar"
+name = "Duergar"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen's Tome of Foes"

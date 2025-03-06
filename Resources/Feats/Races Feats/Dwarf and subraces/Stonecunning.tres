@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://bhnado0clfk6p"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_37shq"]
+
+[resource]
+script = ExtResource("1_37shq")
+unique_id = "stonecunning"
+name = "Stonecunning"
+description = "Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus."
+classes = Array[String]([])
+races = Array[String](["Hill Dwarf", "Mountain Dwarf"])
+pre_req = Array[String]([])
+tags = Array[String](["history", "dwarf", "racial", "passive", "intelligence", "stonework", "proficiency", "bonus"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

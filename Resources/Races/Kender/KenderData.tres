@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="KenderData" load_steps=2 format=3 uid="uid://bj7fowi6xblc4"]
+
+[ext_resource type="Script" path="res://Resources/Races/Kender/KenderData.gd" id="1_6nr15"]
+
+[resource]
+script = ExtResource("1_6nr15")
+unique_id = "kender"
+name = "Kender"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Dragonlance: Shadow of the Dragon Queen"

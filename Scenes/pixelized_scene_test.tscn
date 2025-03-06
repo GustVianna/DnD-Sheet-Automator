@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyhy3erw7irk0"]
+
+[ext_resource type="Shader" path="res://Scenes/pixelized_scene_test.gdshader" id="1_e4f4h"]
+[ext_resource type="PackedScene" uid="uid://cumvmtqhllb3a" path="res://Scenes/MainMenu.tscn" id="1_xqine"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_40ams"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_melyi"]
+shader = ExtResource("1_e4f4h")
+shader_parameter/pixelSize = 4
+
+[node name="Node" type="Node"]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+visibility_layer = 3
+texture_filter = 1
+material = SubResource("ShaderMaterial_40ams")
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+canvas_item_default_texture_filter = 0
+canvas_cull_mask = 4294967293
+size = Vector2i(1080, 1920)
+render_target_update_mode = 4
+
+[node name="Menu" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_xqine")]
+material = SubResource("ShaderMaterial_melyi")

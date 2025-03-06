@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GoliathData" load_steps=2 format=3 uid="uid://c2huje02sxhuy"]
+
+[ext_resource type="Script" path="res://Resources/Races/Goliath/GoliathData.gd" id="1_r0go4"]
+
+[resource]
+script = ExtResource("1_r0go4")
+unique_id = "goliath"
+name = "Goliath"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

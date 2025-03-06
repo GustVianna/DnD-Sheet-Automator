@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AbilityScoreIncreaseTraitLalafel" load_steps=2 format=3 uid="uid://ceetji0t1twlc"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/AbilityScoreIncreaseTraitLalafel.gd" id="1_p33y5"]
+
+[resource]
+script = ExtResource("1_p33y5")
+unique_id = "ability_score_increase_lalafel"
+trait_name = "Ability Score Increase"
+description = "Your Charisma score increases by 2 and Your Dexterity score increases by 1."
+trait_speed = ""

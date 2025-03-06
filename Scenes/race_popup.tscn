@@ -1,0 +1,109 @@
+[gd_scene load_steps=5 format=3 uid="uid://dua5i3vioqi4r"]
+
+[ext_resource type="Script" path="res://Scripts/race_popup.gd" id="1_fa5gy"]
+[ext_resource type="Theme" uid="uid://g5dcmi2kejgv" path="res://Assets/Themes/TestTheme.tres" id="1_y1ig3"]
+[ext_resource type="PackedScene" uid="uid://dovpmp4f4ubog" path="res://Scenes/animated_button.tscn" id="3_1mhrf"]
+[ext_resource type="Texture2D" uid="uid://it3pyg7e2o70" path="res://icon_profile.png" id="4_bnfww"]
+
+[node name="master_race_popup" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_y1ig3")
+script = ExtResource("1_fa5gy")
+
+[node name="background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="background/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 100
+
+[node name="Control" type="VBoxContainer" parent="background/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="MarginContainer" type="MarginContainer" parent="background/ScrollContainer/MarginContainer/Control"]
+layout_mode = 2
+theme_override_constants/margin_right = 450
+
+[node name="AnimatedButton" parent="background/ScrollContainer/MarginContainer/Control/MarginContainer" instance=ExtResource("3_1mhrf")]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+label_name = "Back"
+
+[node name="Image" type="TextureRect" parent="background/ScrollContainer/MarginContainer/Control"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+texture = ExtResource("4_bnfww")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="background/ScrollContainer/MarginContainer/Control"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Dwarf"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CustomName" type="LineEdit" parent="background/ScrollContainer/MarginContainer/Control"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+placeholder_text = "Race name"
+alignment = 1
+
+[node name="ConfirmButton" parent="background/ScrollContainer/MarginContainer/Control" instance=ExtResource("3_1mhrf")]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+color_theme = "Primary"
+label_name = "Confirm"
+
+[node name="FeatsContainer" type="VBoxContainer" parent="background/ScrollContainer/MarginContainer/Control"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="MarginContainer" type="MarginContainer" parent="background/ScrollContainer/MarginContainer/Control/FeatsContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 200
+theme_override_constants/margin_right = 200
+
+[node name="Add" parent="background/ScrollContainer/MarginContainer/Control/FeatsContainer/MarginContainer" instance=ExtResource("3_1mhrf")]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+label_name = "+"
+
+[connection signal="pressed" from="background/ScrollContainer/MarginContainer/Control/MarginContainer/AnimatedButton" to="." method="_on_back_button_pressed"]
+[connection signal="text_changed" from="background/ScrollContainer/MarginContainer/Control/CustomName" to="." method="_on_custom_name_text_changed"]
+[connection signal="pressed" from="background/ScrollContainer/MarginContainer/Control/ConfirmButton" to="." method="_on_confirm_button_pressed"]
+[connection signal="pressed" from="background/ScrollContainer/MarginContainer/Control/FeatsContainer/MarginContainer/Add" to="." method="_on_add_pressed"]
+
+[editable path="background/ScrollContainer/MarginContainer/Control/ConfirmButton"]

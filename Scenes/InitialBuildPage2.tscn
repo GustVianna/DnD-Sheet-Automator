@@ -1,0 +1,219 @@
+[gd_scene load_steps=4 format=3 uid="uid://dek6v0lm1vs0g"]
+
+[ext_resource type="Texture2D" uid="uid://clso65kma06g7" path="res://icon.svg" id="1_xn652"]
+[ext_resource type="PackedScene" path="res://Scenes/StatMarker.tscn" id="2_3vkib"]
+[ext_resource type="Script" path="res://Scripts/Distribution.gd" id="3_2ue61"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menus" type="Control" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -595.0
+offset_right = -595.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backstory" type="TextEdit" parent="Background/Menus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = 707.0
+offset_right = -39.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Backstory"
+
+[node name="Name" type="TextEdit" parent="Background/Menus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 33.0
+offset_top = 56.0
+offset_right = -278.0
+offset_bottom = -923.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Name"
+
+[node name="Background" type="TextEdit" parent="Background/Menus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 33.0
+offset_top = 165.0
+offset_right = -278.0
+offset_bottom = -814.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Background"
+
+[node name="Alignment" type="TextEdit" parent="Background/Menus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 33.0
+offset_top = 272.0
+offset_right = -278.0
+offset_bottom = -707.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Alignment
+"
+
+[node name="Personality Traits" type="TextEdit" parent="Background/Menus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 33.0
+offset_top = 351.0
+offset_right = -41.0
+offset_bottom = -606.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Personality Traits"
+
+[node name="Ideals" type="TextEdit" parent="Background/Menus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 33.0
+offset_top = 442.0
+offset_right = -41.0
+offset_bottom = -515.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Ideals
+"
+
+[node name="Bonds" type="TextEdit" parent="Background/Menus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 33.0
+offset_top = 534.0
+offset_right = -41.0
+offset_bottom = -423.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Alignment
+"
+
+[node name="Flaws" type="TextEdit" parent="Background/Menus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 33.0
+offset_top = 618.0
+offset_right = -41.0
+offset_bottom = -339.0
+grow_horizontal = 2
+grow_vertical = 2
+placeholder_text = "Flaws
+"
+
+[node name="TextureRect" type="TextureRect" parent="Background/Menus"]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 41.0
+offset_right = 544.0
+offset_bottom = 333.0
+texture = ExtResource("1_xn652")
+
+[node name="Stats" type="Control" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatButtons" type="Control" parent="Background/Stats"]
+anchors_preset = 0
+offset_left = 55.0
+offset_top = 63.0
+offset_right = 95.0
+offset_bottom = 103.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/Stats/StatButtons"]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 120.0
+offset_right = 337.0
+offset_bottom = 160.0
+alignment = 1
+
+[node name="CHA" parent="Background/Stats/StatButtons/HBoxContainer" instance=ExtResource("2_3vkib")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DEX" parent="Background/Stats/StatButtons/HBoxContainer" instance=ExtResource("2_3vkib")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="STR" parent="Background/Stats/StatButtons/HBoxContainer" instance=ExtResource("2_3vkib")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="WIS" parent="Background/Stats/StatButtons/HBoxContainer" instance=ExtResource("2_3vkib")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="INT" parent="Background/Stats/StatButtons/HBoxContainer" instance=ExtResource("2_3vkib")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CON" parent="Background/Stats/StatButtons/HBoxContainer" instance=ExtResource("2_3vkib")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Distribution" type="Control" parent="Background/Stats"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_2ue61")
+
+[node name="DistributionOptions" type="Button" parent="Background/Stats/Distribution"]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 439.0
+offset_right = 347.0
+offset_bottom = 470.0
+text = "Point Buy"
+
+[node name="Recommended" type="Button" parent="Background/Stats/Distribution"]
+layout_mode = 0
+offset_left = 222.0
+offset_top = 486.0
+offset_right = 347.0
+offset_bottom = 517.0
+text = "Recommended"
+
+[connection signal="pressed" from="Background/Stats/Distribution/DistributionOptions" to="Background/Stats/Distribution" method="_on_distribution_options_pressed"]
+[connection signal="pressed" from="Background/Stats/Distribution/Recommended" to="Background/Stats/Distribution" method="_on_recommended_pressed"]

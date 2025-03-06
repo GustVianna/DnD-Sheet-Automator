@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PaddedArmor" load_steps=2 format=3 uid="uid://d2026wobbdpme"]
+
+[ext_resource type="Script" path="res://Resources/Armor/padded_armor.gd" id="1_h7wpy"]
+
+[resource]
+script = ExtResource("1_h7wpy")
+unique_id = "padded"
+name = "Padded"
+description = "Padded armor consists of quilted layers of cloth and batting."
+cost = 5
+weight = 8
+stealth_disadvantage = true
+strength = "-"
+category = "Light Armor"

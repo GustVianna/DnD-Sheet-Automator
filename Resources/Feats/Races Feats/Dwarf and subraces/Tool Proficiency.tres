@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://bjk5dpkojn3jh"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_e44ra"]
+
+[resource]
+script = ExtResource("1_e44ra")
+unique_id = "tool_proficiency"
+name = "Tool Proficiency"
+description = "You gain proficiency with the artisan's tools of your choice: Smith's tools, brewer's supplies, or mason's tools."
+classes = Array[String]([])
+races = Array[String](["Hill Dwarf", "Mountain Dwarf"])
+pre_req = Array[String]([])
+tags = Array[String](["proficiency", "dwarf", "racial", "passive", "tools", "smith's", "mason's", "brewer's", "supplies"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

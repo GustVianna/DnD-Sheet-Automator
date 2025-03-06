@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="MagicMissile" load_steps=2 format=3 uid="uid://d0iputvyq6tfp"]
+
+[ext_resource type="Script" path="res://Resources/Spells/MagicMissile.gd" id="1_4xuxo"]
+
+[resource]
+script = ExtResource("1_4xuxo")
+unique_id = ""
+name = ""
+description = ""
+spell_classes = 0
+tags = Array[String]([])
+ritual = true
+concentration = false
+spell_level = 0
+spell_school = "Abjuration"
+spell_casting_time = "10 minutes"
+spell_range = ""
+spell_duration = ""
+spell_components = 0
+spell_damage = 0

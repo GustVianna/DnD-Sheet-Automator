@@ -1,0 +1,48 @@
+- Decidir se os botoes do combate vao ser dropdown ou popup (inclinado pra dropdown
+- colocar os codigos das conditions pra poder tirar da aba de codigo pq ocupa mt espaço
+
+ATENÇÃO
+- N precisa fazer tudo ser resolvido automaticamente, claro o jogo vai resolver td automatico
+pro player mas n precisa ser programado de um jeito q funciona automatico, da pra fazer na mao
+por ex, vantagem em destreza n precisa automaticamente dar vantagem pra td os testes
+q derivam de destreza, vc pode fazer na mao, dar vantagem na destreza e tbm em todas as skills
+
+- Assim como alguem jogando o jogo pensaria de um a um "ah ok tenho vantagem na destreza"
+entao vou marcar aqui tbm tudo q deriva dela, eh soh fazer na mao, n precisa funcionar
+automaticamente num sistema hierarquico de arvore
+
+- outro exemplo tipo ataque. N precisa fazer o pai ataque dar desvantagem pra todos os
+filhos e spells por ex. Se algo da desvantagem em ataques eh soh pegar todos os ataques
+da ficha do jogador e dar desvantagem de um a um. Cada ataque da aba de ataques, e cada
+spell q tenha a variavel attack nela (LEMBRAR DE ADD ESSA VARIAVEL)
+
+- entao por ex blinded em vez de dar desvantagem no "pai ataque", soh vai pegar cada
+ataque da ficha de um a um na mao msm e adicionar desvantagem independente do pai,
+como se fosse separado pra cada um
+
+- desse jeito fica ateh melhor somar vantagem e desvantagem por ex vantagem em dex
+e td q deriva de dex vale como uma coisa só. Por ex a vantagem na destreza pura e
+na acrobacia vêm da msm fonte. Acrobacia n vai ter 2 vantagens, da acrobacia e da
+destreza, o q vai acontecer eh q a destreza pura vai ter vantagem, e a acrobacia tbm.
+
+-------------------------------------------------------------------------------------------
++2 bonus e +1 bonus
+- quando selecionar um, remover de todo mundo pra adicionar
+
+- assim n vai ter chance de repetir
+
+- por ex: selecionou +2 em int -> zera/remove de todos, dps adiciona +2 em int
+mudou de ideia escolheu +2 em dex -> zera/remove de todos, dps adiciona +2 em dex
+
+-------------------------------------------------------------------------------------------
+os stats +2 e +1 n salvam de uma cena pra outra atualmente entao se voltar a cena reseta mas
+os numeros no global manager continuam os mesmos
+
+- vou fazer um recurso p/ initial_build_as_increase poder começar com as checkboxes ja marcadas
+pra n ter esse problema dos numeros atualizarem mas as checkboxes n
+
+OUTRA ALTERNATIVA:
+	
+atualmente os +1 e +2 sao colocados direto no GlobalManager.ability score
+- seria bom modificar tudo no added_race pra ficar mais facil de manejar e ficar mais claro depois
+pra mostrar no futuro

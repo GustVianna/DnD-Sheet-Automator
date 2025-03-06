@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="MetallicBreathWeaponTrait" load_steps=2 format=3 uid="uid://bj2u0bywgpa1s"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Dragonborn/MetallicBreathWeaponTrait.gd" id="1_680l2"]
+
+[resource]
+script = ExtResource("1_680l2")
+unique_id = "metallic_breath_weapon"
+name = "Metallic Breath Weapon"
+description = "At 5th level, you gain a second breath weapon. When you take the Attack action on your turn, you can replace one of your attacks with an exhalation in a 15-foot cone. The save DC for this breath is 8 + your Constitution modifier + your proficiency bonus. Whenever you use this trait, choose one:Enervating Breath. Each creature in the cone must succeed on a Constitution saving throw or become incapacitated until the start of your next turn.Repulsion Breath. Each creature in the cone must succeed on a Strength saving throw or be pushed 20 feet away from you and be knocked prone.Once you use your Metallic Breath Weapon, you can't do so again until you finish a long rest."

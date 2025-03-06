@@ -1,0 +1,95 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1etyshga7go3"]
+
+[ext_resource type="PackedScene" uid="uid://dovpmp4f4ubog" path="res://Scenes/animated_button.tscn" id="1_0ng4u"]
+[ext_resource type="Script" path="res://Scenes/standard_array_values.gd" id="1_5m25l"]
+
+[node name="StandardValues" type="PanelContainer" groups=["StandardValues"]]
+offset_right = 340.0
+offset_bottom = 399.0
+size_flags_vertical = 3
+script = ExtResource("1_5m25l")
+current_value = "8"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="8" parent="MarginContainer/VBoxContainer" groups=["ValueButtons"] instance=ExtResource("1_0ng4u")]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+label_name = "8"
+
+[node name="Label" parent="MarginContainer/VBoxContainer/8" index="1"]
+theme_override_font_sizes/font_size = 30
+
+[node name="10" parent="MarginContainer/VBoxContainer" groups=["ValueButtons"] instance=ExtResource("1_0ng4u")]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+label_name = "10"
+
+[node name="Label" parent="MarginContainer/VBoxContainer/10" index="1"]
+theme_override_font_sizes/font_size = 30
+
+[node name="12" parent="MarginContainer/VBoxContainer" groups=["ValueButtons"] instance=ExtResource("1_0ng4u")]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+label_name = "12"
+
+[node name="Label" parent="MarginContainer/VBoxContainer/12" index="1"]
+theme_override_font_sizes/font_size = 30
+
+[node name="13" parent="MarginContainer/VBoxContainer" groups=["ValueButtons"] instance=ExtResource("1_0ng4u")]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+label_name = "13"
+
+[node name="Label" parent="MarginContainer/VBoxContainer/13" index="1"]
+theme_override_font_sizes/font_size = 30
+
+[node name="14" parent="MarginContainer/VBoxContainer" groups=["ValueButtons"] instance=ExtResource("1_0ng4u")]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+label_name = "14"
+
+[node name="Label" parent="MarginContainer/VBoxContainer/14" index="1"]
+theme_override_font_sizes/font_size = 30
+
+[node name="15" parent="MarginContainer/VBoxContainer" groups=["ValueButtons"] instance=ExtResource("1_0ng4u")]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+label_name = "15"
+
+[node name="Label" parent="MarginContainer/VBoxContainer/15" index="1"]
+theme_override_font_sizes/font_size = 30
+
+[node name="Clear" parent="MarginContainer/VBoxContainer" instance=ExtResource("1_0ng4u")]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+label_name = "Clear"
+
+[node name="Label" parent="MarginContainer/VBoxContainer/Clear" index="1"]
+theme_override_font_sizes/font_size = 30
+
+[connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/10" to="." method="_on_10_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/12" to="." method="_on_12_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/13" to="." method="_on_13_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/14" to="." method="_on_14_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/15" to="." method="_on_15_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Clear" to="." method="_on_clear_pressed"]
+
+[editable path="MarginContainer/VBoxContainer/8"]
+[editable path="MarginContainer/VBoxContainer/10"]
+[editable path="MarginContainer/VBoxContainer/12"]
+[editable path="MarginContainer/VBoxContainer/13"]
+[editable path="MarginContainer/VBoxContainer/14"]
+[editable path="MarginContainer/VBoxContainer/15"]
+[editable path="MarginContainer/VBoxContainer/Clear"]

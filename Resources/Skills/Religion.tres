@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Religion" load_steps=2 format=3 uid="uid://b5uc4uxmwltkl"]
+
+[ext_resource type="Script" path="res://Resources/Skills/Religion.gd" id="1_ye4xg"]
+
+[resource]
+script = ExtResource("1_ye4xg")
+skill_name = ""
+derived_ability = "Intelligence"
+proficiency = false
+proficiency_bonus = 0
+expertise = false
+expertise_bonus = 0
+advantage = false
+disadvantage = false
+added_other = 0
+other_source = ""
+total = 0

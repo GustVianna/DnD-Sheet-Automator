@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LoxodonData" load_steps=2 format=3 uid="uid://dye83eqrrrk1q"]
+
+[ext_resource type="Script" path="res://Resources/Races/Loxodon/LoxodonData.gd" id="1_yhxj2"]
+
+[resource]
+script = ExtResource("1_yhxj2")
+unique_id = "loxodon"
+name = "Loxodon"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Guildmasters' Guide to Ravnica"

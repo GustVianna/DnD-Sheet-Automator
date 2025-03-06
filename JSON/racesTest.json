@@ -1,0 +1,438 @@
+{
+  "races": {
+	"Aarakocra": {
+	  "name": "Aarakocra",
+	  "description": "Aarakocra are bird-like humanoids with large wings, allowing them to soar through the skies with ease. They are highly adapted to aerial life and often live in high mountains or cliffs.",
+	  "traits": {
+		"Ability Score Increase": "Your Dexterity score increases by 2, and your Wisdom score increases by 1",
+		"Speed": "Your base walking speed is 25 feet. Your flying speed is 50 feet.",
+		"Age": "Aarakocra reach maturity by age 3. They have lifespans comparable to humans.",
+		"Alignment": "Aarakocra tend toward neutrality, valuing freedom and self-sufficiency.",
+		"Size": "Aarakocra are about 5 feet tall, with a wingspan of 20 feet. They have thin, lightweight bodies.",
+		"Talons": "You are proficient with your unarmed strikes, which deal 1d4 slashing damage on a hit.",
+		"Languages": "You can speak, read, and write Common and Aarakocra. Aarakocra has its own distinct language, consisting of both spoken and sign language."
+	  }
+	},
+	"Aasimar": {
+	  "name": "Aasimar",
+	  "description": "Aasimar are humans with a celestial heritage, imbued with holy power and radiant energy. They often have a strong sense of destiny and duty.",
+	  "traits": {
+		"Ability Score Increase": "Your Charisma score increases by 2",
+		"Speed": "Your base walking speed is 30 feet.",
+		"Age": "Aasimar mature at the same rate as humans but can live up to 160 years.",
+		"Alignment": "Aasimar tend toward good alignments, reflecting their celestial nature.",
+		"Size": "Aasimar are similar in size and build to humans.",
+		"Darkvision": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
+		"Celestial Resistance": "You have resistance to necrotic and radiant damage.",
+		"Languages": "You can speak, read, and write Common, and Celestial."
+	  }
+	},
+	"Bugbear": {
+	  "name": "Bugbear",
+	  "description": "Bugbears are large, brutish goblinoids known for their strength and stealth. They often live in forests or mountains, using their natural abilities to ambush and hunt prey.",
+	  "traits": {
+		"Ability Score Increase": "Your Strength score increases by 2, and your Dexterity score increases by 1",
+		"Speed": "Your base walking speed is 30 feet.",
+		"Age": "Bugbears reach maturity at age 16 and can live up to 80 years.",
+		"Alignment": "Bugbears tend toward chaotic evil alignments, enjoying violence and mayhem.",
+		"Size": "Bugbears are between 6 and 8 feet tall, with long arms and hunched postures.",
+		"Darkvision": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
+		"Long-Limbed": "When you make a melee attack on your turn, your reach is 5 feet greater than normal.",
+		"Powerful Build": "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.",
+		"Surprise Attack": "If you surprise a creature and hit it with an attack on your first turn in combat, the attack deals an extra 2d6 damage to it.",
+		"Languages": "You can speak, read, and write Common and Goblin."
+	  }
+	},
+	"Centaur": {
+	  "name": "Centaur",
+	  "description": "Centaurs are half-human, half-horse creatures known for their speed and love of open spaces. They often live in nomadic tribes, roaming the plains and forests.",
+	  "traits": {
+		"Ability Score Increase": "Your Strength score increases by 2, and your Wisdom score increases by 1",
+		"Speed": "Your base walking speed is 40 feet.",
+		"Age": "Centaurs reach maturity at age 15 and can live up to 60 years.",
+		"Alignment": "Centaurs tend toward chaotic alignments, valuing freedom and independence.",
+		"Size": "Centaurs are between 6 and 7 feet tall at the shoulder, with powerful builds.",
+		"Hooves": "You have proficiency with your unarmed strikes, which are considered melee weapon attacks.",
+		"Charge": "If you move at least 30 feet straight toward a target and then hit it with a melee weapon attack on the same turn, you can immediately follow that attack with a bonus action, making one attack against the target with your hooves.",
+		"Languages": "You can speak, read, and write Common and Sylvan."
+	  }
+	},
+	"Changeling": {
+	  "name": "Changeling",
+	  "description": "Changelings are shapeshifters capable of altering their appearance at will. They often use their abilities for espionage, infiltration, or entertainment.",
+	  "traits": {
+		"Ability Score Increase": "Your Charisma score increases by 2, your Dexterity score increases by 1, and your Constitution score increases by 1",
+		"Speed": "Your base walking speed is 30 feet.",
+		"Age": "Changelings reach maturity at the same rate as humans, but they can live up to 100 years.",
+		"Alignment": "Changelings have no inherent alignment, but they often lean toward neutrality, valuing their own survival and adaptability.",
+		"Size": "Changelings are built like humans, but their builds are typically lean and wiry.",
+		"Duplicity": "You gain proficiency in the Deception and Insight skills.",
+		"Shapechanger": "As an action, you can transform your appearance or revert to your natural form. You can't duplicate the appearance of a creature you've never seen, and you revert to your natural form if you die.",
+		"Languages": "You can speak, read, and write Common and two other languages of your choice."
+	  }
+	},
+	"Dhampir": {
+	  "name": "Dhampir",
+	  "description": "Dhampirs are humanoids born of a union between a vampire and a mortal. They inherit some vampiric traits but lack many of the weaknesses of their undead progenitors.",
+	  "traits": {
+		"Ability Score Increase": "Your Dexterity score increases by 2, and your Charisma score increases by 1",
+		"Speed": "Your base walking speed is 30 feet.",
+		"Age": "Dhampirs mature at the same rate as humans and live up to 200 years.",
+		"Alignment": "Dhampirs have no innate alignment tendencies, but they often lean toward neutrality, navigating their dual nature.",
+		"Size": "Dhampirs resemble their mortal parent but often possess paler skin and subtly pointed teeth.",
+		"Darkvision": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
+		"Undead Resistance": "You have resistance to necrotic damage.",
+		"Vampiric Bite": "You can use your action to make a bite attack against a creature, dealing 1d4 piercing damage plus your Strength modifier. On a hit, you gain temporary hit points equal to the damage dealt.",
+		"Languages": "You can speak, read, and write Common and one other language of your choice."
+	  }
+	},
+	"Autognome": {
+	  "name": "Autognome",
+	  "description": "Autognomes are sentient constructs created by gnomes, possessing free will and independent thought. They are often built for specific tasks but can pursue a wide range of interests and professions.",
+	  "traits": {
+		"Ability Score Increase": "Your Intelligence score increases by 2, and your Constitution score increases by 1",
+		"Speed": "Your base walking speed is 25 feet.",
+		"Age": "Autognomes do not age, but their components may wear out over time, requiring maintenance and repair.",
+		"Alignment": "Autognomes can have various alignments, reflecting their individual personalities and experiences.",
+		"Size": "Autognomes are similar in size to gnomes, standing between 3 and 4 feet tall.",
+		"Construct Nature": "You have advantage on saving throws against being poisoned, and you have resistance to poison damage.",
+		"Darkvision": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
+		"Gnome Cunning": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
+		"Languages": "You can speak, read, and write Common and Gnomish."
+	  }
+	},
+	"Dragonborn": {
+	  "name": "Dragonborn",
+	  "description": "Dragonborn are proud dragon-like humanoids with draconic ancestry. They possess powerful breath weapons and are known for their honor and determination.",
+	  "traits": {
+		"Ability Score Increase": "Your Strength score increases by 2, and your Charisma score increases by 1",
+		"Speed": "Your base walking speed is 30 feet.",
+		"Age": "Dragonborn reach adulthood in their late teens and live less than a century.",
+		"Alignment": "Dragonborn tend to be lawful, valuing honor and tradition.",
+		"Size": "Dragonborn are tall and powerfully built, often standing over 6 feet tall.",
+		"Draconic Ancestry": "You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry table. Your breath weapon and damage resistance are determined by the dragon type.",
+		"Breath Weapon": "You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation.",
+		"Languages": "You can speak, read, and write Common and Draconic."
+	  },
+	  "subraces": {
+		"Black Dragonborn": {
+		  "name": "Black Dragonborn",
+		  "description": "Black dragonborn are associated with acid and poison. They are often stealthy and adaptable, with an affinity for marshes and swamps.",
+		  "traits": {
+			"Draconic Ancestry": "Your draconic ancestry is black, and you have resistance to acid damage.",
+			"Breath Weapon": "Your breath weapon deals acid damage in a 5 by 30 feet line (Dex save)."
+		  }
+		},
+		"Blue Dragonborn": {
+		  "name": "Blue Dragonborn",
+		  "description": "Blue dragonborn are associated with lightning and storms. They are often aggressive and tempestuous, preferring open spaces and skies.",
+		  "traits": {
+			"Draconic Ancestry": "Your draconic ancestry is blue, and you have resistance to lightning damage.",
+			"Breath Weapon": "Your breath weapon deals lightning damage in a 5 by 30 feet line (Dex save)."
+		  }
+		},
+		"Brass Dragonborn": {
+		  "name": "Brass Dragonborn",
+		  "description": "Brass dragonborn are associated with fire and heat. They are often charismatic and outgoing, with a love for desert environments.",
+		  "traits": {
+			"Draconic Ancestry": "Your draconic ancestry is brass, and you have resistance to fire damage.",
+			"Breath Weapon": "Your breath weapon deals fire damage in a 5 by 30 feet line (Dex save)."
+		  }
+		},
+		"Bronze Dragonborn": {
+		  "name": "Bronze Dragonborn",
+		  "description": "Bronze dragonborn are associated with lightning and ocean storms. They are often brave and protective, with a natural affinity for coastal regions.",
+		  "traits": {
+			"Draconic Ancestry": "Your draconic ancestry is bronze, and you have resistance to lightning damage.",
+			"Breath Weapon": "Your breath weapon deals lightning damage in a 5 by 30 feet line (Dex save)."
+		  }
+		},
+		"Copper Dragonborn": {
+		  "name": "Copper Dragonborn",
+		  "description": "Copper dragonborn are associated with acid and pranks. They are often mischievous and quick-witted, with a fondness for rocky terrain.",
+		  "traits": {
+			"Draconic Ancestry": "Your draconic ancestry is copper, and you have resistance to acid damage.",
+			"Breath Weapon": "Your breath weapon deals acid damage in a 5 by 30 feet line (Dex save)."
+		  }
+		},
+		"Gold Dragonborn": {
+		  "name": "Gold Dragonborn",
+		  "description": "Gold dragonborn are associated with fire and radiance. They are often noble and righteous, with a strong sense of justice.",
+		  "traits": {
+			"Draconic Ancestry": "Your draconic ancestry is gold, and you have resistance to fire damage.",
+			"Breath Weapon": "Your breath weapon deals fire damage in a 15 feet cone (Dex save)."
+		  }
+		},
+		"Green Dragonborn": {
+		  "name": "Green Dragonborn",
+		  "description": "Green dragonborn are associated with poison and nature. They are often cunning and territorial, with a deep connection to forests and swamps.",
+		  "traits": {
+			"Draconic Ancestry": "Your draconic ancestry is green, and you have resistance to poison damage.",
+			"Breath Weapon": "Your breath weapon deals poison damage in a 15 feet cone (Con save)."
+		  }
+		},
+		"Red Dragonborn": {
+		  "name": "Red Dragonborn",
+		  "description": "Red dragonborn are associated with fire and destruction. They are often fierce and aggressive, with a love for volcanic landscapes.",
+		  "traits": {
+			"Draconic Ancestry": "Your draconic ancestry is red, and you have resistance to fire damage.",
+			"Breath Weapon": "Your breath weapon deals fire damage in a 15 feet cone (Dex save)."
+		  }
+		},
+		"Silver Dragonborn": {
+		  "name": "Silver Dragonborn",
+		  "description": "Silver dragonborn are associated with cold and frost. They are often noble and wise, with a natural inclination to protect the weak.",
+		  "traits": {
+			"Draconic Ancestry": "Your draconic ancestry is silver, and you have resistance to cold damage.",
+			"Breath Weapon": "Your breath weapon deals cold damage in a 15 feet cone (Con save)."
+		  }
+		},
+		"White Dragonborn": {
+		  "name": "White Dragonborn",
+		  "description": "White dragonborn are associated with ice and snow. They are often stoic and resilient, with an affinity for frigid climates.",
+		  "traits": {
+			"Draconic Ancestry": "Your draconic ancestry is white, and you have resistance to cold damage.",
+			"Breath Weapon": "Your breath weapon deals cold damage in a 15 feet cone (Con save)."
+		  }
+		}
+	  }
+	},
+	"Fairy": {
+	  "name": "Fairy",
+	  "description": "Fairies are tiny, winged fey creatures known for their mischievous nature and magical abilities. They inhabit forests, meadows, and other natural places, often unseen by larger beings.",
+	  "traits": {
+		"Ability Score Increase": "Your Dexterity score increases by 2, and your Charisma score increases by 1",
+		"Speed": "Your base walking speed is 10 feet. You have a flying speed of 30 feet.",
+		"Age": "Fairies mature quickly and can live up to 300 years.",
+		"Alignment": "Fairies are typically chaotic, valuing personal freedom and whimsy.",
+		"Size": "Fairies stand about 6 inches tall and weigh next to nothing.",
+		"Tiny": "You are considered Tiny, rather than Small, for the purpose of spells and effects.",
+		"Fey Ancestry": "You have advantage on saving throws against being charmed, and magic can't put you to sleep.",
+		"Innate Magic": "You know the druidcraft cantrip. Once you reach 3rd level, you can cast the fairy fire spell once per day. Once you reach 5th level, you can also cast the fly spell once per day. Charisma is your spellcasting ability for these spells.",
+		"Languages": "You can speak, read, and write Sylvan and one other language of your choice."
+	  }
+	},
+	"Firbolg": {
+	  "name": "Firbolg",
+	  "description": "Firbolgs are peaceful giants who dwell in remote forests and hills. They are reclusive but can be fierce protectors of nature when threatened.",
+	  "traits": {
+		"Ability Score Increase": "Your Wisdom score increases by 2, and your Strength score increases by 1",
+		"Speed": "Your base walking speed is 30 feet.",
+		"Age": "Firbolgs mature at around 30 years old and can live up to 500 years.",
+		"Alignment": "Firbolgs are typically neutral, valuing balance and harmony.",
+		"Size": "Firbolgs stand between 7 and 8 feet tall and have powerful builds.",
+		"Hidden Step": "As a bonus action, you can magically turn invisible until the start of your next turn or until you attack, make a damage roll, or force someone to make a saving throw. Once you use this trait, you can't use it again until you finish a short or long rest.",
+		"Powerful Build": "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.",
+		"Speech of Beast and Leaf": "You can communicate with beasts and plants as if they shared a language with you.",
+		"Languages": "You can speak, read, and write Common and Giant."
+	  }
+	},
+	"Verdan": {
+	  "name": "Verdan",
+	  "description": "Verdan are small, lizard-like humanoids created through magical experimentation. They are often used as spies and infiltrators by more powerful beings, but some seek freedom and autonomy.",
+	  "traits": {
+		"Ability Score Increase": "Your Dexterity score increases by 2, and your Intelligence score increases by 1",
+		"Speed": "Your base walking speed is 25 feet.",
+		"Age": "Verdan have short lifespans, rarely living beyond 20 years.",
+		"Alignment": "Verdan are usually neutral, prioritizing their own survival and the interests of their creator.",
+		"Size": "Verdan are small and wiry, standing around 3 to 4 feet tall.",
+		"Chameleon Skin": "You can change the coloration of your skin to match your surroundings, granting you advantage on Dexterity (Stealth) checks.",
+		"Cunning Artisan": "As part of a short rest, you can harvest usable materials from a slain creature of Small or larger size. You can use these materials to create a simple melee or ranged weapon with which you are proficient.",
+		"Languages": "You can speak, read, and write Common and Goblin."
+	  }
+	},
+	"Vedalken": {
+	  "name": "Vedalken",
+	  "description": "Vedalken are a highly intelligent and rational race, often obsessed with knowledge and discovery. They hail from a plane of clockwork precision and logical reasoning.",
+	  "traits": {
+		"Ability Score Increase": "Your Intelligence score increases by 2, and your Wisdom score increases by 1",
+		"Speed": "Your base walking speed is 30 feet.",
+		"Age": "Vedalken reach adulthood at about 40 years and can live up to 350 years.",
+		"Alignment": "Vedalken tend toward lawful alignments, valuing order and reason.",
+		"Size": "Vedalken are taller and slimmer than humans, averaging about 6 feet in height.",
+		"Vedalken Dispassion": "You have advantage on saving throws against spells and other magical effects.",
+		"Partial Recall": "When you make an Intelligence (History) check related to magic items, alchemical objects, or technological devices, you can add twice your proficiency bonus, instead of any proficiency bonus you normally apply.",
+		"Languages": "You can speak, read, and write Common, Vedalken, and one other language of your choice."
+	  }
+	},
+	"Yuan-Ti": {
+	  "name": "Yuan-Ti",
+	  "description": "Yuan-ti are a serpentfolk race with varying degrees of snake-like features. They are often found in jungle regions, where they build hidden temples and pursue their enigmatic agendas.",
+	  "traits": {
+		"Ability Score Increase": "Your Charisma score increases by 2, and your Intelligence score increases by 1",
+		"Speed": "Your base walking speed is 30 feet.",
+		"Age": "Yuan-ti mature at the same rate as humans and can live up to 120 years.",
+		"Alignment": "Yuan-ti society is hierarchical and rigidly structured, often favoring lawful or evil alignments.",
+		"Size": "Yuan-ti resemble humans in height and build, though some have more serpentine features.",
+		"Darkvision": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
+		"Innate Spellcasting": "You can cast the poison spray cantrip. Once you reach 3rd level, you can cast the suggestion spell once per day. Charisma is your spellcasting ability for these spells.",
+		"Magic Resistance": "You have advantage on saving throws against spells and other magical effects.",
+		"Languages": "You can speak, read, and write Common, Abyssal, and Draconic."
+	  }
+	},
+	"Warforged": {
+	  "name": "Warforged",
+	  "description": "Warforged are sentient constructs, forged in the heat of battle to serve as soldiers. They are versatile and resilient, with bodies built for war.",
+	  "traits": {
+		"Ability Score Increase": "Your Constitution score increases by 2, and one other ability score of your choice increases by 1",
+		"Speed": "Your base walking speed is 30 feet.",
+		"Age": "Warforged are constructs and do not age.",
+		"Alignment": "Warforged can have various alignments, reflecting their individual experiences and purposes.",
+		"Size": "Warforged are generally between 6 and 7 feet tall and weigh between 270 and 300 pounds.",
+		"Composite Plating": "Your construction incorporates wood and metal, granting you a +1 bonus to Armor Class.",
+		"Living Construct": "Even though you were constructed, you are a living creature. You are immune to disease. You do not need to eat or breathe, but you can ingest food and drink if you wish. Instead of sleeping, you enter an inactive state for 4 hours each day. You do not dream in this state; you are fully aware of your surroundings and notice approaching enemies and other events as normal.",
+		"Powerful Build": "You count as one size larger when determining your carrying capacity and the weight you can push, drag, or lift.",
+		"Languages": "You can speak, read, and write Common and one other language of your choice."
+	  }
+	},
+	"Tiefling": {
+	  "name": "Tiefling",
+	  "description": "Tieflings are humans with infernal ancestry, granting them demonic traits and abilities. They often face prejudice due to their fiendish heritage but possess unique powers that set them apart.",
+	  "traits": {
+		"Ability Score Increase": "Your Intelligence score increases by 1, and your Charisma score increases by 2",
+		"Speed": "Your base walking speed is 30 feet.",
+		"Age": "Tieflings mature at the same rate as humans but can live up to 150 years.",
+		"Alignment": "Tieflings tend to have chaotic alignments, reflecting their demonic influence.",
+		"Size": "Tieflings are about the same size and build as humans.",
+		"Darkvision": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
+		"Hellish Resistance": "You have resistance to fire damage.",
+		"Infernal Legacy": "You know the thaumaturgy cantrip. Once you reach 3rd level, you can cast the hellish rebuke spell once per day. Once you reach 5th level, you can also cast the darkness spell once per day. Charisma is your spellcasting ability for these spells.",
+		"Languages": "You can speak, read, and write Common and Infernal."
+	  },
+	  "subraces": {
+		"Asmodeus Tiefling": {
+		  "name": "Asmodeus Tiefling",
+		  "description": "Asmodeus tieflings are descended from Asmodeus, the lord of the Nine Hells. They are often regal and charismatic, with a commanding presence.",
+		  "traits": {
+			"Ability Score Increase": "Your Intelligence score increases by 1, and your Charisma score increases by 2",
+			"Infernal Legacy": "You know the thaumaturgy cantrip. Once you reach 3rd level, you can cast the hellish rebuke spell as a 2nd-level spell with this trait; you regain the ability to cast it when you finish a long rest. Once you reach 5th level, you can also cast the darkness spell once per day with this trait; you regain the ability to cast it when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		  }
+		},
+		"Baalzebul Tiefling": {
+		  "name": "Baalzebul Tiefling",
+		  "description": "Baalzebul tieflings are descended from Baalzebul, a fallen archdevil known for his corruption and decay. They often have a vile and repulsive appearance.",
+		  "traits": {
+			"Ability Score Increase": "Your Intelligence score increases by 1, and your Charisma score increases by 2",
+			"Legacy of Maladomini": "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the ray of sickness spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the crown of madness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		  }
+		},
+		"Dispater Tiefling": {
+		  "name": "Dispater Tiefling",
+		  "description": "Dispater tieflings are descended from Dispater, the lord of the second layer of Hell. They are often cunning and manipulative, with a talent for strategy.",
+		  "traits": {
+			"Ability Score Increase": "Your Dexterity score increases by 1, and your Charisma score increases by 2",
+			"Legacy of Dis": "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the disguise self spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the detect thoughts spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		  }
+		},
+		"Fierna Tiefling": {
+		  "name": "Fierna Tiefling",
+		  "description": "Fierna tieflings are descended from Fierna, the archduchess of Phlegethos. They are often charming and persuasive, with a talent for diplomacy.",
+		  "traits": {
+			"Ability Score Increase": "Your Wisdom score increases by 1, and your Charisma score increases by 2",
+			"Legacy of Phlegethos": "You know the friends cantrip. When you reach 3rd level, you can cast the charm person spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the suggestion spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		  }
+		},
+		"Glasya Tiefling": {
+		  "name": "Glasya Tiefling",
+		  "description": "Glasya tieflings are descended from Glasya, the lord of the sixth layer of Hell. They are often deceptive and manipulative, with a talent for intrigue.",
+		  "traits": {
+			"Ability Score Increase": "Your Dexterity score increases by 1, and your Charisma score increases by 2",
+			"Legacy of Malbolge": "You know the minor illusion cantrip. When you reach 3rd level, you can cast the disguise self spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the invisibility spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		  }
+		},
+		"Levistus Tiefling": {
+		  "name": "Levistus Tiefling",
+		  "description": "Levistus tieflings are descended from Levistus, the lord of the fifth layer of Hell. They are often cold and calculating, with a talent for survival.",
+		  "traits": {
+			"Ability Score Increase": "Your Constitution score increases by 1, and your Charisma score increases by 2",
+			"Legacy of Stygia": "You know the ray of frost cantrip. When you reach 3rd level, you can cast the armor of Agathys spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		  }
+		},
+		"Mammon Tiefling": {
+		  "name": "Mammon Tiefling",
+		  "description": "Mammon tieflings are descended from Mammon, the lord of the third layer of Hell. They are often greedy and materialistic, with a talent for commerce.",
+		  "traits": {
+			"Ability Score Increase": "Your Intelligence score increases by 1, and your Charisma score increases by 2",
+			"Legacy of Minauros": "You know the mage hand cantrip. When you reach 3rd level, you can cast the Tenser's floating disk spell once with this trait and regain the ability to do so when you finish a short or long rest. When you reach 5th level, you can cast the arcane lock spell once with this trait, requiring no material component, and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		  }
+		},
+		"Mephistopheles Tiefling": {
+		  "name": "Mephistopheles Tiefling",
+		  "description": "Mephistopheles tieflings are descended from Mephistopheles, the lord of the eighth layer of Hell. They are often cunning and manipulative, with a talent for magic.",
+		  "traits": {
+			"Ability Score Increase": "Your Intelligence score increases by 1, and your Charisma score increases by 2",
+			"Legacy of Cania": "You know the mage hand cantrip. When you reach 3rd level, you can cast the burning hands spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the flame blade spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		  }
+		},
+		"Zariel Tiefling": {
+		  "name": "Zariel Tiefling",
+		  "description": "Zariel tieflings are descended from Zariel, the archduchess of Avernus. They are often fierce and warlike, with a talent for battle.",
+		  "traits": {
+			"Ability Score Increase": "Your Strength score increases by 1, and your Charisma score increases by 2",
+			"Legacy of Avernus": "You know the thaumaturgy cantrip. When you reach 3rd level, you can cast the searing smite spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the branding smite spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells."
+		  }
+		}
+	  }
+	},
+	"Tabaxi": {
+	  "name": "Tabaxi",
+	  "description": "Tabaxi are agile and stealthy catfolk, known for their quick reflexes and sharp senses. They are wanderers and explorers, driven by curiosity and the thrill of adventure.",
+	  "traits": {
+		"Ability Score Increase": "Your Dexterity score increases by 2, and your Charisma score increases by 1",
+		"Speed": "Your base walking speed is 30 feet.",
+		"Age": "Tabaxi reach adulthood at around 16 years old and can live up to 80 years.",
+		"Alignment": "Tabaxi tend to be chaotic, valuing personal freedom and spontaneity.",
+		"Size": "Tabaxi are about the same size and build as humans.",
+		"Darkvision": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
+		"Cat's Claws": "Your claws are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier.",
+		"Cat's Talent": "You have proficiency in the Perception and Stealth skills.",
+		"Languages": "You can speak, read, and write Common and one other language of your choice."
+	  }
+	},
+	"Thri-Kreen": {
+	  "name": "Thri-Kreen",
+	  "description": "Thri-kreen are mantis-like insectoid humanoids, known for their speed and agility. They are nomadic hunters, living in arid plains and desert regions.",
+	  "traits": {
+		"Ability Score Increase": "Your Dexterity score increases by 2, and your Wisdom score increases by 1",
+		"Speed": "Your base walking speed is 40 feet.",
+		"Age": "Thri-kreen reach maturity at around 5 years old and can live up to 30 years.",
+		"Alignment": "Thri-kreen tend to be neutral, valuing survival and adaptation.",
+		"Size": "Thri-kreen are taller and leaner than humans, with an insect-like appearance.",
+		"Natural Jumper": "You are always considered to have a running start when making long jumps.",
+		"Multiple Limbs": "You have four arms, which can wield weapons and perform tasks independently.",
+		"Chameleon Carapace": "You have advantage on Dexterity (Stealth) checks made to hide in desert terrain.",
+		"Languages": "You can speak, read, and write Thri-Kreen and one other language of your choice."
+	  }
+	},
+	"Tortle": {
+	  "name": "Tortle",
+	  "description": "Tortles are turtle-like humanoids known for their resilience and patience. They are at home in the water as well as on land, and they often live simple lives in coastal communities.",
+	  "traits": {
+		"Ability Score Increase": "Your Strength score increases by 2, and your Wisdom score increases by 1",
+		"Speed": "Your base walking speed is 30 feet. Your swimming speed is 30 feet.",
+		"Age": "Tortles reach maturity at around 15 years old and can live up to 50 years.",
+		"Alignment": "Tortles tend to be neutral, valuing peace and harmony.",
+		"Size": "Tortles are about the same size as humans but with stockier builds.",
+		"Claws": "You have claws that are natural weapons, which you can use to make unarmed strikes. If you hit with them, you deal slashing damage equal to 1d4 + your Strength modifier.",
+		"Hold Breath": "You can hold your breath for up to 1 hour at a time.",
+		"Shell Defense": "As a bonus action, you can withdraw into your shell, gaining a +4 bonus to AC but losing your speed. You remain in this state until you use a bonus action to end it.",
+		"Languages": "You can speak, read, and write Common and Aquan."
+	  }
+	},
+	"Triton": {
+	  "name": "Triton",
+	  "description": "Tritons are aquatic humanoids, resembling a cross between humans and sea creatures. They live in the ocean depths and guard the seas against threats from above and below.",
+	  "traits": {
+		"Ability Score Increase": "Your Strength score increases by 1, your Constitution score increases by 1, and your Charisma score increases by 1",
+		"Speed": "Your base walking speed is 30 feet. Your swimming speed is 30 feet.",
+		"Age": "Tritons mature at the same rate as humans and can live up to 200 years.",
+		"Alignment": "Tritons tend to be lawful, valuing duty and honor.",
+		"Size": "Tritons are about the same size as humans but with more athletic builds.",
+		"Amphibious": "You can breathe air and water.",
+		"Control Air and Water": "You can cast the fog cloud and gust of wind spells with this trait, requiring no material components. Once you reach 3rd level, you can also cast the wall of water spell once per day. Charisma is your spellcasting ability for these spells.",
+		"Emissary of the Sea": "Aquatic beasts have an extraordinary affinity with your people. You can communicate simple ideas with beasts that can breathe water.",
+		"Languages": "You can speak, read, and write Common, Primordial, and one other language of your choice."
+	  }
+	}
+  }
+}

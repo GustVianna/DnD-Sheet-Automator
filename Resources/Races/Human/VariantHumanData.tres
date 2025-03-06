@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HumanData" load_steps=2 format=3 uid="uid://dn47aghs1wkte"]
+
+[ext_resource type="Script" path="res://Resources/Races/Human/HumanData.gd" id="1_mmsns"]
+
+[resource]
+script = ExtResource("1_mmsns")
+unique_id = "variant_human"
+name = "Variant Human"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Player's Handbook"

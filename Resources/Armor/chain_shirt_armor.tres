@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ChainShirtArmor" load_steps=2 format=3 uid="uid://bj12eenhrvrqt"]
+
+[ext_resource type="Script" path="res://Resources/Armor/chain_shirt_armor.gd" id="1_c2ymk"]
+
+[resource]
+script = ExtResource("1_c2ymk")
+unique_id = "chain_shirt"
+name = "Chain Shirt"
+description = "Made of interlocking metal rings, a chain shirt is worn between layers of clothing or leather. This armor offers modest protection to the wearer’s upper body and allows the sound of the rings rubbing against one another to be muffled by outer layers."
+cost = 50
+weight = 20
+stealth_disadvantage = false
+strength = "-"
+category = "Medium Armor"

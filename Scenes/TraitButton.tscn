@@ -1,0 +1,163 @@
+[gd_scene load_steps=9 format=3 uid="uid://dpdrw0m85eikd"]
+
+[ext_resource type="Script" path="res://Scripts/TraitButton.gd" id="1_s3swc"]
+[ext_resource type="Theme" uid="uid://g5dcmi2kejgv" path="res://Assets/Themes/TestTheme.tres" id="2_vg3a2"]
+[ext_resource type="Script" path="res://Scenes/animated_button.gd" id="3_dhmf0"]
+[ext_resource type="Texture2D" uid="uid://vobh1ssysion" path="res://Assets/Lucid V1.2/PNG/Shadow/16/Lock-Closed.png" id="5_qsabv"]
+[ext_resource type="Texture2D" uid="uid://mcy1t5ytd43t" path="res://Assets/Lucid V1.2/SVG/Shadow/Chevron-Arrow-Up.svg" id="6_2kq6l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hy0id"]
+bg_color = Color(0.00392157, 0.454902, 0.745098, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_el6yf"]
+bg_color = Color(0.00392157, 0.454902, 0.745098, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qbp6"]
+bg_color = Color(0.00392157, 0.372549, 0.615686, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="TraitButton" type="VBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -50.0
+offset_right = 256.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_vg3a2")
+script = ExtResource("1_s3swc")
+
+[node name="AnimatedButton" type="Button" parent="."]
+z_index = 1
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("2_vg3a2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hy0id")
+theme_override_styles/hover = SubResource("StyleBoxFlat_el6yf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5qbp6")
+script = ExtResource("3_dhmf0")
+
+[node name="Shadow" type="Panel" parent="AnimatedButton"]
+self_modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="AnimatedButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AnimatedButton/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="AnimatedButton/MarginContainer/HBoxContainer" groups=["ButtonLabel"]]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Text"
+vertical_alignment = 1
+
+[node name="Level" type="HBoxContainer" parent="AnimatedButton/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="AnimatedButton/MarginContainer/HBoxContainer/Level"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Lock" type="TextureRect" parent="AnimatedButton/MarginContainer/HBoxContainer/Level/MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("5_qsabv")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Level" type="Label" parent="AnimatedButton/MarginContainer/HBoxContainer/Level"]
+layout_mode = 2
+text = "Lv.5"
+
+[node name="TextureRect" type="TextureRect" parent="AnimatedButton/MarginContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("6_2kq6l")
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 2
+mouse_filter = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Speed" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 1
+text = "Bonus action"
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Level 2"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextEdit" type="TextEdit" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+mouse_filter = 1
+placeholder_text = "Trait Text"
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[connection signal="pressed" from="AnimatedButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="AnimatedButton" to="AnimatedButton" method="_on_pressed"]
+[connection signal="resized" from="AnimatedButton" to="AnimatedButton" method="_on_resized"]

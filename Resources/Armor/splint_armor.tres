@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SplintArmor" load_steps=2 format=3 uid="uid://cb61trrco2508"]
+
+[ext_resource type="Script" path="res://Resources/Armor/splint_armor.gd" id="1_pe03d"]
+
+[resource]
+script = ExtResource("1_pe03d")
+unique_id = "splint"
+name = "Splint"
+description = "This armor is made of narrow vertical strips of metal riveted to a backing of leather that is worn over cloth padding. Flexible chain mail protects the joints."
+cost = 200
+weight = 60
+stealth_disadvantage = true
+strength = "Str 15"
+category = "Heavy Armor"

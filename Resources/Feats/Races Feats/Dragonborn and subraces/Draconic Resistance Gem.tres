@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://cg8pb6rvtx50q"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_qssh8"]
+
+[resource]
+script = ExtResource("1_qssh8")
+unique_id = "draconic_resistance_gem"
+name = "Draconic Resistance"
+description = "You have resistance to the damage type associated with your Gem Ancestry."
+classes = Array[String]([])
+races = Array[String](["Gem Dragonborn"])
+pre_req = Array[String]([])
+tags = Array[String](["gem", "dragonborn", "racial", "passive", "resistance"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

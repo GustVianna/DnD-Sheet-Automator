@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Persuasion" load_steps=2 format=3 uid="uid://cgmjxbdg4vlgf"]
+
+[ext_resource type="Script" path="res://Resources/Skills/Persuasion.gd" id="1_vkj8l"]
+
+[resource]
+script = ExtResource("1_vkj8l")
+skill_name = ""
+derived_ability = "Charisma"
+proficiency = false
+proficiency_bonus = 0
+expertise = false
+expertise_bonus = 0
+advantage = false
+disadvantage = false
+added_other = 0
+other_source = ""
+total = 0

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="OwlinData" load_steps=2 format=3 uid="uid://evrife5bhtme"]
+
+[ext_resource type="Script" path="res://Resources/Races/Owlin/OwlinData.gd" id="1_j117j"]
+
+[resource]
+script = ExtResource("1_j117j")
+unique_id = "owlin"
+name = "Owlin"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Strixhaven: A Curriculum of Chaos"

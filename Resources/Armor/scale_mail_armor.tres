@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ScaleMailArmor" load_steps=2 format=3 uid="uid://cagew7rdjxaj1"]
+
+[ext_resource type="Script" path="res://Resources/Armor/scale_mail_armor.gd" id="1_ovot5"]
+
+[resource]
+script = ExtResource("1_ovot5")
+unique_id = "scale_mail"
+name = "Scale Mail"
+description = "This armor consists of a coat and leggings (and perhaps a separate skirt) of leather covered with overlapping pieces of metal, much like the scales of a fish. The suit includes gauntlets."
+cost = 50
+weight = 45
+stealth_disadvantage = true
+strength = "-"
+category = "Medium Armor"

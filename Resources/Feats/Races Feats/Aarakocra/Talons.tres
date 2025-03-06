@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://ds5vea0ghlbrr"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_v8wpy"]
+
+[resource]
+script = ExtResource("1_v8wpy")
+unique_id = "talons"
+name = "Talons"
+description = "You have talons that you can use to make unarmed strikes. When you hit with them, the strike deals 1d6 + your Strength modifier slashing damage, instead of the bludgeoning damage normal for an unarmed strike."
+classes = Array[String]([])
+races = Array[String](["Aarakocra"])
+pre_req = Array[String]([])
+tags = Array[String](["attack", "aarakocra", "racial", "passive"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

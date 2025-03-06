@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HalfOrcData" load_steps=2 format=3 uid="uid://c6ky8ieyuy3hg"]
+
+[ext_resource type="Script" path="res://Resources/Races/Half-Orc/HalfOrcData.gd" id="1_mo5c6"]
+
+[resource]
+script = ExtResource("1_mo5c6")
+unique_id = "mark_half_orc"
+name = "Mark of Finding Half Orc"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Eberron: Rising from the Last War"

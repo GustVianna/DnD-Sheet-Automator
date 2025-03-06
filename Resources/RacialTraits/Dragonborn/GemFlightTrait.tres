@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="GemFlightTrait" load_steps=2 format=3 uid="uid://bj5dcoagjfavu"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Dragonborn/GemFlightTrait.gd" id="1_llads"]
+
+[resource]
+script = ExtResource("1_llads")
+unique_id = "gem_flight"
+name = "Gem Flight"
+description = "Starting at 5th level, you can use a bonus action to manifest spectral wings on your body. These wings last for 1 minute. For the duration, you gain a flying speed equal to your walking speed and can hover. Once you use this trait, you can't do so again until you finish a long rest."

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ChangelingData" load_steps=2 format=3 uid="uid://de4q8584qpdpv"]
+
+[ext_resource type="Script" path="res://Resources/Races/Changeling/ChangelingData.gd" id="1_ucnwl"]
+
+[resource]
+script = ExtResource("1_ucnwl")
+unique_id = "changeling"
+name = "Changeling"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

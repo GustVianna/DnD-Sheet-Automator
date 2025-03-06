@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ElfData" load_steps=2 format=3 uid="uid://biodl34g01o8x"]
+
+[ext_resource type="Script" path="res://Resources/Races/Elf/ElfData.gd" id="1_maten"]
+
+[resource]
+script = ExtResource("1_maten")
+unique_id = "sea_elf"
+name = "Sea Elf"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Eberron: Rising from the Last War"

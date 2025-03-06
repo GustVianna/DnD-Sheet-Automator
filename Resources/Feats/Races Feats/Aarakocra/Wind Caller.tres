@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://bbw741utcw71i"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_gbufp"]
+
+[resource]
+script = ExtResource("1_gbufp")
+unique_id = "wind_caller"
+name = "Wind Caller"
+description = "Starting at 3rd level, you can cast the gust of wind spell with this trait, without requiring a material component. Once you cast the spell with this trait, you can't do so again until you finish a long rest. You can also cast the spell using any spell slots you have of 2nd level or higher.Intelligence, Wisdom, or Charisma is your spellcasting ability for when you cast gust of wind with this trait (choose when you select this race)."
+classes = Array[String]([])
+races = Array[String](["Aarakocra"])
+pre_req = Array[String]([])
+tags = Array[String](["spell", "aarakocra", "racial", "passive"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://mpfoijq8fesv"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_n6oyj"]
+
+[resource]
+script = ExtResource("1_n6oyj")
+unique_id = "psionic_mind"
+name = "Psionic Mind"
+description = "You can send telepathic messages to any creature you can see within 30 feet of you. You don't need to share a language with the creature for it to understand these messages, but it must be able to understand at least one language to comprehend them."
+classes = Array[String]([])
+races = Array[String](["Gem Dragonborn"])
+pre_req = Array[String]([])
+tags = Array[String](["gem", "dragonborn", "racial", "passive", "telepathic"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

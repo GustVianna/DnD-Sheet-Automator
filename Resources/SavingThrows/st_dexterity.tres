@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="STDexterity" load_steps=2 format=3 uid="uid://cg4vc3bn36c2r"]
+
+[ext_resource type="Script" path="res://Resources/SavingThrows/st_dexterity.gd" id="1_uvfm2"]
+
+[resource]
+script = ExtResource("1_uvfm2")
+ability_name = "Dexterity"
+advantage = false
+disadvantage = false
+proficiency = false
+added_other = {}
+total = 0

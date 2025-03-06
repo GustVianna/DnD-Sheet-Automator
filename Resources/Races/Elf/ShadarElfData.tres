@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ElfData" load_steps=2 format=3 uid="uid://bksysknjlcdll"]
+
+[ext_resource type="Script" path="res://Resources/Races/Elf/ElfData.gd" id="1_81bj0"]
+
+[resource]
+script = ExtResource("1_81bj0")
+unique_id = "shadar_elf"
+name = "Shadar-kai Elf"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen's Tome of Foes"

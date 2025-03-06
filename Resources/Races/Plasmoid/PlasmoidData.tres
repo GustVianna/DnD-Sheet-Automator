@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PlasmoidData" load_steps=2 format=3 uid="uid://cipndsxexgm4r"]
+
+[ext_resource type="Script" path="res://Resources/Races/Plasmoid/PlasmoidData.gd" id="1_ef8ck"]
+
+[resource]
+script = ExtResource("1_ef8ck")
+unique_id = "plasmoid"
+name = "Plasmoid"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Astral Adventurer's Guide"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FlightTrait" load_steps=2 format=3 uid="uid://b5y6yoap81f0m"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Aarakocra/FlightTrait.gd" id="1_vlh7r"]
+
+[resource]
+script = ExtResource("1_vlh7r")
+unique_id = "flight"
+trait_name = "Flight"
+description = "Because of your wings, you have a flying speed equal to your walking speed. You can't use this flying speed if you're wearing medium or heavy armor."
+trait_speed = "Passive"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WizardData" load_steps=2 format=3 uid="uid://w6sglh6qu1js"]
+
+[ext_resource type="Script" path="res://Resources/Classes/Wizard/wizard_data.gd" id="1_fnxce"]
+
+[resource]
+script = ExtResource("1_fnxce")
+unique_id = "wizard"
+name = "Wizard"
+description = ""
+features = Array[Resource("res://Resources/ClassTraits/ClassTraitData.gd")]([])

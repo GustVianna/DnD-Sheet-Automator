@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="STStrength" load_steps=2 format=3 uid="uid://cbssi5e126v17"]
+
+[ext_resource type="Script" path="res://Resources/SavingThrows/st_strength.gd" id="1_k6aje"]
+
+[resource]
+script = ExtResource("1_k6aje")
+ability_name = "Strength"
+advantage = false
+disadvantage = false
+proficiency = true
+added_other = {}
+total = 0

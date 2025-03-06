@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ElfData" load_steps=2 format=3 uid="uid://cghkakfy3tkdy"]
+
+[ext_resource type="Script" path="res://Resources/Races/Elf/ElfData.gd" id="1_d522e"]
+
+[resource]
+script = ExtResource("1_d522e")
+unique_id = "wood_elf"
+name = "Wood Elf"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Player's Handbook"

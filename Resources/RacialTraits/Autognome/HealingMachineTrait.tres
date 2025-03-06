@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="HealingMachineTrait" load_steps=2 format=3 uid="uid://cakynya5wy4dm"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Autognome/HealingMachineTrait.gd" id="1_cir8w"]
+
+[resource]
+script = ExtResource("1_cir8w")
+unique_id = "creature_type_construct"
+name = "Creature Type"
+description = "You are a Construct."

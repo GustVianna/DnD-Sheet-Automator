@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="YuanTiData" load_steps=2 format=3 uid="uid://c31te3wldl0r8"]
+
+[ext_resource type="Script" path="res://Resources/Races/Yuan-Ti/YuanTiData.gd" id="1_8y8y4"]
+
+[resource]
+script = ExtResource("1_8y8y4")
+unique_id = "yuan_ti"
+name = "Yuan-Ti"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://0dhv3pl2c0w"]
+
+[ext_resource type="PackedScene" uid="uid://djyo2o66wh84e" path="res://Scenes/MainScene.tscn" id="1_nl1ey"]
+[ext_resource type="Shader" path="res://Scenes/pixelized_scene_test.gdshader" id="1_o3tar"]
+[ext_resource type="Script" path="res://Scenes/FpsCounter.gd" id="2_0u24f"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yc1wd"]
+shader = ExtResource("1_o3tar")
+shader_parameter/change_color_depth = true
+shader_parameter/target_color_depth = 5
+shader_parameter/dithering = true
+shader_parameter/scale_resolution = true
+shader_parameter/target_resolution_scale = 3
+shader_parameter/enable_recolor = false
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="main" parent="." instance=ExtResource("1_nl1ey")]
+layout_mode = 1
+
+[node name="ScrollContainer1" parent="main/SwippableElements/Page1" index="1"]
+scroll_vertical = 100
+
+[node name="Dice" parent="main" index="2"]
+label_name = ""
+
+[node name="Label" parent="main/Dice" index="1"]
+script = ExtResource("2_0u24f")
+
+[node name="ColorRect2" type="ColorRect" parent="main"]
+visible = false
+z_index = 3
+material = SubResource("ShaderMaterial_yc1wd")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[editable path="main"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/GridContainer/Strength/Strength"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/GridContainer/Dexterity/Dexterity"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/GridContainer/Constitution/Constitution"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/GridContainer/Intelligence/Intelligence"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/GridContainer/Wisdom/Wisdom"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/GridContainer/Charisma/Charisma"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/SavingThrows/MarginContainer/VBoxContainer/SavingThrows/Strength/Strength"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/SavingThrows/MarginContainer/VBoxContainer/SavingThrows/Dexterity/Dexterity"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/SavingThrows/MarginContainer/VBoxContainer/SavingThrows/Constitution/Constitution"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/SavingThrows/MarginContainer/VBoxContainer/SavingThrows/Intelligence/Intelligence"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/SavingThrows/MarginContainer/VBoxContainer/SavingThrows/Wisdom/Wisdom"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/SavingThrows/MarginContainer/VBoxContainer/SavingThrows/Charisma/Strength"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/PassiveSenses/MarginContainer/PassiveSenses/PassivePerception"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/PassiveSenses/MarginContainer/PassiveSenses/PassiveInsight"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/PassiveSenses/MarginContainer/PassiveSenses/PassiveInvestigation"]
+[editable path="main/SwippableElements/Page1/ScrollContainer1/Scroll/VBoxContainer/Feats/MarginContainer/Feats/MarginContainer/PassivePerception"]
+[editable path="main/SwippableElements/Page2/ScrollContainer2/Scroll/VBoxContainer/Equipped/MarginContainer/Equipped/TraitButton"]
+[editable path="main/SwippableElements/Page2/ScrollContainer2/Scroll/VBoxContainer/Inventory/MarginContainer/Inventory/TraitButton"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Equipped/MarginContainer/Equipped/CombatInfo/HBoxContainer/Initiative/Initiative"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Equipped/MarginContainer/Equipped/CombatInfo/HBoxContainer/AC/AC"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Equipped/MarginContainer/Equipped/CombatInfo/HBoxContainer/Speed/Speed"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Actions/Attack/MarginContainer/Items/Attack/UnarmedAttack"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Actions/Attack/MarginContainer/Items/Attack/UnarmedAttack/AnimatedButton/MarginContainer/HBoxContainer/Hit"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Actions/Attack/MarginContainer/Items/Attack/UnarmedAttack/AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Damage"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Actions/Attack/MarginContainer/Items/Attack/UnarmedAttack/AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Damage2"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Actions/Attack/MarginContainer/Items/Attack/MeleeAttack"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Actions/Attack/MarginContainer/Items/Attack/MeleeAttack/AnimatedButton/MarginContainer/HBoxContainer/Hit"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Actions/Attack/MarginContainer/Items/Attack/MeleeAttack/AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Damage"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Actions/Attack/MarginContainer/Items/Attack/MeleeAttack/AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Damage2"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Actions/Attack/MarginContainer/Items/Attack/RangedAttack"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Actions/Attack/MarginContainer/Items/Attack/RangedAttack/AnimatedButton/MarginContainer/HBoxContainer/Hit"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Actions/Attack/MarginContainer/Items/Attack/RangedAttack/AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Damage"]
+[editable path="main/SwippableElements/Page3/ScrollContainer3/Scroll/VBoxContainer/Actions/Attack/MarginContainer/Items/Attack/RangedAttack/AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Damage2"]
+[editable path="main/SwippableElements/Page4/ScrollContainer4/Scroll/VBoxContainer/BeingAffectedBy/BeingAffectedBy"]
+[editable path="main/Dice"]
+[editable path="main/Bio"]

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Nature" load_steps=2 format=3 uid="uid://b2q52m6ygk1ey"]
+
+[ext_resource type="Script" path="res://Resources/Skills/Nature.gd" id="1_rf84b"]
+
+[resource]
+script = ExtResource("1_rf84b")
+skill_name = ""
+derived_ability = "Wisdom"
+proficiency = false
+proficiency_bonus = 0
+expertise = false
+expertise_bonus = 0
+advantage = false
+disadvantage = false
+added_other = 0
+other_source = ""
+total = 0

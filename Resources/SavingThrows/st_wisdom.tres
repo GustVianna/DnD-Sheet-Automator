@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="STWisdom" load_steps=2 format=3 uid="uid://bhmmn5noite83"]
+
+[ext_resource type="Script" path="res://Resources/SavingThrows/st_wisdom.gd" id="1_sbahy"]
+
+[resource]
+script = ExtResource("1_sbahy")
+ability_name = "Wisdom"
+advantage = false
+disadvantage = false
+proficiency = false
+added_other = {}
+total = 0

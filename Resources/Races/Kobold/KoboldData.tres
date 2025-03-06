@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="KoboldData" load_steps=2 format=3 uid="uid://b1p4fjkssup1l"]
+
+[ext_resource type="Script" path="res://Resources/Races/Kobold/KoboldData.gd" id="1_tjp3o"]
+
+[resource]
+script = ExtResource("1_tjp3o")
+unique_id = "kobold"
+name = "Kobold"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

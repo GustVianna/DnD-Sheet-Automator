@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LizardfolkData" load_steps=2 format=3 uid="uid://rxdsvc8pdypc"]
+
+[ext_resource type="Script" path="res://Resources/Races/Lizardfolk/LizardfolkData.gd" id="1_5xri1"]
+
+[resource]
+script = ExtResource("1_5xri1")
+unique_id = "lizardfolk"
+name = "Lizardfolk"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Mordenkainen Presents: Monsters of the Multiverse"

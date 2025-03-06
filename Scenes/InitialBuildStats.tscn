@@ -1,0 +1,1316 @@
+[gd_scene load_steps=17 format=3 uid="uid://bdfh27cxcsj1p"]
+
+[ext_resource type="Theme" uid="uid://g5dcmi2kejgv" path="res://Assets/Themes/TestTheme.tres" id="1_e22yt"]
+[ext_resource type="PackedScene" uid="uid://ntar0ljurf53" path="res://Scenes/BackgroundBio.tscn" id="2_daj7v"]
+[ext_resource type="PackedScene" uid="uid://dovpmp4f4ubog" path="res://Scenes/animated_button.tscn" id="4_cw161"]
+[ext_resource type="Script" path="res://Scenes/StatsScreen.gd" id="4_vypra"]
+[ext_resource type="Texture2D" uid="uid://mcy1t5ytd43t" path="res://Assets/Lucid V1.2/SVG/Shadow/Chevron-Arrow-Up.svg" id="5_6v6ap"]
+[ext_resource type="PackedScene" uid="uid://knfwp2hx33bn" path="res://Scenes/StatTypeContainer.tscn" id="5_ouxtk"]
+
+[sub_resource type="Animation" id="Animation_7uhj6"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_cgvjt"]
+resource_name = "button_shaking"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.05, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.1, 0.2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8j8bu"]
+_data = {
+"RESET": SubResource("Animation_7uhj6"),
+"button_shaking": SubResource("Animation_cgvjt")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qv3ll"]
+bg_color = Color(0.00392157, 0.454902, 0.745098, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0470588, 0.207843, 0.415686, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d2cmc"]
+bg_color = Color(0.00392157, 0.454902, 0.745098, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0470588, 0.207843, 0.415686, 1)
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bl6pw"]
+bg_color = Color(0.00392157, 0.380392, 0.627451, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.0470588, 0.207843, 0.415686, 1)
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Animation" id="Animation_5gjnc"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_a5wnx"]
+resource_name = "button_shaking"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.035, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, -0.035, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_og3q5"]
+_data = {
+"RESET": SubResource("Animation_5gjnc"),
+"button_shaking": SubResource("Animation_a5wnx")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qv0fa"]
+bg_color = Color(0.105882, 0.0901961, 0.0901961, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.00392157, 0.454902, 0.745098, 1)
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="InitialBuildStats" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_e22yt")
+
+[node name="Background" parent="." instance=ExtResource("2_daj7v")]
+layout_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scroll_vertical = 100
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="Stats" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 100
+script = ExtResource("4_vypra")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats"]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_right = 450
+
+[node name="AnimatedButton" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer2/MarginContainer" instance=ExtResource("4_cw161")]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+label_name = "Back"
+
+[node name="LineEdit" type="RichTextLabel" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "[wave amp=50.0 freq=3.0 connected=1][center]Set your stats[/center][/wave]"
+fit_content = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 25
+
+[node name="ButtonsContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/PanelContainer/MarginContainer" instance=ExtResource("5_ouxtk")]
+layout_mode = 2
+
+[node name="Stats" type="GridContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 50
+columns = 3
+
+[node name="Strength" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Strength" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength" groups=["StatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+label_name = "Strength"
+
+[node name="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/Strength" index="1"]
+theme_override_font_sizes/font_size = 60
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/Strength"]
+libraries = {
+"": SubResource("AnimationLibrary_8j8bu")
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/Strength"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+
+[node name="STRUp" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/Strength/VBoxContainer" groups=["UpStatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qv3ll")
+label_name = ""
+
+[node name="Shadow" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/Strength/VBoxContainer/STRUp" index="0"]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/Strength/VBoxContainer/STRUp"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/Strength/VBoxContainer/STRUp/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_6v6ap")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="STRDown" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/Strength/VBoxContainer" groups=["DownStatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_d2cmc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d2cmc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bl6pw")
+theme_override_styles/focus = SubResource("StyleBoxFlat_d2cmc")
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/Strength/VBoxContainer/STRDown"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/Strength/VBoxContainer/STRDown/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_6v6ap")
+expand_mode = 3
+stretch_mode = 5
+flip_v = true
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Strength" type="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Strength"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dexterity" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Dexterity" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity" groups=["StatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+label_name = "Strength"
+
+[node name="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/Dexterity" index="1"]
+theme_override_font_sizes/font_size = 60
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/Dexterity"]
+libraries = {
+"": SubResource("AnimationLibrary_8j8bu")
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/Dexterity"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+
+[node name="DEXUp" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/Dexterity/VBoxContainer" groups=["UpStatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qv3ll")
+label_name = ""
+
+[node name="Shadow" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/Dexterity/VBoxContainer/DEXUp" index="0"]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/Dexterity/VBoxContainer/DEXUp"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/Dexterity/VBoxContainer/DEXUp/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_6v6ap")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="DEXDown" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/Dexterity/VBoxContainer" groups=["DownStatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_d2cmc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d2cmc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bl6pw")
+theme_override_styles/focus = SubResource("StyleBoxFlat_d2cmc")
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/Dexterity/VBoxContainer/DEXDown"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/Dexterity/VBoxContainer/DEXDown/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_6v6ap")
+expand_mode = 3
+stretch_mode = 5
+flip_v = true
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Dexterity" type="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Dexterity"
+horizontal_alignment = 1
+
+[node name="Constitution" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Constitution" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution" groups=["StatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+label_name = "Strength"
+
+[node name="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/Constitution" index="1"]
+theme_override_font_sizes/font_size = 60
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/Constitution"]
+libraries = {
+"": SubResource("AnimationLibrary_8j8bu")
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/Constitution"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+
+[node name="CONUp" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/Constitution/VBoxContainer" groups=["UpStatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qv3ll")
+label_name = ""
+
+[node name="Shadow" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/Constitution/VBoxContainer/CONUp" index="0"]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/Constitution/VBoxContainer/CONUp"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/Constitution/VBoxContainer/CONUp/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_6v6ap")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="CONDown" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/Constitution/VBoxContainer" groups=["DownStatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_d2cmc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d2cmc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bl6pw")
+theme_override_styles/focus = SubResource("StyleBoxFlat_d2cmc")
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/Constitution/VBoxContainer/CONDown"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/Constitution/VBoxContainer/CONDown/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_6v6ap")
+expand_mode = 3
+stretch_mode = 5
+flip_v = true
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Constitution" type="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Constitution"
+horizontal_alignment = 1
+
+[node name="Intelligence" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Intelligence" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence" groups=["StatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+label_name = "Strength"
+
+[node name="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/Intelligence" index="1"]
+theme_override_font_sizes/font_size = 60
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/Intelligence"]
+libraries = {
+"": SubResource("AnimationLibrary_8j8bu")
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/Intelligence"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+
+[node name="INTUp" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/Intelligence/VBoxContainer" groups=["UpStatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qv3ll")
+label_name = ""
+
+[node name="Shadow" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/Intelligence/VBoxContainer/INTUp" index="0"]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/Intelligence/VBoxContainer/INTUp"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/Intelligence/VBoxContainer/INTUp/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_6v6ap")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="INTDown" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/Intelligence/VBoxContainer" groups=["DownStatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_d2cmc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d2cmc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bl6pw")
+theme_override_styles/focus = SubResource("StyleBoxFlat_d2cmc")
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/Intelligence/VBoxContainer/INTDown"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/Intelligence/VBoxContainer/INTDown/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_6v6ap")
+expand_mode = 3
+stretch_mode = 5
+flip_v = true
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Intelligence" type="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Intelligence"
+horizontal_alignment = 1
+
+[node name="Wisdom" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Wisdom" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom" groups=["StatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+label_name = "Strength"
+
+[node name="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/Wisdom" index="1"]
+theme_override_font_sizes/font_size = 60
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/Wisdom"]
+libraries = {
+"": SubResource("AnimationLibrary_8j8bu")
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/Wisdom"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+
+[node name="WISUp" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/Wisdom/VBoxContainer" groups=["UpStatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qv3ll")
+label_name = ""
+
+[node name="Shadow" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/Wisdom/VBoxContainer/WISUp" index="0"]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/Wisdom/VBoxContainer/WISUp"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/Wisdom/VBoxContainer/WISUp/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_6v6ap")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="WISDown" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/Wisdom/VBoxContainer" groups=["DownStatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_d2cmc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d2cmc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bl6pw")
+theme_override_styles/focus = SubResource("StyleBoxFlat_d2cmc")
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/Wisdom/VBoxContainer/WISDown"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/Wisdom/VBoxContainer/WISDown/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_6v6ap")
+expand_mode = 3
+stretch_mode = 5
+flip_v = true
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Wisdom" type="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Wisdom"
+horizontal_alignment = 1
+
+[node name="Charisma" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 5
+
+[node name="Charisma" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma" groups=["StatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+label_name = "Strength"
+
+[node name="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/Charisma" index="1"]
+theme_override_font_sizes/font_size = 60
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/Charisma"]
+libraries = {
+"": SubResource("AnimationLibrary_8j8bu")
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/Charisma"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 100
+
+[node name="CHAUp" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/Charisma/VBoxContainer" groups=["UpStatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_qv3ll")
+label_name = ""
+
+[node name="Shadow" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/Charisma/VBoxContainer/CHAUp" index="0"]
+visible = false
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/Charisma/VBoxContainer/CHAUp"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/Charisma/VBoxContainer/CHAUp/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_6v6ap")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="CHADown" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/Charisma/VBoxContainer" groups=["DownStatButton"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxFlat_d2cmc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_d2cmc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bl6pw")
+theme_override_styles/focus = SubResource("StyleBoxFlat_d2cmc")
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/Charisma/VBoxContainer/CHADown"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/Charisma/VBoxContainer/CHADown/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("5_6v6ap")
+expand_mode = 3
+stretch_mode = 5
+flip_v = true
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Charisma" type="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Charisma"
+horizontal_alignment = 1
+
+[node name="PointBuy" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/PointBuy"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/PointBuy/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="PointBuyAmount" type="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/PointBuy/PanelContainer/MarginContainer"]
+layout_mode = 2
+text = "27/27
+Points remaining"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Rolls" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_right = 50
+
+[node name="PanelContainer" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Rolls"
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 15
+theme_override_constants/v_separation = 20
+columns = 3
+
+[node name="Roll1" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AnimatedButton" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll1" groups=["RollButtons"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll1/AnimatedButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll1/AnimatedButton/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll1/AnimatedButton/MarginContainer/HBoxContainer" groups=["RollLabel"]]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 45
+text = "-"
+horizontal_alignment = 1
+
+[node name="Clear" type="Button" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll1/AnimatedButton/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "X"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll1/AnimatedButton"]
+libraries = {
+"": SubResource("AnimationLibrary_og3q5")
+}
+
+[node name="DiceValues" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll1"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_qv0fa")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll1/DiceValues"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll1/DiceValues/MarginContainer" groups=["RollValues"]]
+layout_mode = 2
+bbcode_enabled = true
+text = " "
+fit_content = true
+
+[node name="Roll2" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AnimatedButton" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll2" groups=["RollButtons"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll2/AnimatedButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll2/AnimatedButton/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll2/AnimatedButton/MarginContainer/HBoxContainer" groups=["RollLabel"]]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 45
+text = "-"
+horizontal_alignment = 1
+
+[node name="Clear" type="Button" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll2/AnimatedButton/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "X"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll2/AnimatedButton"]
+libraries = {
+"": SubResource("AnimationLibrary_og3q5")
+}
+
+[node name="DiceValues" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_qv0fa")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll2/DiceValues"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll2/DiceValues/MarginContainer" groups=["RollValues"]]
+layout_mode = 2
+bbcode_enabled = true
+text = " "
+
+[node name="Roll3" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AnimatedButton" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll3" groups=["RollButtons"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll3/AnimatedButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll3/AnimatedButton/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll3/AnimatedButton/MarginContainer/HBoxContainer" groups=["RollLabel"]]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 45
+text = "-"
+horizontal_alignment = 1
+
+[node name="Clear" type="Button" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll3/AnimatedButton/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "X"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll3/AnimatedButton"]
+libraries = {
+"": SubResource("AnimationLibrary_og3q5")
+}
+
+[node name="DiceValues" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll3"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_qv0fa")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll3/DiceValues"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll3/DiceValues/MarginContainer" groups=["RollValues"]]
+layout_mode = 2
+bbcode_enabled = true
+text = " "
+
+[node name="Roll4" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AnimatedButton" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll4" groups=["RollButtons"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll4/AnimatedButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll4/AnimatedButton/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll4/AnimatedButton/MarginContainer/HBoxContainer" groups=["RollLabel"]]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 45
+text = "-"
+horizontal_alignment = 1
+
+[node name="Clear" type="Button" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll4/AnimatedButton/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "X"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll4/AnimatedButton"]
+libraries = {
+"": SubResource("AnimationLibrary_og3q5")
+}
+
+[node name="DiceValues" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll4"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_qv0fa")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll4/DiceValues"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll4/DiceValues/MarginContainer" groups=["RollValues"]]
+layout_mode = 2
+bbcode_enabled = true
+text = " "
+
+[node name="Roll5" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AnimatedButton" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll5" groups=["RollButtons"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll5/AnimatedButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll5/AnimatedButton/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll5/AnimatedButton/MarginContainer/HBoxContainer" groups=["RollLabel"]]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 45
+text = "-"
+horizontal_alignment = 1
+
+[node name="Clear" type="Button" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll5/AnimatedButton/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "X"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll5/AnimatedButton"]
+libraries = {
+"": SubResource("AnimationLibrary_og3q5")
+}
+
+[node name="DiceValues" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll5"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_qv0fa")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll5/DiceValues"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll5/DiceValues/MarginContainer" groups=["RollValues"]]
+layout_mode = 2
+bbcode_enabled = true
+text = " "
+
+[node name="Roll6" type="VBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AnimatedButton" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll6" groups=["RollButtons"] instance=ExtResource("4_cw161")]
+z_index = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_horizontal = 3
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll6/AnimatedButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll6/AnimatedButton/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll6/AnimatedButton/MarginContainer/HBoxContainer" groups=["RollLabel"]]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 45
+text = "-"
+horizontal_alignment = 1
+
+[node name="Clear" type="Button" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll6/AnimatedButton/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "X"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll6/AnimatedButton"]
+libraries = {
+"": SubResource("AnimationLibrary_og3q5")
+}
+
+[node name="DiceValues" type="PanelContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll6"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_qv0fa")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll6/DiceValues"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="RichTextLabel" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll6/DiceValues/MarginContainer" groups=["RollValues"]]
+layout_mode = 2
+bbcode_enabled = true
+text = " "
+fit_content = true
+
+[node name="AnimatedButton" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer" instance=ExtResource("4_cw161")]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+color_theme = "Primary"
+label_name = "Roll"
+
+[node name="AnimatedButton" parent="ScrollContainer/Stats/VBoxContainer/VBoxContainer" instance=ExtResource("4_cw161")]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+color_theme = "Primary"
+label_name = "Next"
+
+[connection signal="pressed" from="ScrollContainer/Stats/VBoxContainer/VBoxContainer2/MarginContainer/AnimatedButton" to="ScrollContainer/Stats" method="_on_back_pressed"]
+[connection signal="pressed" from="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll1/AnimatedButton/MarginContainer/HBoxContainer/Clear" to="ScrollContainer/Stats" method="_on_clear_pressed"]
+[connection signal="pressed" from="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll2/AnimatedButton/MarginContainer/HBoxContainer/Clear" to="ScrollContainer/Stats" method="_on_clear2_pressed"]
+[connection signal="pressed" from="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll3/AnimatedButton/MarginContainer/HBoxContainer/Clear" to="ScrollContainer/Stats" method="_on_clear3_pressed"]
+[connection signal="pressed" from="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll4/AnimatedButton/MarginContainer/HBoxContainer/Clear" to="ScrollContainer/Stats" method="_on_clear4_pressed"]
+[connection signal="pressed" from="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll5/AnimatedButton/MarginContainer/HBoxContainer/Clear" to="ScrollContainer/Stats" method="_on_clear5_pressed"]
+[connection signal="pressed" from="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/GridContainer/Roll6/AnimatedButton/MarginContainer/HBoxContainer/Clear" to="ScrollContainer/Stats" method="_on_clear6_pressed"]
+[connection signal="pressed" from="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Rolls/PanelContainer/MarginContainer/VBoxContainer/AnimatedButton" to="ScrollContainer/Stats" method="_on_roll_1_pressed"]
+[connection signal="pressed" from="ScrollContainer/Stats/VBoxContainer/VBoxContainer/AnimatedButton" to="ScrollContainer/Stats" method="_on_next_button_pressed"]
+
+[editable path="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/Strength"]
+[editable path="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Strength/Strength/VBoxContainer/STRUp"]
+[editable path="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/Dexterity"]
+[editable path="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Dexterity/Dexterity/VBoxContainer/DEXUp"]
+[editable path="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/Constitution"]
+[editable path="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Constitution/Constitution/VBoxContainer/CONUp"]
+[editable path="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/Intelligence"]
+[editable path="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Intelligence/Intelligence/VBoxContainer/INTUp"]
+[editable path="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/Wisdom"]
+[editable path="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Wisdom/Wisdom/VBoxContainer/WISUp"]
+[editable path="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/Charisma"]
+[editable path="ScrollContainer/Stats/VBoxContainer/VBoxContainer/Stats/Charisma/Charisma/VBoxContainer/CHAUp"]

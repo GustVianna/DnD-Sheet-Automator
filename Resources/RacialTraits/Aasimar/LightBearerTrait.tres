@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LightBearerTrait" load_steps=2 format=3 uid="uid://dnims1x8lmsua"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Aasimar/LightBearerTrait.gd" id="1_drpm2"]
+
+[resource]
+script = ExtResource("1_drpm2")
+unique_id = "light_bearer"
+trait_name = "Light bearer"
+description = "You know the light cantrip. Charisma is your spellcasting ability for it."
+trait_speed = "Passive"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WindCallerTrait" load_steps=2 format=3 uid="uid://haxrfk82kt8y"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Aarakocra/WindCallerTrait.gd" id="1_kvyyl"]
+
+[resource]
+script = ExtResource("1_kvyyl")
+unique_id = "wind_caller"
+trait_name = "Wind caller"
+description = "Starting at 3rd level, you can cast the gust of wind spell with this trait, without requiring a material component. Once you cast the spell with this trait, you can't do so again until you finish a long rest. You can also cast the spell using any spell slots you have of 2nd level or higher."
+trait_speed = "Action"

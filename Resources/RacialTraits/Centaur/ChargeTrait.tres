@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ChargeTrait" load_steps=2 format=3 uid="uid://ciyqkkwjksjcd"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Centaur/ChargeTrait.gd" id="1_38uus"]
+
+[resource]
+script = ExtResource("1_38uus")
+unique_id = "charge"
+name = "Charge"
+description = "If you move at least 30 feet straight toward a target and then hit it with a melee weapon attack on the same turn, you can immediately follow that attack with a bonus action, making one attack against the target with your hooves."

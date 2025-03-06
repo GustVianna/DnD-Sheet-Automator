@@ -1,0 +1,149 @@
+[gd_scene load_steps=8 format=3 uid="uid://dir8kenlypgaw"]
+
+[ext_resource type="Script" path="res://Scripts/attack_button.gd" id="1_6rvbu"]
+[ext_resource type="Theme" uid="uid://g5dcmi2kejgv" path="res://Assets/Themes/TestTheme.tres" id="2_6shf2"]
+[ext_resource type="Script" path="res://Scenes/animated_button.gd" id="3_4ls74"]
+[ext_resource type="PackedScene" uid="uid://dovpmp4f4ubog" path="res://Scenes/animated_button.tscn" id="5_meoig"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hy0id"]
+bg_color = Color(0.00392157, 0.454902, 0.745098, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_el6yf"]
+bg_color = Color(0.00392157, 0.454902, 0.745098, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5qbp6"]
+bg_color = Color(0.00392157, 0.372549, 0.615686, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="AttackButton" type="VBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -60.0
+offset_right = 360.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_6rvbu")
+
+[node name="AnimatedButton" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_6shf2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_hy0id")
+theme_override_styles/hover = SubResource("StyleBoxFlat_el6yf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5qbp6")
+script = ExtResource("3_4ls74")
+
+[node name="Shadow" type="Panel" parent="AnimatedButton"]
+self_modulate = Color(0, 0, 0, 1)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="AnimatedButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AnimatedButton/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Label" type="Label" parent="AnimatedButton/MarginContainer/HBoxContainer" groups=["ButtonLabel"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.6
+text = "Text"
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="AnimatedButton/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="Hit" parent="AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer" instance=ExtResource("5_meoig")]
+layout_mode = 2
+size_flags_horizontal = 3
+color_theme = "Primary"
+label_name = ""
+
+[node name="Label" parent="AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Hit" index="1"]
+text = ""
+
+[node name="Damage" parent="AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer" instance=ExtResource("5_meoig")]
+layout_mode = 2
+size_flags_horizontal = 3
+color_theme = "Primary"
+label_name = ""
+
+[node name="Label" parent="AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Damage" index="1"]
+text = ""
+autowrap_mode = 1
+text_overrun_behavior = 0
+
+[node name="Damage2" parent="AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer" instance=ExtResource("5_meoig")]
+layout_mode = 2
+size_flags_horizontal = 3
+color_theme = "Primary"
+label_name = ""
+
+[node name="Label" parent="AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Damage2" index="1"]
+text = ""
+autowrap_mode = 1
+text_overrun_behavior = 0
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 2
+
+[node name="TextEdit" type="TextEdit" parent="PanelContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+placeholder_text = "Trait Text"
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[connection signal="pressed" from="AnimatedButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="AnimatedButton" to="AnimatedButton" method="_on_pressed"]
+[connection signal="resized" from="AnimatedButton" to="AnimatedButton" method="_on_resized"]
+[connection signal="pressed" from="AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Hit" to="." method="_on_hit_pressed"]
+[connection signal="pressed" from="AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Damage" to="." method="_on_damage_pressed"]
+[connection signal="pressed" from="AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Damage2" to="." method="_on_damage_2_pressed"]
+
+[editable path="AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Hit"]
+[editable path="AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Damage"]
+[editable path="AnimatedButton/MarginContainer/HBoxContainer/HBoxContainer/Damage2"]

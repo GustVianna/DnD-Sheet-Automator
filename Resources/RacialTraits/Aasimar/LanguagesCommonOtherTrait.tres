@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LanguagesCommonOtherTrait" load_steps=2 format=3 uid="uid://cpnvcmd56m3mg"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/LanguagesCommonOtherTrait.gd" id="1_02eh4"]
+
+[resource]
+script = ExtResource("1_02eh4")
+unique_id = "languages_common_other"
+trait_name = "Languages"
+description = "You can speak, read, and write Common and one other language that you and your DM agree is appropriate for your character."
+trait_speed = "Passive"

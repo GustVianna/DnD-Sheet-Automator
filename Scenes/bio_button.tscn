@@ -1,0 +1,344 @@
+[gd_scene load_steps=11 format=3 uid="uid://d12v6tyoucisq"]
+
+[ext_resource type="Theme" uid="uid://g5dcmi2kejgv" path="res://Assets/Themes/TestTheme.tres" id="1_70lpd"]
+[ext_resource type="Script" path="res://Scripts/BioManager.gd" id="2_6j17g"]
+[ext_resource type="Texture2D" uid="uid://it3pyg7e2o70" path="res://icon_profile.png" id="4_ytx7j"]
+[ext_resource type="PackedScene" uid="uid://dovpmp4f4ubog" path="res://Scenes/animated_button.tscn" id="5_b38qh"]
+[ext_resource type="Texture2D" uid="uid://dy8o14uglspkf" path="res://Assets/Lucid V1.2/SVG/Shadow/Gear.svg" id="6_ox1uc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfcou"]
+bg_color = Color(0.105882, 0.0901961, 0.0901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nhjgm"]
+bg_color = Color(0.105882, 0.0901961, 0.0901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kuhr0"]
+bg_color = Color(0.105882, 0.0901961, 0.0901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxxvn"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1fcmd"]
+
+[node name="Bio" type="Button"]
+z_index = 5
+z_as_relative = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 275.0
+grow_horizontal = 2
+theme = ExtResource("1_70lpd")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_rfcou")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nhjgm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kuhr0")
+script = ExtResource("2_6j17g")
+
+[node name="BioPanel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 1920)
+layout_direction = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2195.0
+offset_bottom = -275.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BioPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BioPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="ScrollElements" type="MarginContainer" parent="BioPanel/VBoxContainer/ScrollContainer"]
+custom_minimum_size = Vector2(0, 3000)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 300
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Picture" type="TextureRect" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("4_ytx7j")
+stretch_mode = 5
+
+[node name="WrittenMenus" type="VBoxContainer" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer"]
+layout_mode = 2
+
+[node name="ShortTexts" type="GridContainer" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus"]
+layout_mode = 2
+columns = 2
+
+[node name="Name" type="LineEdit" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus/ShortTexts"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Name"
+
+[node name="Age" type="LineEdit" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus/ShortTexts"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Age"
+
+[node name="Height" type="LineEdit" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus/ShortTexts"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Height"
+
+[node name="Weight" type="LineEdit" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus/ShortTexts"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Weight"
+
+[node name="Eyes" type="LineEdit" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus/ShortTexts"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Eyes"
+
+[node name="Skin" type="LineEdit" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus/ShortTexts"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Skin"
+
+[node name="Hair" type="LineEdit" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus/ShortTexts"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Hair"
+
+[node name="Alignment" type="LineEdit" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus/ShortTexts"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Alignment"
+
+[node name="LongTexts" type="VBoxContainer" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Personality" type="TextEdit" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus/LongTexts"]
+layout_mode = 2
+placeholder_text = "Personality traits"
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Ideals" type="TextEdit" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus/LongTexts"]
+layout_mode = 2
+placeholder_text = "Ideals"
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Bonds" type="TextEdit" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus/LongTexts"]
+layout_mode = 2
+placeholder_text = "Bonds"
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Flaws" type="TextEdit" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus/LongTexts"]
+layout_mode = 2
+placeholder_text = "Flaws"
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Backstory" type="TextEdit" parent="BioPanel/VBoxContainer/ScrollContainer/ScrollElements/VBoxContainer/WrittenMenus/LongTexts"]
+layout_mode = 2
+size_flags_vertical = 3
+placeholder_text = "Backstory"
+wrap_mode = 1
+scroll_fit_content_height = true
+
+[node name="Close" type="Button" parent="BioPanel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_font_sizes/font_size = 200
+text = "^"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Picture" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.37
+texture = ExtResource("4_ytx7j")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 15
+
+[node name="ClassButtons" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/ClassButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+text = "Wizard
+1"
+
+[node name="AnimatedButton" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer" instance=ExtResource("5_b38qh")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+color_theme = "Primary"
+label_name = ""
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/AnimatedButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/AnimatedButton/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("6_ox1uc")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="LineEdit" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 25
+vertical_alignment = 1
+
+[node name="HpBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+max_value = 50.0
+step = 1.0
+value = 33.0
+allow_greater = true
+show_percentage = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HpBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HpBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="HP" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HpBar/HBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 30
+text = "20/40"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TempHpBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/VBoxContainer/HpBar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.2
+theme_override_styles/background = SubResource("StyleBoxFlat_pxxvn")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1fcmd")
+max_value = 20.0
+step = 1.0
+value = 8.0
+allow_greater = true
+fill_mode = 1
+show_percentage = false
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/VBoxContainer/HpBar/HBoxContainer/TempHpBar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_right = 10
+
+[node name="TempHp" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/HpBar/HBoxContainer/TempHpBar/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "4"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Rests" type="HBoxContainer" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="ShortRest" parent="MarginContainer/HBoxContainer/VBoxContainer/Rests" instance=ExtResource("5_b38qh")]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+theme_override_font_sizes/font_size = 30
+label_name = "Short Rest"
+
+[node name="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Rests/ShortRest" index="1"]
+theme_override_font_sizes/font_size = 25
+
+[node name="LongRest" parent="MarginContainer/HBoxContainer/VBoxContainer/Rests" instance=ExtResource("5_b38qh")]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+theme_override_font_sizes/font_size = 30
+label_name = "Long Rest"
+
+[node name="Label" parent="MarginContainer/HBoxContainer/VBoxContainer/Rests/LongRest" index="1"]
+theme_override_font_sizes/font_size = 25
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="pressed" from="BioPanel/VBoxContainer/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Rests/ShortRest" to="." method="_on_short_rest_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/Rests/LongRest" to="." method="_on_long_rest_pressed"]
+
+[editable path="MarginContainer/HBoxContainer/VBoxContainer/HBoxContainer/AnimatedButton"]
+[editable path="MarginContainer/HBoxContainer/VBoxContainer/Rests/ShortRest"]
+[editable path="MarginContainer/HBoxContainer/VBoxContainer/Rests/LongRest"]

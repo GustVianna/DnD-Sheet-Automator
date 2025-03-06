@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WarlockData" load_steps=2 format=3 uid="uid://bphnw4tg6ujss"]
+
+[ext_resource type="Script" path="res://Resources/Classes/Warlock/warlock_data.gd" id="1_ldliv"]
+
+[resource]
+script = ExtResource("1_ldliv")
+unique_id = "warlock"
+name = "Warlock"
+description = ""
+features = Array[Resource("res://Resources/ClassTraits/ClassTraitData.gd")]([])

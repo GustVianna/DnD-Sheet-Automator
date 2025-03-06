@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://dd31wr4g0sit0"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_qe48e"]
+
+[resource]
+script = ExtResource("1_qe48e")
+unique_id = "gem_flight"
+name = "Gem Flight"
+description = "Starting at 5th level, you can use a bonus action to manifest spectral wings on your body. These wings last for 1 minute. For the duration, you gain a flying speed equal to your walking speed and can hover. Once you use this trait, you can't do so again until you finish a long rest."
+classes = Array[String]([])
+races = Array[String](["Gem Dragonborn"])
+pre_req = Array[String]([])
+tags = Array[String](["gem", "dragonborn", "racial", "passive", "flight"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

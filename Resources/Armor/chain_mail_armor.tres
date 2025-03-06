@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ChainMailArmor" load_steps=2 format=3 uid="uid://dds3jbka4b8t2"]
+
+[ext_resource type="Script" path="res://Resources/Armor/chain_mail_armor.gd" id="1_qjnia"]
+
+[resource]
+script = ExtResource("1_qjnia")
+unique_id = "chain_mail"
+name = "Chain mail"
+description = "Made of interlocking metal rings, chain mail includes a layer of quilted fabric worn underneath the mail to prevent chafing and to cushion the impact of blows. The suit includes gauntlets."
+cost = 75
+weight = 55
+stealth_disadvantage = false
+strength = "Str 13"
+category = "Heavy Armor"

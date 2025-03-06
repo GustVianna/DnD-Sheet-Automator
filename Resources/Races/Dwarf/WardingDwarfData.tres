@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="DwarfData" load_steps=2 format=3 uid="uid://cnmw50qsvj3pa"]
+
+[ext_resource type="Script" path="res://Resources/Races/Dwarf/DwarfData.gd" id="1_glarg"]
+
+[resource]
+script = ExtResource("1_glarg")
+unique_id = "warding_dwarf"
+name = "Mark of Warding Dwarf"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Eberron: Rising from the Last War"

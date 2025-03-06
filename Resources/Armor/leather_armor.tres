@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="LeatherArmor" load_steps=2 format=3 uid="uid://b3jayd5llu28s"]
+
+[ext_resource type="Script" path="res://Resources/Armor/leather_armor.gd" id="1_pmyxw"]
+
+[resource]
+script = ExtResource("1_pmyxw")
+unique_id = "leather"
+name = "Leather"
+description = "The breastplate and shoulder protectors of this armor are made of leather that has been stiffened by being boiled in oil. The rest of the armor is made of softer and more flexible materials."
+cost = 10
+weight = 10
+stealth_disadvantage = false
+strength = "-"
+category = "Light Armor"

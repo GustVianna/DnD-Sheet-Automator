@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HexbloodData" load_steps=2 format=3 uid="uid://bok76bm2pti2q"]
+
+[ext_resource type="Script" path="res://Resources/Races/Hexblood/HexbloodData.gd" id="1_hlgk1"]
+
+[resource]
+script = ExtResource("1_hlgk1")
+unique_id = "hexblood"
+name = "Hexblood"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Van Richten's Guide to Ravenloft"

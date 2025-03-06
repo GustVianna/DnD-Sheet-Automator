@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HalfOrcData" load_steps=2 format=3 uid="uid://dt32ydkxij2la"]
+
+[ext_resource type="Script" path="res://Resources/Races/Half-Orc/HalfOrcData.gd" id="1_eh8bg"]
+
+[resource]
+script = ExtResource("1_eh8bg")
+unique_id = "half_orc"
+name = "Half Orc"
+description = ""
+traits = Array[Resource("res://Scripts/Resource Classes/RacialTraitData.gd")]([])
+source = "Player's Handbook"

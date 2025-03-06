@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="SneakyTrait" load_steps=2 format=3 uid="uid://cbt17c8wma5hm"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Bugbear/SneakyTrait.gd" id="1_6hoyt"]
+
+[resource]
+script = ExtResource("1_6hoyt")
+unique_id = "sneaky"
+name = "Sneaky"
+description = "You are proficient in the Stealth skill. In addition, without squeezing, you can move through and stop in a space large enough for a Small creature."

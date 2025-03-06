@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="VampiricBiteTrait" load_steps=2 format=3 uid="uid://xil3hdopo8dv"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Dhampir/VampiricBiteTrait.gd" id="1_8nnq1"]
+
+[resource]
+script = ExtResource("1_8nnq1")
+unique_id = "vampiric_bite"
+name = "Vampiric Bite"
+description = "Your fanged bite is a natural weapon, which counts as a simple melee weapon with which you are proficient. You add your Constitution modifier, instead of your Strength modifier, to the attack and damage rolls when you attack with this bite. It deals 1d4 piercing damage on a hit. While you are missing half or more of your hit points, you have advantage on attack rolls you make with this bite.When you attack with this bite and hit a creature that isn't a Construct or an Undead, you can empower yourself in one of the following ways of your choice:You regain hit points equal to the piercing damage dealt by the bite.You gain a bonus to the next ability check or attack roll you make; the bonus equals the piercing damage dealt by the biteYou can empower yourself with this bite a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."

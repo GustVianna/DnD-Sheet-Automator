@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://bl7ow3pooexa8"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_lwypo"]
+
+[resource]
+script = ExtResource("1_lwypo")
+unique_id = "draconic_resistance_chromatic"
+name = "Draconic Resistance"
+description = "You have resistance to the damage type associated with your Chromatic Ancestry."
+classes = Array[String]([])
+races = Array[String](["Chromatic Dragonborn"])
+pre_req = Array[String]([])
+tags = Array[String](["chromatic", "dragonborn", "racial", "passive", "resistance"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

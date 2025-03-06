@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BugbearData" load_steps=2 format=3 uid="uid://dxk6bsimm4mpd"]
+
+[ext_resource type="Script" path="res://Resources/Races/Bugbear/BugbearData.gd" id="1_173w8"]
+
+[resource]
+script = ExtResource("1_173w8")
+unique_id = "bugbear"
+name = "Lalafel"
+description = ""
+traits = Array[Resource("res://Resources/RacialTraits/RacialTraitData.gd")]([])
+source = ""

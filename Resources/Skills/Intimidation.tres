@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Intimidation" load_steps=2 format=3 uid="uid://b41ecebdn6taq"]
+
+[ext_resource type="Script" path="res://Resources/Skills/Intimidation.gd" id="1_jyix8"]
+
+[resource]
+script = ExtResource("1_jyix8")
+skill_name = ""
+derived_ability = "Charisma"
+proficiency = false
+proficiency_bonus = 0
+expertise = false
+expertise_bonus = 0
+advantage = false
+disadvantage = false
+added_other = 0
+other_source = ""
+total = 0

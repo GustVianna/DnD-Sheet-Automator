@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://dssgaoiq14710"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_ygduq"]
+
+[resource]
+script = ExtResource("1_ygduq")
+unique_id = "hability_score_improvement_4"
+name = "Ability Score Improvement"
+description = "When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.Using the optional feats rule, you can forgo taking this feature to take a feat of your choice instead"
+classes = Array[String](["Wizard", "Barbarian", "Cleric", "Bard", "Ranger", "Fighter", "Artificer", "Warlock", "Monk", "Paladin", "Rogue", "Sorcerer", "Druid"])
+races = Array[String]([])
+pre_req = Array[String](["Level 4"])
+tags = Array[String](["class", "score"])
+feat_type = {
+"Acquirable": false,
+"Class": true,
+"Racial": false
+}

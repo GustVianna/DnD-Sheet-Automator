@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=3 uid="uid://knfwp2hx33bn"]
+
+[ext_resource type="Script" path="res://Scenes/StatTypeContainer.gd" id="1_6upb1"]
+[ext_resource type="PackedScene" uid="uid://dovpmp4f4ubog" path="res://Scenes/animated_button.tscn" id="2_wa5wo"]
+
+[node name="ButtonsContainer" type="HBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -334.0
+offset_top = -32.5
+offset_right = 334.0
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+script = ExtResource("1_6upb1")
+
+[node name="Left" parent="." instance=ExtResource("2_wa5wo")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+label_name = "<"
+
+[node name="StatType" parent="." instance=ExtResource("2_wa5wo")]
+layout_mode = 2
+size_flags_horizontal = 3
+label_name = "Recommended"
+
+[node name="Right" parent="." instance=ExtResource("2_wa5wo")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+label_name = ">"
+
+[connection signal="pressed" from="Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Right" to="." method="_on_right_pressed"]

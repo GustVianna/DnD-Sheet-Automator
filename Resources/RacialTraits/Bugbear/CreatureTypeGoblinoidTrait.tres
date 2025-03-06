@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CreatureTypeGoblinoidTrait" load_steps=2 format=3 uid="uid://bv5qxuteqpo5s"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Bugbear/CreatureTypeGoblinoidTrait.gd" id="1_0kvtj"]
+
+[resource]
+script = ExtResource("1_0kvtj")
+unique_id = "creature_type_goblinoid"
+name = "Creature Type"
+description = "Creature Type. You are a Humanoid. You are also considered a goblinoid for any prerequisite or effect that requires you to be a goblinoid"

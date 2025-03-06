@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Investigation" load_steps=2 format=3 uid="uid://b3s4h44hutmqc"]
+
+[ext_resource type="Script" path="res://Resources/Skills/Investigation.gd" id="1_4mbp1"]
+
+[resource]
+script = ExtResource("1_4mbp1")
+skill_name = ""
+derived_ability = "Intelligence"
+proficiency = false
+proficiency_bonus = 0
+expertise = false
+expertise_bonus = 0
+advantage = false
+disadvantage = false
+added_other = 0
+other_source = ""
+total = 0

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="AncestralLegacyTrait" load_steps=2 format=3 uid="uid://c6k3yvm4t4n2s"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Dhampir/AncestralLegacyTrait.gd" id="1_npr5p"]
+
+[resource]
+script = ExtResource("1_npr5p")
+unique_id = "deathless_nature"
+name = "Deathless Nature"
+description = "You don't need to breathe."

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DangerSenseData" load_steps=2 format=3 uid="uid://b2tiotq4vbmft"]
+
+[ext_resource type="Script" path="res://Resources/ClassTraits/Barbarian/danger_sense_data.gd" id="1_3lrrk"]
+
+[resource]
+script = ExtResource("1_3lrrk")
+trait_class = "Barbarian"
+unique_id = "danger_sense"
+trait_name = "Danger sense"
+description = "At 2nd level, you gain an uncanny sense of when things nearby aren't as they should be, giving you an edge when you dodge away from danger. You have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can't be blinded, deafened, or incapacitated."
+trait_speed = "Passive"
+level = 2.0

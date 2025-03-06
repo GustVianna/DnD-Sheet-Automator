@@ -1,0 +1,159 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckhm26ro8ava5"]
+
+[sub_resource type="GDScript" id="GDScript_7p458"]
+script/source = "extends Panel
+
+signal value_selected(new_value)
+signal clear_selected
+
+var available_values = [8,10,12,13,14,15]
+
+var unavailable_values = []
+
+func _ready():
+	var stat_buttons = get_tree().get_nodes_in_group(\"StatButton\")
+	
+	for index in stat_buttons.size():
+		if available_values.has(int(stat_buttons[index].text)):
+			unavailable_values.append(int(stat_buttons[index].text))
+			printerr(unavailable_values)
+			
+	
+	if unavailable_values.is_empty() == false:
+		for value in unavailable_values:
+			printerr(value)
+			$VBoxContainer.find_child(str(value)).disabled = true
+		
+
+func _on_8_pressed():
+	var value = 8
+	
+	if unavailable_values.has(value):
+		return
+		
+	else:
+		value_selected.emit(value)
+		
+	queue_free()
+
+func _on_10_pressed():
+	var value = 10
+	
+	if unavailable_values.has(value):
+		return
+		
+	else:
+		value_selected.emit(value)
+		
+	queue_free()
+
+func _on_12_pressed():
+	var value = 12
+	
+	if unavailable_values.has(value):
+		return
+		
+	else:
+		value_selected.emit(value)
+		
+	queue_free()
+
+func _on_13_pressed():
+	var value = 13
+	
+	if unavailable_values.has(value):
+		return
+		
+	else:
+		value_selected.emit(value)
+		
+	queue_free()
+
+func _on_14_pressed():
+	var value = 14
+	
+	if unavailable_values.has(value):
+		return
+		
+	else:
+		value_selected.emit(value)
+		
+	queue_free()
+
+func _on_15_pressed():
+	var value = 15
+	
+	if unavailable_values.has(value):
+		return
+		
+	else:
+		value_selected.emit(value)
+		
+		
+	queue_free()
+
+func get_selected_value(selected_stat_value):
+	get_node(\"VBoxContainer/\" + str(selected_stat_value)).disabled = false
+	unavailable_values.erase(selected_stat_value)
+
+
+func _on_clear_pressed():
+	unavailable_values.erase(get_parent().text)
+	
+	clear_selected.emit()
+	queue_free()
+"
+
+[node name="StandardArray" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 51.0
+offset_bottom = 207.0
+grow_horizontal = 2
+grow_vertical = 2
+script = SubResource("GDScript_7p458")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="8" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "8"
+
+[node name="10" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "10"
+
+[node name="12" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "12"
+
+[node name="13" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "13"
+
+[node name="14" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "14"
+
+[node name="15" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "15"
+
+[node name="Clear" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Clear"
+
+[connection signal="pressed" from="VBoxContainer/8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="VBoxContainer/10" to="." method="_on_10_pressed"]
+[connection signal="pressed" from="VBoxContainer/12" to="." method="_on_12_pressed"]
+[connection signal="pressed" from="VBoxContainer/13" to="." method="_on_13_pressed"]
+[connection signal="pressed" from="VBoxContainer/14" to="." method="_on_14_pressed"]
+[connection signal="pressed" from="VBoxContainer/15" to="." method="_on_15_pressed"]
+[connection signal="pressed" from="VBoxContainer/Clear" to="." method="_on_clear_pressed"]

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="NaturalAffinityTrait" load_steps=2 format=3 uid="uid://bgjv7nat1pus2"]
+
+[ext_resource type="Script" path="res://Resources/RacialTraits/Centaur/NaturalAffinityTrait.gd" id="1_s3a6u"]
+
+[resource]
+script = ExtResource("1_s3a6u")
+unique_id = "natural_affinity"
+name = "Natural Affinity"
+description = "Your fey connection to nature gives you an intuitive connection to the natural world and the animals within it. You therefore have proficiency in one of the following skills of your choice: Animal Handling, Medicine, Nature, or Survival."

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Strength" load_steps=2 format=3 uid="uid://ch0qyl682k4w"]
+
+[ext_resource type="Script" path="res://Resources/AbilityScore/strength.gd" id="1_l5dud"]
+
+[resource]
+script = ExtResource("1_l5dud")
+ability_name = ""
+advantage = false
+disadvantage = false
+added_race = {}
+added_feats = {}
+added_other = {}
+total = 0

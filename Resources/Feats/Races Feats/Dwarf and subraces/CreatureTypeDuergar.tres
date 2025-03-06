@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="FeatData" load_steps=2 format=3 uid="uid://cf3ve2scuy0y0"]
+
+[ext_resource type="Script" path="res://Scripts/Resource Classes/FeatData.gd" id="1_41r42"]
+
+[resource]
+script = ExtResource("1_41r42")
+unique_id = "creature_type_duergar"
+name = "Creature Type"
+description = "You are a Humanoid. You are also considered a dwarf for any prerequisite or effect that requires you to be a dwarf."
+classes = Array[String]([])
+races = Array[String](["Duergar"])
+pre_req = Array[String]([])
+tags = Array[String](["Duergar", "dwarf", "racial", "passive", "creature", "type"])
+feat_type = {
+"Acquirable": false,
+"Class": false,
+"Racial": true
+}

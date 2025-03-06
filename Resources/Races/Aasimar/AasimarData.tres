@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AasimarData" load_steps=9 format=3 uid="uid://ct5jweuvpa0vw"]
+
+[ext_resource type="Script" path="res://Resources/Races/Aasimar/AasimarData.gd" id="1_lr8uj"]
+[ext_resource type="Resource" uid="uid://bpcautsoblkuf" path="res://Resources/RacialTraits/Aasimar/Darkvision60Trait.tres" id="3_bmoux"]
+[ext_resource type="Resource" uid="uid://dken53r3qrcui" path="res://Resources/RacialTraits/Aasimar/CelestialResistanceTrait.tres" id="3_ng5e5"]
+[ext_resource type="Resource" uid="uid://blvw86etocf1y" path="res://Resources/RacialTraits/Aasimar/HealingHandsTrait.tres" id="4_5jbx6"]
+[ext_resource type="Resource" uid="uid://dnims1x8lmsua" path="res://Resources/RacialTraits/Aasimar/LightBearerTrait.tres" id="5_fuyr6"]
+[ext_resource type="Resource" uid="uid://jvehisve3t58" path="res://Resources/RacialTraits/Aasimar/SmallMediumSizeTrait.tres" id="6_wbllb"]
+[ext_resource type="Resource" uid="uid://dmn8kkx3hjtaa" path="res://Resources/RacialTraits/Aasimar/CelestialRevelationTrait.tres" id="7_1q5cx"]
+[ext_resource type="Resource" uid="uid://cpnvcmd56m3mg" path="res://Resources/RacialTraits/Aasimar/LanguagesCommonOtherTrait.tres" id="7_untf4"]
+
+[resource]
+script = ExtResource("1_lr8uj")
+unique_id = "aasimar"
+name = "Aasimar"
+description = ""
+traits = Array[Resource("res://Resources/RacialTraits/RacialTraitData.gd")]([ExtResource("6_wbllb"), ExtResource("3_ng5e5"), ExtResource("3_bmoux"), ExtResource("4_5jbx6"), ExtResource("5_fuyr6"), ExtResource("7_1q5cx"), ExtResource("7_untf4")])
+source = "Mordenkainen Presents: Monsters of the Multiverse"
